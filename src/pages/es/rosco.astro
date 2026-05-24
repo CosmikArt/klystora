@@ -1,13 +1,19 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import RoscoWrapper from '../../components/games/rosco/RoscoWrapper';
+import { getMessages, type Locale } from '../../lib/i18n';
 
-const title = 'Rosco — Klystora';
-const description = 'Encuentra palabras para cada letra del abecedario. Un nuevo puzzle cada día.';
+const locale: Locale = 'es';
+const messages = getMessages(locale);
+const gameInfo = messages.games.rosco;
 ---
 
-<Layout title={title} description={description}>
-  <div class="min-h-[calc(100vh-200px)] flex flex-col items-center justify-start pt-8 px-4">
+<Layout title={`${gameInfo.name} — Klystora`} description={gameInfo.desc}>
+  <div class="max-w-2xl mx-auto px-4 py-8">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-bold">{gameInfo.name}</h1>
+      <p class="text-sand-500 mt-1">{gameInfo.desc}</p>
+    </div>
     <RoscoWrapper client:only="react" />
   </div>
 </Layout>

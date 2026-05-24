@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, useCallback, type ReactNode } from 'react';
 import type { Lang } from '@/lib/translations';
-import { translations } from '@/lib/translations';
+import { translations, supportedLanguages } from '@/lib/translations';
 
 interface LanguageContextType {
   lang: Lang;
@@ -11,28 +11,39 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | null>(null);
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
+export function LanguageProvider({ children, initialLang = 'en' }: { children: ReactNode; initialLang?: Lang }) {
   const [lang, setLang] = useState<Lang>(() => {
-    const stored = localStorage.getItem('klystora-lang');
-    return (stored === 'es' ? 'es' : 'en') as Lang;
+    if (typeof window !== 'undefined') {
+      const stored = localStorage.getItem('klystora-lang');
+      if (stored && supportedLanguages.includes(stored as Lang)) {
+        return stored as Lang;
+      }
+    }
+    return initialLang;
   });
 
   const setLangFn = useCallback((newLang: Lang) => {
     setLang(newLang);
-    localStorage.setItem('klystora-lang', newLang);
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('klystora-lang', newLang);
+    }
   }, []);
 
   const toggleLang = useCallback(() => {
     setLang(prev => {
-      const newLang = prev === 'en' ? 'es' : 'en';
-      localStorage.setItem('klystora-lang', newLang);
+      const currentIndex = supportedLanguages.indexOf(prev);
+      const nextIndex = (currentIndex + 1) % supportedLanguages.length;
+      const newLang = supportedLanguages[nextIndex];
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('klystora-lang', newLang);
+      }
       return newLang;
     });
   }, []);
 
   const t = useCallback((key: string): string => {
     const tr = translations[lang] as Record<string, string>;
-    return tr[key] ?? key;
+    return tr[key] ?? translations.en[key] ?? key;
   }, [lang]);
 
   return (

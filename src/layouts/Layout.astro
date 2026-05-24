@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-import { getLocaleFromPath, getMessages, getHomeUrl, type Locale } from '../lib/i18n';
+import { getLocaleFromPath, getMessages, getHomeUrl, getGameUrl, type Locale, locales, localeNames, ogLocales } from '../lib/i18n';
 
 interface Props {
   title?: string;
@@ -10,16 +10,17 @@ interface Props {
 
 const { 
   title = 'Klystora — Word games. New every day.',
-  description = 'Eight daily word games in 30 languages. No signup, no pop-up ads. Play instantly.',
+  description = 'Eight daily word games in 27 languages. No signup, no pop-up ads. Play instantly.',
   ogImage = '/og-image-default.jpg'
 } = Astro.props;
 
 const locale = getLocaleFromPath(Astro.url.pathname) as Locale;
 const messages = getMessages(locale);
-const isEs = locale === 'es';
-const otherLocale = isEs ? 'en' : 'es';
-const otherLangLabel = isEs ? 'EN' : 'ES';
-const otherLangUrl = isEs ? '/' : '/es/';
+const ogLocale = ogLocales[locale] || 'en_US';
+
+// Build language switcher URLs
+const pathWithoutLocale = Astro.url.pathname.replace(/^\/[a-z]{2}\//, '/').replace(/^\/[a-z]{2}$/, '/');
+const currentPath = Astro.url.pathname;
 ---
 
 <!DOCTYPE html>
@@ -35,7 +36,7 @@ const otherLangUrl = isEs ? '/' : '/es/';
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImage} />
     <meta property="og:type" content="website" />
-    <meta property="og:locale" content={isEs ? 'es_MX' : 'en_US'} />
+    <meta property="og:locale" content={ogLocale} />
     <meta property="og:site_name" content="Klystora" />
     
     <!-- Twitter -->
@@ -45,10 +46,12 @@ const otherLangUrl = isEs ? '/' : '/es/';
     <meta name="twitter:image" content={ogImage} />
     
     <!-- Canonical + Hreflang -->
-    <link rel="canonical" href={`https://klystora.com${Astro.url.pathname}`} />
-    <link rel="alternate" hreflang="en" href={`https://klystora.com${Astro.url.pathname.replace(/^\/es\//, '/').replace(/^\/es$/, '/')}`} />
-    <link rel="alternate" hreflang="es" href={`https://klystora.com/es${Astro.url.pathname.replace(/^\/es/, '').replace(/^\/$/, '/')}`} />
-    <link rel="alternate" hreflang="x-default" href={`https://klystora.com${Astro.url.pathname.replace(/^\/es\//, '/').replace(/^\/es$/, '/')}`} />
+    <link rel="canonical" href={`https://klystora.com${currentPath}`} />
+    {locales.map(loc => {
+      const locPath = loc === 'en' ? pathWithoutLocale : `/${loc}${pathWithoutLocale}`;
+      return <link rel="alternate" hreflang={loc} href={`https://klystora.com${locPath}`} />;
+    })}
+    <link rel="alternate" hreflang="x-default" href={`https://klystora.com${pathWithoutLocale}`} />
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -89,16 +92,33 @@ const otherLangUrl = isEs ? '/' : '/es/';
         </a>
         
         <nav class="hidden md:flex items-center gap-6">
-          <a href={isEs ? '/es/' : '/'} class="text-sm font-medium text-[#4D4732] hover:text-[#6845BC] transition">{messages.nav.games}</a>
-          <a href={isEs ? '/es/blog' : '/blog'} class="text-sm font-medium text-[#4D4732] hover:text-[#6845BC] transition">{messages.nav.blog}</a>
-          <a href={isEs ? '/es/about' : '/about'} class="text-sm font-medium text-[#4D4732] hover:text-[#6845BC] transition">{messages.nav.about}</a>
+          <a href={getHomeUrl(locale)} class="text-sm font-medium text-[#4D4732] hover:text-[#6845BC] transition">{messages.nav.games}</a>
+          <a href={locale === 'en' ? '/blog' : `/${locale}/blog`} class="text-sm font-medium text-[#4D4732] hover:text-[#6845BC] transition">{messages.nav.blog}</a>
+          <a href={locale === 'en' ? '/about' : `/${locale}/about`} class="text-sm font-medium text-[#4D4732] hover:text-[#6845BC] transition">{messages.nav.about}</a>
         </nav>
         
         <div class="flex items-center gap-3">
-          <a href={otherLangUrl} class="text-sm text-[#897F62] hover:text-[#6845BC] transition">
-            {otherLangLabel}
-          </a>
-          <a href={isEs ? '/es/palabra-diaria' : '/daily-word'} class="bg-[#6845BC] text-white text-sm font-medium px-4 py-2 rounded-lg hover:bg-[#533694] transition">
+          <!-- Language Selector -->
+          <div class="relative group">
+            <button class="text-sm text-[#897F62] hover:text-[#6845BC] transition flex items-center gap-1">
+              {localeNames[locale]}
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="absolute right-0 top-full mt-1 w-48 bg-white rounded-lg shadow-lg border border-[#E3DBC5] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50 max-h-64 overflow-y-auto">
+              {locales.map(loc => {
+                const locPath = loc === 'en' ? pathWithoutLocale : `/${loc}${pathWithoutLocale}`;
+                return (
+                  <a 
+                    href={locPath}
+                    class={`block px-4 py-2 text-sm hover:bg-[#F5F1E8] transition ${loc === locale ? 'text-[#6845BC] font-medium bg-[#F5F1E8]' : 'text-[#4D4732]'}`}
+                  >
+                    {localeNames[loc]}
+                  </a>
+                );
+              })}
+            </div>
+          </div>
+          <a href={getGameUrl('dailyWord', locale)} class="bg-[#6845BC] text-white text-sm font-medium px-4 py-2 rounded-lg hover:bg-[#533694] transition">
             {messages.playNow}
           </a>
         </div>
@@ -116,23 +136,23 @@ const otherLangUrl = isEs ? '/' : '/es/';
           <div>
             <h4 class="font-semibold text-sm mb-4">{messages.footer.games}</h4>
             <ul class="space-y-2">
-              <li><a href={isEs ? '/es/palabra-diaria' : '/daily-word'} class="text-sm text-[#897F62] hover:text-[#6845BC]">{messages.games.dailyWord.name}</a></li>
-              <li><a href={isEs ? '/es/crucigrama-mini' : '/mini-crossword'} class="text-sm text-[#897F62] hover:text-[#6845BC]">{messages.games.crossword.name}</a></li>
-              <li><a href={isEs ? '/es/sopa-de-letras' : '/word-search'} class="text-sm text-[#897F62] hover:text-[#6845BC]">{messages.games.wordSearch.name}</a></li>
+              <li><a href={getGameUrl('dailyWord', locale)} class="text-sm text-[#897F62] hover:text-[#6845BC]">{messages.games.dailyWord.name}</a></li>
+              <li><a href={getGameUrl('crossword', locale)} class="text-sm text-[#897F62] hover:text-[#6845BC]">{messages.games.crossword.name}</a></li>
+              <li><a href={getGameUrl('wordSearch', locale)} class="text-sm text-[#897F62] hover:text-[#6845BC]">{messages.games.wordSearch.name}</a></li>
             </ul>
           </div>
           <div>
             <h4 class="font-semibold text-sm mb-4">{messages.footer.company}</h4>
             <ul class="space-y-2">
-              <li><a href={isEs ? '/es/about' : '/about'} class="text-sm text-[#897F62] hover:text-[#6845BC]">{messages.nav.about}</a></li>
-              <li><a href={isEs ? '/es/blog' : '/blog'} class="text-sm text-[#897F62] hover:text-[#6845BC]">{messages.nav.blog}</a></li>
+              <li><a href={locale === 'en' ? '/about' : `/${locale}/about`} class="text-sm text-[#897F62] hover:text-[#6845BC]">{messages.nav.about}</a></li>
+              <li><a href={locale === 'en' ? '/blog' : `/${locale}/blog`} class="text-sm text-[#897F62] hover:text-[#6845BC]">{messages.nav.blog}</a></li>
             </ul>
           </div>
           <div>
             <h4 class="font-semibold text-sm mb-4">{messages.footer.legal}</h4>
             <ul class="space-y-2">
-              <li><a href={isEs ? '/es/privacy' : '/privacy'} class="text-sm text-[#897F62] hover:text-[#6845BC]">{messages.footer.privacy}</a></li>
-              <li><a href={isEs ? '/es/terms' : '/terms'} class="text-sm text-[#897F62] hover:text-[#6845BC]">{messages.footer.terms}</a></li>
+              <li><a href={locale === 'en' ? '/privacy' : `/${locale}/privacy`} class="text-sm text-[#897F62] hover:text-[#6845BC]">{messages.footer.privacy}</a></li>
+              <li><a href={locale === 'en' ? '/terms' : `/${locale}/terms`} class="text-sm text-[#897F62] hover:text-[#6845BC]">{messages.footer.terms}</a></li>
             </ul>
           </div>
           <div>
