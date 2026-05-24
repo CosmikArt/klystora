@@ -1,17 +1,13 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import ConnectionsWrapper from '../../components/games/connections/ConnectionsWrapper';
 
 const title = 'Conexiones — Klystora';
-const description = 'Agrupa 16 palabras en 4 categorías.';
+const description = 'Encuentra grupos de 4 palabras que comparten un tema. Un nuevo puzzle cada día.';
 ---
 
 <Layout title={title} description={description}>
-  <div class="max-w-2xl mx-auto px-4 py-16 text-center">
-    <h1 class="text-4xl font-bold mb-4">Conexiones</h1>
-    <p class="text-lg text-sand-500 mb-8">Agrupa 16 palabras en 4 categorías.</p>
-    <div class="bg-violet-50 rounded-2xl p-8">
-      <p class="text-violet-600 font-medium">Próximamente — ¡estamos construyendo este juego!</p>
-      <p class="text-sand-500 text-sm mt-2">Juega <a href="/es/palabra-diaria" class="text-violet-500 underline">Palabra Diaria</a> mientras tanto.</p>
-    </div>
+  <div class="min-h-[calc(100vh-200px)] flex flex-col items-center justify-start pt-8 px-4">
+    <ConnectionsWrapper client:only="react" />
   </div>
 </Layout>

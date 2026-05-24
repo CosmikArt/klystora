@@ -1,17 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import AnagramsWrapper from '../components/games/anagrams/AnagramsWrapper';
 
 const title = 'Anagrams — Klystora';
-const description = 'Unscramble letters to form words.';
+const description = 'Form words from scrambled letters. A new puzzle every day.';
 ---
 
 <Layout title={title} description={description}>
-  <div class="max-w-2xl mx-auto px-4 py-16 text-center">
-    <h1 class="text-4xl font-bold mb-4">Anagrams</h1>
-    <p class="text-lg text-sand-500 mb-8">Unscramble letters to form words.</p>
-    <div class="bg-violet-50 rounded-2xl p-8">
-      <p class="text-violet-600 font-medium">Coming soon — we're building this game!</p>
-      <p class="text-sand-500 text-sm mt-2">Play <a href="/daily-word" class="text-violet-500 underline">Daily Word</a> while you wait.</p>
-    </div>
+  <div class="min-h-[calc(100vh-200px)] flex flex-col items-center justify-start pt-8 px-4">
+    <AnagramsWrapper client:only="react" />
   </div>
 </Layout>

@@ -1,17 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import SpellingBeeWrapper from '../components/games/spellingbee/SpellingBeeWrapper';
 
 const title = 'Spelling Bee — Klystora';
-const description = 'Form words using 7 letters.';
+const description = 'Form words using 7 letters. A new puzzle every day.';
 ---
 
 <Layout title={title} description={description}>
-  <div class="max-w-2xl mx-auto px-4 py-16 text-center">
-    <h1 class="text-4xl font-bold mb-4">Spelling Bee</h1>
-    <p class="text-lg text-sand-500 mb-8">Form words using 7 letters.</p>
-    <div class="bg-violet-50 rounded-2xl p-8">
-      <p class="text-violet-600 font-medium">Coming soon — we're building this game!</p>
-      <p class="text-sand-500 text-sm mt-2">Play <a href="/daily-word" class="text-violet-500 underline">Daily Word</a> while you wait.</p>
-    </div>
+  <div class="min-h-[calc(100vh-200px)] flex flex-col items-center justify-start pt-8 px-4">
+    <SpellingBeeWrapper client:only="react" />
   </div>
 </Layout>
