@@ -4,12 +4,47 @@ export const defaultLocale: Locale = 'en';
 export const locales: Locale[] = ['en', 'es'];
 
 export function getLocaleFromPath(path: string): Locale {
-  const match = path.match(/^\/(en|es)(\/|$)/);
+  const match = path.match(/^\/(es)(\/|$)/);
   return (match?.[1] as Locale) || defaultLocale;
 }
 
 export function getMessages(locale: Locale) {
   return messages[locale] || messages[defaultLocale];
+}
+
+// Game slugs por idioma — según biblia sección 7.2
+export const gameSlugs: Record<Locale, Record<string, string>> = {
+  en: {
+    dailyWord: 'daily-word',
+    crossword: 'mini-crossword',
+    wordSearch: 'word-search',
+    anagrams: 'anagrams',
+    connections: 'connections',
+    spellingBee: 'spelling-bee',
+    wordLadder: 'word-ladder',
+    rosco: 'word-wheel',
+  },
+  es: {
+    dailyWord: 'palabra-diaria',
+    crossword: 'crucigrama-mini',
+    wordSearch: 'sopa-de-letras',
+    anagrams: 'anagramas',
+    connections: 'conexiones',
+    spellingBee: 'colmena',
+    wordLadder: 'escalera-de-palabras',
+    rosco: 'rosco',
+  }
+};
+
+// Helper para obtener URL de un juego en un idioma
+export function getGameUrl(gameKey: string, locale: Locale): string {
+  const slug = gameSlugs[locale][gameKey];
+  return locale === 'en' ? `/${slug}` : `/es/${slug}`;
+}
+
+// Helper para obtener homepage URL
+export function getHomeUrl(locale: Locale): string {
+  return locale === 'en' ? '/' : '/es/';
 }
 
 const messages = {
@@ -33,7 +68,7 @@ const messages = {
       connections: { name: 'Connections', desc: 'Group words by theme' },
       spellingBee: { name: 'Spelling Bee', desc: 'Words from 7 letters' },
       wordLadder: { name: 'Word Ladder', desc: 'Chain words by one letter' },
-      rosco: { name: 'Rosco', desc: 'One word per letter' }
+      rosco: { name: 'Word Wheel', desc: 'One word per letter' }
     },
     footer: {
       games: 'Games',

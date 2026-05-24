@@ -1,19 +1,20 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { getMessages } from '../lib/i18n';
+import { getMessages, getGameUrl, type Locale } from '../lib/i18n';
 
-const messages = getMessages('en');
+const locale: Locale = 'en';
+const messages = getMessages(locale);
 
 const games = [
-  { slug: 'daily-word', key: 'dailyWord', img: '/game-daily-word-preview.png' },
-  { slug: 'crossword', key: 'crossword', img: '/game-crossword-preview.png' },
-  { slug: 'word-search', key: 'wordSearch', img: '/game-word-search-preview.png' },
-  { slug: 'anagrams', key: 'anagrams', img: '/game-anagrams-preview.png' },
-  { slug: 'connections', key: 'connections', img: '/game-connections-preview.png' },
-  { slug: 'spelling-bee', key: 'spellingBee', img: '/game-spelling-bee-preview.png' },
-  { slug: 'word-ladder', key: 'wordLadder', img: '/game-word-ladder-preview.png' },
-  { slug: 'rosco', key: 'rosco', img: '/game-rosco-preview.png' },
-];
+  { key: 'dailyWord', img: '/game-daily-word-preview.png' },
+  { key: 'crossword', img: '/game-crossword-preview.png' },
+  { key: 'wordSearch', img: '/game-word-search-preview.png' },
+  { key: 'anagrams', img: '/game-anagrams-preview.png' },
+  { key: 'connections', img: '/game-connections-preview.png' },
+  { key: 'spellingBee', img: '/game-spelling-bee-preview.png' },
+  { key: 'wordLadder', img: '/game-word-ladder-preview.png' },
+  { key: 'rosco', img: '/game-rosco-preview.png' },
+] as const;
 ---
 
 <Layout>
@@ -31,7 +32,7 @@ const games = [
           <a href="/daily-word" class="bg-violet-500 text-white font-medium px-8 py-3 rounded-xl hover:bg-violet-600 transition shadow-violet">
             {messages.playNow}
           </a>
-          <a href="/games" class="border-2 border-violet-500 text-violet-500 font-medium px-8 py-3 rounded-xl hover:bg-violet-50 transition">
+          <a href="#games" class="border-2 border-violet-500 text-violet-500 font-medium px-8 py-3 rounded-xl hover:bg-violet-50 transition">
             {messages.exploreGames}
           </a>
         </div>
@@ -40,12 +41,12 @@ const games = [
   </section>
 
   <!-- Games Grid -->
-  <section class="max-w-6xl mx-auto px-4 py-16">
+  <section id="games" class="max-w-6xl mx-auto px-4 py-16">
     <h2 class="text-3xl font-bold text-center mb-12">8 Ways to Play</h2>
     
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       {games.map(game => (
-        <a href={`/${game.slug}`} class="group block bg-white border border-sand-200 rounded-2xl overflow-hidden hover:shadow-lg hover:border-violet-300 transition-all">
+        <a href={getGameUrl(game.key, locale)} class="group block bg-white border border-sand-200 rounded-2xl overflow-hidden hover:shadow-lg hover:border-violet-300 transition-all">
           <div class="aspect-[4/3] bg-sand-100 overflow-hidden">
             <img src={game.img} alt={messages.games[game.key].name} class="w-full h-full object-cover group-hover:scale-105 transition-transform" />
           </div>

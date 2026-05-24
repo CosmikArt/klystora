@@ -16,15 +16,15 @@ const ogImage = '/og-images/palabra-diaria.png';
     
     <DailyWordWrapper client:only="react" />
     
-    <article class="mt-16 prose prose-sand max-w-none">
-      <h2>Cómo Jugar Palabra Diaria</h2>
-      <p>Palabra Diaria es un juego de adivinanza donde tienes 6 intentos para encontrar una palabra oculta de 5 letras. Después de cada intento, las casillas cambian de color para mostrarte qué tan cerca estás:</p>
-      <ul>
-        <li><strong class="text-correct">Verde</strong> — la letra es correcta y está en la posición correcta</li>
-        <li><strong class="text-partial">Amarillo</strong> — la letra está en la palabra pero en otra posición</li>
-        <li><strong class="text-wrong">Gris</strong> — la letra no está en la palabra</li>
+    <article class="mt-16 max-w-none">
+      <h2 class="text-2xl font-bold mb-4">Cómo Jugar Palabra Diaria</h2>
+      <p class="text-sand-500 mb-4">Palabra Diaria es un juego de adivinanza donde tienes 6 intentos para encontrar una palabra oculta de 5 letras. Después de cada intento, las casillas cambian de color:</p>
+      <ul class="space-y-2 mb-6">
+        <li><strong class="text-[#4A8B5B]">Verde</strong> — la letra es correcta y está en la posición correcta</li>
+        <li><strong class="text-[#D9A93E]">Amarillo</strong> — la letra está en la palabra pero en otra posición</li>
+        <li><strong class="text-[#7A7268]">Gris</strong> — la letra no está en la palabra</li>
       </ul>
-      <p>¡Un nuevo puzzle se publica cada día a medianoche! Vuelve mañana para un nuevo reto.</p>
+      <p class="text-sand-500">¡Un nuevo puzzle se publica cada día a medianoche! Vuelve mañana para un nuevo reto.</p>
     </article>
   </div>
 </Layout>

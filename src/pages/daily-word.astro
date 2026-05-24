@@ -9,32 +9,22 @@ const ogImage = '/og-images/daily-word.png';
 
 <Layout title={title} description={description} ogImage={ogImage}>
   <div class="max-w-2xl mx-auto px-4 py-8">
-    <!-- Game Header -->
     <div class="text-center mb-6">
       <h1 class="text-3xl font-bold">Daily Word</h1>
       <p class="text-sand-500 mt-1">Guess the 5-letter word in 6 tries</p>
     </div>
     
-    <!-- React Island -->
     <DailyWordWrapper client:only="react" />
     
-    <!-- SEO Content Below Fold -->
-    <article class="mt-16 prose prose-sand max-w-none">
-      <h2>How to Play Daily Word</h2>
-      <p>Daily Word is a word-guessing game where you have 6 attempts to find a hidden 5-letter word. After each guess, the tiles change color to show how close you are:</p>
-      <ul>
-        <li><strong class="text-correct">Green</strong> — the letter is correct and in the right position</li>
-        <li><strong class="text-partial">Yellow</strong> — the letter is in the word but in the wrong position</li>
-        <li><strong class="text-wrong">Gray</strong> — the letter is not in the word</li>
+    <article class="mt-16 max-w-none">
+      <h2 class="text-2xl font-bold mb-4">How to Play Daily Word</h2>
+      <p class="text-sand-500 mb-4">Daily Word is a word-guessing game where you have 6 attempts to find a hidden 5-letter word. After each guess, the tiles change color to show how close you are:</p>
+      <ul class="space-y-2 mb-6">
+        <li><strong class="text-[#4A8B5B]">Green</strong> — the letter is correct and in the right position</li>
+        <li><strong class="text-[#D9A93E]">Yellow</strong> — the letter is in the word but in the wrong position</li>
+        <li><strong class="text-[#7A7268]">Gray</strong> — the letter is not in the word</li>
       </ul>
-      <p>A new puzzle is released every day at midnight. Come back tomorrow for a fresh challenge!</p>
-      
-      <h3>Tips for Success</h3>
-      <ul>
-        <li>Start with a word that has common vowels (A, E, I) and consonants (R, S, T, L, N)</li>
-        <li>Pay attention to letter positions — a yellow letter means it appears somewhere else</li>
-        <li>Use the process of elimination — gray letters are not in the word at all</li>
-      </ul>
+      <p class="text-sand-500">A new puzzle is released every day at midnight. Come back tomorrow for a fresh challenge!</p>
     </article>
   </div>
 </Layout>
