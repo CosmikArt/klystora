@@ -1,0 +1,30 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import DailyWordWrapper from '../../components/games/DailyWordWrapper';
+
+const title = 'Palabra Diaria — Klystora';
+const description = 'Adivina la palabra de 5 letras en 6 intentos. Un nuevo puzzle cada día. Sin registro.';
+const ogImage = '/og-images/palabra-diaria.png';
+---
+
+<Layout title={title} description={description} ogImage={ogImage}>
+  <div class="max-w-2xl mx-auto px-4 py-8">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-bold">Palabra Diaria</h1>
+      <p class="text-sand-500 mt-1">Adivina la palabra de 5 letras en 6 intentos</p>
+    </div>
+    
+    <DailyWordWrapper client:only="react" />
+    
+    <article class="mt-16 prose prose-sand max-w-none">
+      <h2>Cómo Jugar Palabra Diaria</h2>
+      <p>Palabra Diaria es un juego de adivinanza donde tienes 6 intentos para encontrar una palabra oculta de 5 letras. Después de cada intento, las casillas cambian de color para mostrarte qué tan cerca estás:</p>
+      <ul>
+        <li><strong class="text-correct">Verde</strong> — la letra es correcta y está en la posición correcta</li>
+        <li><strong class="text-partial">Amarillo</strong> — la letra está en la palabra pero en otra posición</li>
+        <li><strong class="text-wrong">Gris</strong> — la letra no está en la palabra</li>
+      </ul>
+      <p>¡Un nuevo puzzle se publica cada día a medianoche! Vuelve mañana para un nuevo reto.</p>
+    </article>
+  </div>
+</Layout>

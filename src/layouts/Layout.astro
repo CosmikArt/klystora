@@ -1,0 +1,143 @@
+---
+import '../styles/global.css';
+import { getLocaleFromPath, getMessages, type Locale } from '../lib/i18n';
+
+interface Props {
+  title?: string;
+  description?: string;
+  ogImage?: string;
+}
+
+const { 
+  title = 'Klystora — Word games. New every day.',
+  description = 'Eight daily word games in 30 languages. No signup, no pop-up ads. Play instantly.',
+  ogImage = '/og-image-default.jpg'
+} = Astro.props;
+
+const locale = getLocaleFromPath(Astro.url.pathname) as Locale;
+const messages = getMessages(locale);
+const isEs = locale === 'es';
+---
+
+<!DOCTYPE html>
+<html lang={locale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#6845BC" />
+    
+    <!-- OG -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content={isEs ? 'es_MX' : 'en_US'} />
+    <meta property="og:site_name" content="Klystora" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    
+    <!-- Canonical + Hreflang -->
+    <link rel="canonical" href={`https://klystora.com${Astro.url.pathname}`} />
+    <link rel="alternate" hreflang="en" href={`https://klystora.com${Astro.url.pathname.replace(/^\/es/, '') || '/'}`} />
+    <link rel="alternate" hreflang="es" href={`https://klystora.com/es${Astro.url.pathname.replace(/^\/(en|es)/, '') || ''}`} />
+    <link rel="alternate" hreflang="x-default" href={`https://klystora.com${Astro.url.pathname.replace(/^\/(en|es)/, '') || '/'}`} />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&display=swap" rel="stylesheet" />
+    
+    <title>{title}</title>
+    
+    <!-- Schema.org Organization -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Klystora",
+        "url": "https://klystora.com",
+        "logo": "https://klystora.com/favicon.svg"
+      }
+    </script>
+  </head>
+  <body class="min-h-screen bg-[#FAF8F3] text-[#1A1614]">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-[#FAF8F3]/80 backdrop-blur-md border-b border-[#E3DBC5]">
+      <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+        <a href={isEs ? '/es' : '/'} class="flex items-center gap-2">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <path d="M14 2L26 14L14 26L2 14L14 2Z" fill="url(#kly)" />
+            <defs>
+              <linearGradient id="kly" x1="2" y1="2" x2="26" y2="26">
+                <stop stop-color="#A484F0" />
+                <stop offset="1" stop-color="#6845BC" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <span class="font-semibold text-lg tracking-tight">Klystora</span>
+        </a>
+        
+        <nav class="hidden md:flex items-center gap-6">
+          <a href={`/${locale}/games`} class="text-sm font-medium text-[#4D4732] hover:text-[#6845BC] transition">{messages.nav.games}</a>
+          <a href={`/${locale}/blog`} class="text-sm font-medium text-[#4D4732] hover:text-[#6845BC] transition">{messages.nav.blog}</a>
+          <a href={`/${locale}/about`} class="text-sm font-medium text-[#4D4732] hover:text-[#6845BC] transition">{messages.nav.about}</a>
+        </nav>
+        
+        <div class="flex items-center gap-3">
+          <a href={isEs ? '/en' : '/es'} class="text-sm text-[#897F62] hover:text-[#6845BC] transition">
+            {isEs ? 'EN' : 'ES'}
+          </a>
+          <a href={`/${locale}/games`} class="bg-[#6845BC] text-white text-sm font-medium px-4 py-2 rounded-lg hover:bg-[#533694] transition">
+            {messages.playNow}
+          </a>
+        </div>
+      </div>
+    </header>
+    
+    <main>
+      <slot />
+    </main>
+    
+    <!-- Footer -->
+    <footer class="border-t border-[#E3DBC5] mt-20">
+      <div class="max-w-6xl mx-auto px-4 py-12">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div>
+            <h4 class="font-semibold text-sm mb-4">{messages.footer.games}</h4>
+            <ul class="space-y-2">
+              <li><a href={`/${locale}/daily-word`} class="text-sm text-[#897F62] hover:text-[#6845BC]">{messages.games.dailyWord.name}</a></li>
+              <li><a href={`/${locale}/crossword`} class="text-sm text-[#897F62] hover:text-[#6845BC]">{messages.games.crossword.name}</a></li>
+              <li><a href={`/${locale}/word-search`} class="text-sm text-[#897F62] hover:text-[#6845BC]">{messages.games.wordSearch.name}</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-sm mb-4">{messages.footer.company}</h4>
+            <ul class="space-y-2">
+              <li><a href={`/${locale}/about`} class="text-sm text-[#897F62] hover:text-[#6845BC]">{messages.nav.about}</a></li>
+              <li><a href={`/${locale}/blog`} class="text-sm text-[#897F62] hover:text-[#6845BC]">{messages.nav.blog}</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-sm mb-4">{messages.footer.legal}</h4>
+            <ul class="space-y-2">
+              <li><a href={`/${locale}/privacy`} class="text-sm text-[#897F62] hover:text-[#6845BC]">{messages.footer.privacy}</a></li>
+              <li><a href={`/${locale}/terms`} class="text-sm text-[#897F62] hover:text-[#6845BC]">{messages.footer.terms}</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-sm text-[#897F62]">© 2026 Klystora</p>
+            <p class="text-xs text-[#C9BD9C] mt-1">Ore Data México S.A.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
