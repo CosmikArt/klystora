@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Game2048Wrapper from '../components/games/game2048/Game2048Wrapper';
+
+const title = '2048 — Klystora';
+const description = 'Merge numbered tiles to reach 2048. A classic puzzle game.';
+const ogImage = '/og/2048.jpg';
+---
+
+<Layout title={title} description={description} ogImage={ogImage}>
+  <div class="max-w-2xl mx-auto px-4 py-8">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-bold">2048</h1>
+      <p class="text-sand-500 mt-1">Merge tiles to reach 2048</p>
+    </div>
+    
+    <Game2048Wrapper lang="en" client:only="react" />
+    
+    <article class="mt-16 max-w-none">
+      <h2 class="text-2xl font-bold mb-4">How to Play 2048</h2>
+      <p class="text-sand-500 mb-4">2048 is a sliding tile puzzle game. Combine tiles with the same number to create larger numbers.</p>
+      <ul class="space-y-2 mb-6">
+        <li>Use arrow keys to slide all tiles in one direction</li>
+        <li>When two tiles with the same number touch, they merge into one</li>
+        <li>After each move, a new tile (2 or 4) appears randomly</li>
+        <li>The goal is to create a tile with the number 2048</li>
+      </ul>
+      <p class="text-sand-500">Can you reach 2048? The game continues even after you reach the goal for a higher score!</p>
+    </article>
+  </div>
+</Layout>

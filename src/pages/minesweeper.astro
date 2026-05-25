@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro';
+import MinesweeperWrapper from '../components/games/minesweeper/MinesweeperWrapper';
+
+const title = 'Minesweeper — Klystora';
+const description = 'Clear the minefield without detonating any mines. Classic logic puzzle.';
+const ogImage = '/og/minesweeper.jpg';
+---
+
+<Layout title={title} description={description} ogImage={ogImage}>
+  <div class="max-w-2xl mx-auto px-4 py-8">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-bold">Minesweeper</h1>
+      <p class="text-sand-500 mt-1">Clear the field without hitting mines</p>
+    </div>
+    
+    <MinesweeperWrapper lang="en" client:only="react" />
+    
+    <article class="mt-16 max-w-none">
+      <h2 class="text-2xl font-bold mb-4">How to Play Minesweeper</h2>
+      <p class="text-sand-500 mb-4">Minesweeper is a classic logic puzzle where you must clear a rectangular board containing hidden mines.</p>
+      <ul class="space-y-2 mb-6">
+        <li>Left-click to reveal a cell</li>
+        <li>Right-click to place or remove a flag</li>
+        <li>Numbers show how many mines are adjacent to that cell</li>
+        <li>Use logic to deduce which cells are safe</li>
+      </ul>
+      <p class="text-sand-500">Clear all non-mine cells to win. Be careful — one wrong click and it's game over!</p>
+    </article>
+  </div>
+</Layout>

@@ -22,6 +22,8 @@ const games = [
   { key: 'memory', img: '/game-memory-preview.png' },
   { key: 'hangman', img: '/game-hangman-preview.png' },
   { key: 'trivia', img: '/game-trivia-preview.png' },
+  { key: 'game2048', img: '/game-2048-preview.png' },
+  { key: 'minesweeper', img: '/game-minesweeper-preview.png' },
 ] as const;
 ---
 
@@ -50,7 +52,7 @@ const games = [
 
   <!-- Games Grid -->
   <section id="games" class="max-w-6xl mx-auto px-4 py-16">
-    <h2 class="text-3xl font-bold text-center mb-12">12 Ways to Play</h2>
+    <h2 class="text-3xl font-bold text-center mb-12">14 Ways to Play</h2>
     
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       {games.map(game => (
