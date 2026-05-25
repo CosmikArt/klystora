@@ -1,4 +1,5 @@
 import { useState, useCallback, useEffect } from 'react';
+import { useAnalytics } from '@/hooks/useAnalytics';
 import { motion, AnimatePresence } from 'framer-motion';
 import { RotateCcw, Trophy, ArrowUp, ArrowDown, ArrowLeft, ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
@@ -33,6 +34,7 @@ function getInitialTiles(): Tile[] {
 }
 
 export default function Game2048() {
+  const { trackGameComplete } = useAnalytics();
   const { t } = useLanguage();
   const [tiles, setTiles] = useState<Tile[]>(getInitialTiles);
   const [score, setScore] = useState(0);
@@ -156,6 +158,7 @@ export default function Game2048() {
       // Check win
       if (!won && newTiles.some(t => t.value >= 2048)) {
         setWon(true);
+        trackGameComplete('2048', score, true);
       }
 
       // Check game over
@@ -171,6 +174,7 @@ export default function Game2048() {
         });
         if (!hasMoves && emptyCells.length === 0) {
           setGameOver(true);
+          trackGameComplete('2048', score, false);
         }
       }
 

@@ -3,6 +3,7 @@ import confetti from 'canvas-confetti';
 import { Flame, BarChart3, Share2, CircleHelp, ChevronUp } from 'lucide-react';
 import type { Lang } from '@/lib/translations';
 import { useLanguage } from '@/hooks/useLanguage';
+import { useAnalytics } from '@/hooks/useAnalytics';
 import { getDailyWord, isValidWord, getDateKey, getNextMidnight, formatTimeRemaining } from '@/lib/wordList';
 import GameGrid from './GameGrid';
 import type { Tile, TileState } from './GameGrid';
@@ -143,6 +144,7 @@ export default function DailyWordGame() {
   const [stats, setStats] = useState<GameStats>(loadStats);
   const [timeRemaining, setTimeRemaining] = useState('');
   const [alreadyPlayedToday, setAlreadyPlayedToday] = useState(false);
+  const { trackGameComplete } = useAnalytics();
 
   const shakeTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
   const popTimeouts = useRef<ReturnType<typeof setTimeout>[]>([]);
@@ -301,6 +303,7 @@ export default function DailyWordGame() {
         setGameState('won');
         setAlreadyPlayedToday(true);
         showMessage(tg.youWin);
+        trackGameComplete('daily-word', currentRow + 1, true);
         // Confetti!
         confetti({
           particleCount: 60,
@@ -335,6 +338,7 @@ export default function DailyWordGame() {
         setGameState('lost');
         setAlreadyPlayedToday(true);
         showMessage(tg.youLose(targetWord));
+        trackGameComplete('daily-word', 0, false);
 
         // Update stats
         setStats(prev => {

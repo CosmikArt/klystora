@@ -1,4 +1,5 @@
 ---
+import PwaInstallPrompt from '@/components/PwaInstallPrompt';
 import Layout from '../layouts/Layout.astro';
 ---
 
@@ -40,4 +41,5 @@ import Layout from '../layouts/Layout.astro';
       View Pricing
     </a>
   </div>
+  <PwaInstallPrompt client:only="react" />
 </Layout>

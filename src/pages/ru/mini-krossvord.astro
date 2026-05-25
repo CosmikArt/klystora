@@ -1,4 +1,5 @@
 ---
+import PwaInstallPrompt from '@/components/PwaInstallPrompt';
 import Layout from '../../layouts/Layout.astro';
 import LazyGameWrapper from '../../components/games/LazyGameWrapper';
 import { getMessages, type Locale } from '../../lib/i18n';
@@ -8,7 +9,7 @@ const messages = getMessages(locale);
 const gameInfo = messages.games.crossword;
 ---
 
-<Layout title={`${gameInfo.name} — Klystora`} description={gameInfo.desc}>
+<Layout title={`${gameInfo.name} — Klystora`} description={gameInfo.desc} ogImage="/og/default.jpg">
   <div class="max-w-2xl mx-auto px-4 py-8">
     <div class="text-center mb-6">
       <h1 class="text-3xl font-bold">{gameInfo.name}</h1>
@@ -16,4 +17,5 @@ const gameInfo = messages.games.crossword;
     </div>
     <LazyGameWrapper game="mini-crossword" lang="ru" client:only="react" />
   </div>
+  <PwaInstallPrompt client:only="react" />
 </Layout>

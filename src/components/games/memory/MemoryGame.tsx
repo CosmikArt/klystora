@@ -1,4 +1,5 @@
 import { useState, useCallback, useEffect } from 'react';
+import { useAnalytics } from '@/hooks/useAnalytics';
 import { motion, AnimatePresence } from 'framer-motion';
 import { RotateCcw, Trophy, Clock, Zap } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
@@ -19,6 +20,7 @@ function shuffle<T>(arr: T[]): T[] {
 }
 
 export default function MemoryGame() {
+  const { trackGameComplete } = useAnalytics();
   const { lang } = useLanguage();
   const [cards, setCards] = useState<Card[]>(() => {
     const pairs = EMOJIS.slice(0, 8);
@@ -53,7 +55,10 @@ export default function MemoryGame() {
           setFlippedIds([]);
           setMatches(m => {
             const newMatches = m + 1;
-            if (newMatches === 8) setIsComplete(true);
+            if (newMatches === 8) {
+              setIsComplete(true);
+              trackGameComplete('memory', moves, true);
+            }
             return newMatches;
           });
         }, 500);

@@ -1,4 +1,5 @@
 import { useState, useCallback, useEffect } from 'react';
+import { useAnalytics } from '@/hooks/useAnalytics';
 import { motion, AnimatePresence } from 'framer-motion';
 import { RotateCcw, Check, Zap, Trophy, Clock, Lightbulb } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
@@ -55,6 +56,7 @@ const PUZZLES = [
 ];
 
 export default function SudokuGame() {
+  const { trackGameComplete } = useAnalytics();
   const { lang } = useLanguage();
   const [puzzleIndex] = useState(() => Math.floor(Math.random() * PUZZLES.length));
   const puzzle = PUZZLES[puzzleIndex];
@@ -101,6 +103,7 @@ export default function SudokuGame() {
     // Check complete
     if (newGrid.every((row, rr) => row.every((val, cc) => val === puzzle.solution[rr][cc]))) {
       setIsComplete(true);
+      trackGameComplete('sudoku', elapsed, true);
     }
   };
 

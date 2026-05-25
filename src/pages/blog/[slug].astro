@@ -1,4 +1,5 @@
 ---
+import PwaInstallPrompt from '@/components/PwaInstallPrompt';
 import Layout from '../../layouts/Layout.astro';
 import fs from 'fs';
 import path from 'path';
@@ -43,4 +44,5 @@ const tags = frontmatter.tags || [];
       <a href="/blog" class="text-coral-400 hover:text-coral-300">← Back to Blog</a>
     </div>
   </article>
+  <PwaInstallPrompt client:only="react" />
 </Layout>

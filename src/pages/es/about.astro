@@ -1,4 +1,5 @@
 ---
+import PwaInstallPrompt from '@/components/PwaInstallPrompt';
 import Layout from '../../layouts/Layout.astro';
 ---
 
@@ -8,4 +9,5 @@ import Layout from '../../layouts/Layout.astro';
     <p class="text-lg text-sand-500 mb-6">Klystora es una suite de juegos de palabras diarios para personas que aman los puzzles. Ocho juegos, 30 idiomas, sin registro.</p>
     <p class="text-sand-500">Construido por Ore Data México S.A.</p>
   </div>
+  <PwaInstallPrompt client:only="react" />
 </Layout>

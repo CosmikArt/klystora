@@ -1,4 +1,5 @@
 ---
+import PwaInstallPrompt from '@/components/PwaInstallPrompt';
 import Layout from '../../layouts/Layout.astro';
 import LazyGameWrapper from '../../components/games/LazyGameWrapper';
 
@@ -28,4 +29,5 @@ const ogImage = '/og/default.jpg';
       <p class="text-sand-500">Use the number pad below the grid to fill in cells. Tap a cell to select it, then tap a number. Use hints if you get stuck!</p>
     </article>
   </div>
+  <PwaInstallPrompt client:only="react" />
 </Layout>

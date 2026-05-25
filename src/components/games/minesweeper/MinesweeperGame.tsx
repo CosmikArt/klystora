@@ -1,4 +1,5 @@
 import { useState, useCallback, useEffect } from 'react';
+import { useAnalytics } from '@/hooks/useAnalytics';
 import { motion, AnimatePresence } from 'framer-motion';
 import { RotateCcw, Flag, Bomb, Trophy } from 'lucide-react';
 
@@ -56,6 +57,7 @@ function createBoard(): Cell[][] {
 }
 
 export default function MinesweeperGame() {
+  const { trackGameComplete } = useAnalytics();
   const [board, setBoard] = useState<Cell[][]>(createBoard);
   const [gameOver, setGameOver] = useState(false);
   const [won, setWon] = useState(false);
@@ -99,6 +101,7 @@ export default function MinesweeperGame() {
       if (newBoard[row][col].isMine) {
         newBoard[row][col].isRevealed = true;
         setGameOver(true);
+        trackGameComplete('minesweeper', timer, false);
         // Reveal all mines
         for (let r = 0; r < ROWS; r++) {
           for (let c = 0; c < COLS; c++) {
@@ -112,6 +115,7 @@ export default function MinesweeperGame() {
         const revealedCount = newBoard.flat().filter(c => c.isRevealed).length;
         if (revealedCount === ROWS * COLS - MINES) {
           setWon(true);
+          trackGameComplete('minesweeper', timer, true);
         }
       }
 

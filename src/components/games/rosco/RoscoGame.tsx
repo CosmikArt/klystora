@@ -1,4 +1,5 @@
 import { useState, useCallback, useEffect, useRef } from 'react';
+import { useAnalytics } from '@/hooks/useAnalytics';
 import { motion, AnimatePresence } from 'framer-motion';
 import { RotateCcw, Check, X, CircleHelp, Zap, Clock } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
@@ -27,6 +28,7 @@ interface GameStats {
 const TOTAL_TIME = 120; // 120 seconds
 
 export default function RoscoGame() {
+  const { trackGameComplete } = useAnalytics();
   const { lang } = useLanguage();
   const [puzzleIndex] = useState(getDailyPuzzleIndex);
   const puzzle = getPuzzle(lang, puzzleIndex);
@@ -63,9 +65,9 @@ export default function RoscoGame() {
         const remaining = TOTAL_TIME - elapsedSec;
         setTimeLeft(Math.max(0, remaining));
 
-        if (remaining <= 0) {
-          endGame();
-        }
+    if (remaining <= 0) {
+      endGame(true);
+    }
       }, 1000);
     }
     return () => {
@@ -73,20 +75,19 @@ export default function RoscoGame() {
     };
   }, [gameComplete, startTime]);
 
-  const endGame = useCallback(() => {
+  const endGame = useCallback((timedOut = false) => {
     if (gameComplete) return;
     setGameComplete(true);
     const time = Math.floor((Date.now() - startTime) / 1000);
-    setStats((s) => {
-      const finalScore = s.correct * 10 + s.passed * 5;
-      return { ...s, time, completed: true, score: finalScore };
-    });
+    const finalStats = { ...stats, time, completed: true, score: stats.correct * 10 + stats.passed * 5 };
+    setStats(finalStats);
+    trackGameComplete('rosco', finalStats.score, finalStats.correct >= totalLetters * 0.5);
     // Mark all unanswered as passed
     setLetterStatuses((prev) =>
       prev.map((ls) => (ls.state === 'current' || ls.state === 'unanswered' ? { ...ls, state: 'passed' as LetterState } : ls))
     );
     setTimeout(() => setShowStats(true), 600);
-  }, [gameComplete, startTime, totalLetters]);
+  }, [gameComplete, startTime, totalLetters, stats]);
 
   const showToastMsg = (msg: string) => {
     setToast(msg);
@@ -144,13 +145,16 @@ export default function RoscoGame() {
       setTimeout(() => {
         setGameComplete(true);
         const time = Math.floor((Date.now() - startTime) / 1000);
+        const finalCorrect = stats.correct + (isCorrect ? 1 : 0);
+        const finalScore = finalCorrect * 10 + stats.passed * 5;
         setStats((s) => ({
           ...s,
           time,
           completed: true,
-          score: s.correct * 10 + s.passed * 5,
+          score: finalScore,
         }));
-        if (stats.correct + (isCorrect ? 1 : 0) >= totalLetters * 0.7) {
+        trackGameComplete('rosco', finalScore, finalCorrect >= totalLetters * 0.5);
+        if (finalCorrect >= totalLetters * 0.7) {
           confetti({ particleCount: 60, spread: 70, origin: { y: 0.6 }, colors: ['#FF6B3D', '#6845BC', '#4A8B5B', '#D9A93E'] });
         }
         setTimeout(() => setShowStats(true), 600);
@@ -182,7 +186,7 @@ export default function RoscoGame() {
     // Find next
     const nextIdx = getNextUnanswered(currentIdx);
     if (nextIdx === -1) {
-      setTimeout(() => endGame(), 300);
+      setTimeout(() => endGame(false), 300);
     } else {
       setLetterStatuses((prev) =>
         prev.map((ls, i) => (i === nextIdx ? { ...ls, state: 'current' as LetterState } : ls))

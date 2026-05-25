@@ -1,4 +1,5 @@
 ---
+import PwaInstallPrompt from '@/components/PwaInstallPrompt';
 import Layout from '../layouts/Layout.astro';
 import LazyGameWrapper from '../components/games/LazyGameWrapper';
 
@@ -32,4 +33,5 @@ const description = 'Find hidden words in the grid. A new puzzle every day.';
         </details>
     </section>
   </div>
+  <PwaInstallPrompt client:only="react" />
 </Layout>

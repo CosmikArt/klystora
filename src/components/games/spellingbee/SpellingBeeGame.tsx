@@ -1,4 +1,5 @@
 import { useState, useCallback, useEffect, useRef } from 'react';
+import { useAnalytics } from '@/hooks/useAnalytics';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Shuffle, Delete, RotateCcw, Check, X, Star, Clock, Zap } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
@@ -15,6 +16,7 @@ interface GameStats {
 }
 
 export default function SpellingBeeGame() {
+  const { trackGameComplete } = useAnalytics();
   const { lang } = useLanguage();
   const [puzzleIndex] = useState(getDailyPuzzleIndex);
   const puzzle = getPuzzle(lang, puzzleIndex);
@@ -147,6 +149,7 @@ export default function SpellingBeeGame() {
       setGameComplete(true);
       const time = Math.floor((Date.now() - startTime) / 1000);
       setStats((s) => ({ ...s, time, completed: true, rank: lang === 'es' ? 'Genio' : 'Genius' }));
+      trackGameComplete('spelling-bee', newScore, true);
       confetti({ particleCount: 60, spread: 70, origin: { y: 0.6 }, colors: ['#FF6B3D', '#6845BC', '#4A8B5B', '#D9A93E'] });
       setTimeout(() => setShowStats(true), 800);
     }

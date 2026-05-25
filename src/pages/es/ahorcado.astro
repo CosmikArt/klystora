@@ -1,4 +1,5 @@
 ---
+import PwaInstallPrompt from '@/components/PwaInstallPrompt';
 import Layout from '../../layouts/Layout.astro';
 import LazyGameWrapper from '../../components/games/LazyGameWrapper';
 
@@ -28,4 +29,5 @@ const ogImage = '/og/default.jpg';
       <p class="text-sand-500">¿Puedes adivinar la palabra antes de que se complete el ahorcado?</p>
     </article>
   </div>
+  <PwaInstallPrompt client:only="react" />
 </Layout>

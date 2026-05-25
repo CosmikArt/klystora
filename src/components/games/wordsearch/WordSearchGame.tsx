@@ -1,4 +1,5 @@
 import { useState, useCallback, useRef, useMemo } from 'react';
+import { useAnalytics } from '@/hooks/useAnalytics';
 import { motion, AnimatePresence } from 'framer-motion';
 import { RotateCcw, Eye, Sparkles, Trophy, Clock, Target, Zap } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
@@ -95,6 +96,7 @@ function placeWord(grid: string[][], word: string, row: number, col: number, dir
 }
 
 export default function WordSearchGame() {
+  const { trackGameComplete } = useAnalytics();
   const { lang } = useLanguage();
   const puzzles = lang === 'es' ? PUZZLES_ES : PUZZLES_EN;
   const [puzzleIndex] = useState(() => Math.floor(Math.random() * puzzles.length));
@@ -167,6 +169,12 @@ export default function WordSearchGame() {
       setFoundWords(prev => [...prev, { word: matched.word.toUpperCase(), cells: matched.cells, color }]);
       setLastFound(matched.word.toUpperCase());
       setTimeout(() => setLastFound(null), 2000);
+      
+      // Check if all words found
+      const newFoundCount = foundWords.length + 1;
+      if (newFoundCount === puzzle.words.length) {
+        trackGameComplete('word-search', newFoundCount, true);
+      }
     }
     
     setSelectedCells([]);

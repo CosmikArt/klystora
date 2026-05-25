@@ -1,4 +1,5 @@
 import { useState, useCallback, useEffect, useRef } from 'react';
+import { useAnalytics } from '@/hooks/useAnalytics';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Shuffle, RotateCcw, Check, X, CircleHelp, Clock } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
@@ -20,6 +21,7 @@ interface SolvedCategory {
 }
 
 export default function ConnectionsGame() {
+  const { trackGameComplete } = useAnalytics();
   const { lang, t } = useLanguage();
   const [puzzleIndex] = useState(getDailyPuzzleIndex);
   const puzzle = getPuzzle(lang, puzzleIndex);
@@ -100,6 +102,7 @@ export default function ConnectionsGame() {
             setGameWon(true);
             const time = Math.floor((Date.now() - startTime) / 1000);
             setStats((s) => ({ ...s, time, completed: true, score: s.score + Math.max(0, 300 - time) }));
+            trackGameComplete('connections', stats.groupsFound + 1, true);
             confetti({ particleCount: 60, spread: 70, origin: { y: 0.6 }, colors: ['#FF6B3D', '#6845BC', '#4A8B5B', '#D9A93E'] });
             setTimeout(() => setShowStats(true), 600);
           }
@@ -119,6 +122,7 @@ export default function ConnectionsGame() {
       setGameOver(true);
       const time = Math.floor((Date.now() - startTime) / 1000);
       setStats((s) => ({ ...s, time, completed: true }));
+      trackGameComplete('connections', stats.groupsFound, false);
       // Reveal remaining categories
       const remaining = puzzle.categories.filter(
         (c) => !solved.some((s) => s.category.name === c.name)

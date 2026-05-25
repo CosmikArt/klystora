@@ -1,4 +1,5 @@
 import { useState, useCallback, useEffect } from 'react';
+import { useAnalytics } from '@/hooks/useAnalytics';
 import { motion } from 'framer-motion';
 import { RotateCcw, Check, X, Trash2 } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
@@ -6,6 +7,7 @@ import { getPuzzle, isValidWord, canFormWord, getWordScore, shuffleLetters } fro
 import confetti from 'canvas-confetti';
 
 export default function AnagramsGame() {
+  const { trackGameComplete } = useAnalytics();
   const { lang } = useLanguage();
   const [seed] = useState(() => Math.floor(Date.now() / 86400000));
   const puzzle = getPuzzle(seed, lang as 'en' | 'es');
@@ -50,6 +52,7 @@ export default function AnagramsGame() {
       );
       if (allFound || foundWords.length + 1 >= puzzle.targetWords.length * 0.5) {
         setGameWon(true);
+        trackGameComplete('anagrams', score + wordScore, true);
         confetti({ particleCount: 60, spread: 70, origin: { y: 0.6 } });
       }
     } else {

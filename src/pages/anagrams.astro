@@ -1,4 +1,5 @@
 ---
+import PwaInstallPrompt from '@/components/PwaInstallPrompt';
 import Layout from '../layouts/Layout.astro';
 import LazyGameWrapper from '../components/games/LazyGameWrapper';
 
@@ -33,4 +34,5 @@ const description = 'Form words from scrambled letters. A new puzzle every day.'
         </details>
     </section>
   </div>
+  <PwaInstallPrompt client:only="react" />
 </Layout>

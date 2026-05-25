@@ -1,4 +1,5 @@
 import { useState, useCallback } from 'react';
+import { useAnalytics } from '@/hooks/useAnalytics';
 import { motion } from 'framer-motion';
 import { RotateCcw, Check } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
@@ -24,6 +25,7 @@ const PUZZLE_ES = {
 };
 
 export default function CrosswordGame() {
+  const { trackGameComplete } = useAnalytics();
   const { lang } = useLanguage();
   const puzzle = lang === 'es' ? PUZZLE_ES : PUZZLE_EN;
   const [grid, setGrid] = useState(() => 
@@ -106,6 +108,13 @@ export default function CrosswordGame() {
 
   const { correct, total } = checkSolution();
   const isComplete = correct === total && total > 0;
+
+  // Track completion
+  useEffect(() => {
+    if (isComplete) {
+      trackGameComplete('mini-crossword', correct, true);
+    }
+  }, [isComplete, correct, trackGameComplete]);
 
   return (
     <div className="w-full max-w-[520px] mx-auto">

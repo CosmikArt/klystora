@@ -1,4 +1,5 @@
 import { useState, useCallback, useEffect, useRef } from 'react';
+import { useAnalytics } from '@/hooks/useAnalytics';
 import { motion, AnimatePresence } from 'framer-motion';
 import { RotateCcw, Check, X, Lightbulb, Clock, ArrowDown } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
@@ -21,6 +22,7 @@ interface GameStats {
 }
 
 export default function WordLadderGame() {
+  const { trackGameComplete } = useAnalytics();
   const { lang } = useLanguage();
   const [puzzleIndex] = useState(getDailyPuzzleIndex);
   const puzzle = getPuzzle(lang, puzzleIndex);
@@ -130,6 +132,7 @@ export default function WordLadderGame() {
         completed: true,
         score: 500 + stepBonus + timeBonus - s.hintsUsed * 50,
       }));
+      trackGameComplete('word-ladder', ladder.length + 1, true);
       confetti({ particleCount: 60, spread: 70, origin: { y: 0.6 }, colors: ['#FF6B3D', '#6845BC', '#4A8B5B', '#D9A93E'] });
       setTimeout(() => setShowStats(true), 600);
     } else if (ladder.length + 1 >= puzzle.maxSteps) {
@@ -137,6 +140,7 @@ export default function WordLadderGame() {
       setGameOver(true);
       const time = Math.floor((Date.now() - startTime) / 1000);
       setStats((s) => ({ ...s, time, completed: true, score: Math.max(0, 100 - s.hintsUsed * 50) }));
+      trackGameComplete('word-ladder', ladder.length + 1, false);
       setTimeout(() => setShowStats(true), 600);
     }
   }, [currentInput, gameWon, gameOver, wordLen, getLastWord, puzzle.targetWord, puzzle.optimalPath.length, puzzle.maxSteps, lang, ladder.length, startTime]);

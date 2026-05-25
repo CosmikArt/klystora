@@ -1,4 +1,5 @@
 import { useState, useCallback } from 'react';
+import { useAnalytics } from '@/hooks/useAnalytics';
 import { motion, AnimatePresence } from 'framer-motion';
 import { RotateCcw, Trophy, Clock, Zap, Star } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
@@ -36,6 +37,7 @@ function shuffle<T>(arr: T[]): T[] {
 }
 
 export default function TriviaGame() {
+  const { trackGameComplete } = useAnalytics();
   const { lang } = useLanguage();
   const questions = lang === 'es' ? QUESTIONS_ES : QUESTIONS_EN;
   const [shuffled] = useState(() => shuffle(questions).slice(0, 5));
@@ -63,6 +65,7 @@ export default function TriviaGame() {
         setShowResult(false);
       } else {
         setIsComplete(true);
+        trackGameComplete('trivia', score + (correct ? 1 : 0), (score + (correct ? 1 : 0)) / shuffled.length >= 0.7);
       }
     }, 1500);
   };

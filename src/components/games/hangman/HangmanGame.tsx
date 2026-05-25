@@ -1,4 +1,5 @@
 import { useState, useCallback, useEffect } from 'react';
+import { useAnalytics } from '@/hooks/useAnalytics';
 import { motion, AnimatePresence } from 'framer-motion';
 import { RotateCcw, Trophy, Clock, Heart } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
@@ -11,6 +12,7 @@ const HANGMAN_PARTS = [
 ];
 
 export default function HangmanGame() {
+  const { trackGameComplete } = useAnalytics();
   const { lang } = useLanguage();
   const words = lang === 'es' ? WORDS_ES : WORDS_EN;
   const [word] = useState(() => words[Math.floor(Math.random() * words.length)]);
@@ -52,6 +54,13 @@ export default function HangmanGame() {
   const isWon = word.split('').every(c => guessed.has(c));
   const isLost = wrongGuesses >= 6;
   const isComplete = isWon || isLost;
+
+  // Track game completion
+  useEffect(() => {
+    if (isComplete) {
+      trackGameComplete('hangman', 6 - wrongGuesses, isWon);
+    }
+  }, [isComplete, isWon, wrongGuesses, trackGameComplete]);
 
   const formatTime = (s: number) => {
     const m = Math.floor(s / 60);

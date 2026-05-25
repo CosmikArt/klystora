@@ -73,6 +73,15 @@ const currentPath = Astro.url.pathname;
     <!-- Plausible Analytics -->
     <Plausible />
     
+    <!-- PWA Install Prompt -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').catch(() => {});
+        });
+      }
+    </script>
+    
     <!-- Schema.org Organization -->
     <script type="application/ld+json">
       {
