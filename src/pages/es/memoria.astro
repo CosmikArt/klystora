@@ -1,0 +1,31 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import MemoryWrapper from '../../components/games/memory/MemoryWrapper';
+
+const title = 'Memoria — Klystora';
+const description = '¡Prueba tu memoria! Encuentra todos los pares de cartas en la menor cantidad de movimientos posible.';
+const ogImage = '/og/default.jpg';
+---
+
+<Layout title={title} description={description} ogImage={ogImage}>
+  <div class="max-w-2xl mx-auto px-4 py-8">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-bold">Memoria</h1>
+      <p class="text-sand-500 mt-1">Encuentra todos los pares</p>
+    </div>
+    
+    <MemoryWrapper lang="es" client:only="react" />
+    
+    <article class="mt-16 max-w-none">
+      <h2 class="text-2xl font-bold mb-4">Cómo Jugar Memoria</h2>
+      <p class="text-sand-500 mb-4">Memoria es un juego clásico de cartas que pone a prueba tu memoria visual y concentración.</p>
+      <ul class="space-y-2 mb-6">
+        <li>Haz clic en una carta para voltearla</li>
+        <li>Haz clic en otra carta para encontrar su par</li>
+        <li>Si coinciden, se quedan boca arriba</li>
+        <li>Si no, se voltean de nuevo — ¡recuerda sus posiciones!</li>
+      </ul>
+      <p class="text-sand-500">Intenta encontrar todos los pares en la menor cantidad de movimientos posible. ¡Cada juego genera un tablero aleatorio nuevo!</p>
+    </article>
+  </div>
+</Layout>

@@ -1,0 +1,31 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import MemoryWrapper from '../../components/games/memory/MemoryWrapper';
+
+const title = 'Memory Match — Klystora';
+const description = "Test your memory! Find all matching pairs of cards in the fewest moves possible.";
+const ogImage = '/og/default.jpg';
+---
+
+<Layout title={title} description={description} ogImage={ogImage}>
+  <div class="max-w-2xl mx-auto px-4 py-8">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-bold">Memory Match</h1>
+      <p class="text-sand-500 mt-1">Find all the matching pairs</p>
+    </div>
+    
+    <MemoryWrapper lang="de" client:only="react" />
+    
+    <article class="mt-16 max-w-none">
+      <h2 class="text-2xl font-bold mb-4">How to Play Memory Match</h2>
+      <p class="text-sand-500 mb-4">Memory Match is a classic card-matching game that tests your visual memory and concentration.</p>
+      <ul class="space-y-2 mb-6">
+        <li>Click a card to flip it over</li>
+        <li>Click another card to find its match</li>
+        <li>If they match, they stay face-up</li>
+        <li>If not, they flip back — remember their positions!</li>
+      </ul>
+      <p class="text-sand-500">Try to find all pairs in the fewest moves possible. A new random board is generated each game!</p>
+    </article>
+  </div>
+</Layout>

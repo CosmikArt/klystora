@@ -1,0 +1,31 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SudokuWrapper from '../../components/games/sudoku/SudokuWrapper';
+
+const title = 'Sudoku — Klystora';
+const description = "Classic 9x9 Sudoku puzzle. Fill the grid so every row, column, and 3x3 box contains digits 1-9.";
+const ogImage = '/og/default.jpg';
+---
+
+<Layout title={title} description={description} ogImage={ogImage}>
+  <div class="max-w-2xl mx-auto px-4 py-8">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-bold">Sudoku</h1>
+      <p class="text-sand-500 mt-1">Fill the 9×9 grid with digits 1-9</p>
+    </div>
+    
+    <SudokuWrapper lang="nl" client:only="react" />
+    
+    <article class="mt-16 max-w-none">
+      <h2 class="text-2xl font-bold mb-4">How to Play Sudoku</h2>
+      <p class="text-sand-500 mb-4">Sudoku is a logic-based number placement puzzle. The objective is to fill a 9×9 grid so that each column, each row, and each of the nine 3×3 boxes contains all of the digits from 1 to 9.</p>
+      <ul class="space-y-2 mb-6">
+        <li>Each row must contain the numbers 1-9 exactly once</li>
+        <li>Each column must contain the numbers 1-9 exactly once</li>
+        <li>Each 3×3 box must contain the numbers 1-9 exactly once</li>
+        
+      </ul>
+      <p class="text-sand-500">Use the number pad below the grid to fill in cells. Tap a cell to select it, then tap a number. Use hints if you get stuck!</p>
+    </article>
+  </div>
+</Layout>

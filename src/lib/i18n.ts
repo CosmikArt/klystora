@@ -37,6 +37,10 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     spellingBee: 'spelling-bee',
     wordLadder: 'word-ladder',
     rosco: 'word-wheel',
+    sudoku: 'sudoku',
+    memory: 'memory',
+    hangman: 'hangman',
+    trivia: 'trivia',
   },
   es: {
     dailyWord: 'palabra-diaria',
@@ -47,6 +51,10 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     spellingBee: 'colmena',
     wordLadder: 'escalera-de-palabras',
     rosco: 'rosco',
+    sudoku: 'sudoku',
+    memory: 'memoria',
+    hangman: 'ahorcado',
+    trivia: 'trivia',
   },
   zh: {
     dailyWord: 'mei-ri-yi-ci',
@@ -57,6 +65,10 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     spellingBee: 'pin-xie-bi-sai',
     wordLadder: 'dan-ci-ti-ti',
     rosco: 'zhuan-lun-pan',
+    sudoku: 'shu-du',
+    memory: 'ji-yi',
+    hangman: 'jiao-xing',
+    trivia: 'wen-da',
   },
   hi: {
     dailyWord: 'din-bhar-ka-shabd',
@@ -67,6 +79,10 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     spellingBee: 'vartani-madhumakkhi',
     wordLadder: 'shabd-seedi',
     rosco: 'shabd-chakra',
+    sudoku: 'sudoku',
+    memory: 'yaadash',
+    hangman: 'faansi',
+    trivia: 'prashnottari',
   },
   pt: {
     dailyWord: 'palavra-diaria',
@@ -77,6 +93,10 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     spellingBee: 'abelha-de-ortografia',
     wordLadder: 'escada-de-palavras',
     rosco: 'roda-de-palavras',
+    sudoku: 'sudoku',
+    memory: 'memoria',
+    hangman: 'forca',
+    trivia: 'trivia',
   },
   bn: {
     dailyWord: 'doinik-shobdo',
@@ -87,6 +107,10 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     spellingBee: 'barnona-moumachhi',
     wordLadder: 'shobdo-siri',
     rosco: 'shobdo-chakra',
+    sudoku: 'sudoku',
+    memory: 'smriti',
+    hangman: 'phashi',
+    trivia: 'proshno',
   },
   ru: {
     dailyWord: 'slovo-dnya',
@@ -97,6 +121,10 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     spellingBee: 'pchela-orfografii',
     wordLadder: 'lestnitsa-slov',
     rosco: 'koleso-slov',
+    sudoku: 'sudoku',
+    memory: 'pamyat',
+    hangman: 'viselitsa',
+    trivia: 'viktorna',
   },
   ja: {
     dailyWord: 'mainichi-no-kotoba',
@@ -107,6 +135,10 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     spellingBee: 'supellingu-bii',
     wordLadder: 'tango-hashi',
     rosco: 'tango-sharin',
+    sudoku: 'sudoku',
+    memory: 'kioku',
+    hangman: 'tari',
+    trivia: 'torivia',
   },
   de: {
     dailyWord: 'taegliches-wort',
@@ -117,6 +149,10 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     spellingBee: 'rechtschreib-biene',
     wordLadder: 'wortleiter',
     rosco: 'wortrad',
+    sudoku: 'sudoku',
+    memory: 'gedaechtnis',
+    hangman: 'galgen',
+    trivia: 'quiz',
   },
   ko: {
     dailyWord: 'maeil-han-geul',
@@ -127,6 +163,10 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     spellingBee: 'pyeongbeob-bbeol',
     wordLadder: 'daneo-saedeul',
     rosco: 'daneo-hoihwan',
+    sudoku: 'sudoku',
+    memory: 'gieok',
+    hangman: 'hyeongi',
+    trivia: 'sijag',
   },
   fr: {
     dailyWord: 'mot-du-jour',
@@ -137,6 +177,10 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     spellingBee: 'abeille-d-orthographe',
     wordLadder: 'echelle-de-mots',
     rosco: 'roue-de-mots',
+    sudoku: 'sudoku',
+    memory: 'memoire',
+    hangman: 'pendu',
+    trivia: 'trivia',
   },
   tr: {
     dailyWord: 'gunun-kelimesi',
@@ -147,6 +191,10 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     spellingBee: 'yazim-ari',
     wordLadder: 'kelime-merdiveni',
     rosco: 'kelime-tekerlegi',
+    sudoku: 'sudoku',
+    memory: 'hafiza',
+    hangman: 'adam-asma',
+    trivia: 'bilgi',
   },
   it: {
     dailyWord: 'parola-del-giorno',
@@ -157,6 +205,10 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     spellingBee: 'ape-ortografica',
     wordLadder: 'scala-di-parole',
     rosco: 'ruota-di-parole',
+    sudoku: 'sudoku',
+    memory: 'memoria',
+    hangman: 'impiccato',
+    trivia: 'trivia',
   },
   pl: {
     dailyWord: 'slowo-dnia',
@@ -167,6 +219,10 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     spellingBee: 'pszczola-ortografii',
     wordLadder: 'drabina-slow',
     rosco: 'kolo-slow',
+    sudoku: 'sudoku',
+    memory: 'pamiec',
+    hangman: 'wisielec',
+    trivia: 'ciekawostki',
   },
   nl: {
     dailyWord: 'dagelijks-woord',
@@ -177,6 +233,10 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     spellingBee: 'spelling-bij',
     wordLadder: 'woordladder',
     rosco: 'woordwiel',
+    sudoku: 'sudoku',
+    memory: 'geheugen',
+    hangman: 'galgje',
+    trivia: 'weetjes',
   },
   uk: {
     dailyWord: 'slovo-dnya',
@@ -187,6 +247,10 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     spellingBee: 'bdzhola-ortografiyi',
     wordLadder: 'dribynka-sliv',
     rosco: 'koleso-sliv',
+    sudoku: 'sudoku',
+    memory: 'pamyat',
+    hangman: 'shibenitsya',
+    trivia: 'viktorina',
   },
   ro: {
     dailyWord: 'cuvantul-zilei',
@@ -197,6 +261,10 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     spellingBee: 'albina-ortografiei',
     wordLadder: 'scara-cuvintelor',
     rosco: 'roata-cuvintelor',
+    sudoku: 'sudoku',
+    memory: 'memorie',
+    hangman: 'spanzuratoarea',
+    trivia: 'trivia',
   },
   el: {
     dailyWord: 'i-lexi-tis-imeras',
@@ -207,6 +275,10 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     spellingBee: 'melissa-orthografias',
     wordLadder: 'skala-lekseon',
     rosco: 'trochos-lekseon',
+    sudoku: 'sudoku',
+    memory: 'mnimi',
+    hangman: 'kremala',
+    trivia: 'gnoseis',
   },
   cs: {
     dailyWord: 'slovo-dne',
@@ -217,6 +289,10 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     spellingBee: 'vcela-pravopisu',
     wordLadder: 'retez-slov',
     rosco: 'kolo-slov',
+    sudoku: 'sudoku',
+    memory: 'pamet',
+    hangman: 'sibenice',
+    trivia: 'kviz',
   },
   sv: {
     dailyWord: 'dagens-ord',
@@ -227,6 +303,10 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     spellingBee: 'stavnings-bi',
     wordLadder: 'ordstege',
     rosco: 'ordhjul',
+    sudoku: 'sudoku',
+    memory: 'minne',
+    hangman: 'hangagubbe',
+    trivia: 'trivia',
   },
   hu: {
     dailyWord: 'a-napi-szo',
@@ -237,6 +317,10 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     spellingBee: 'helyesirasi-meh',
     wordLadder: 'szoletra',
     rosco: 'szokerék',
+    sudoku: 'sudoku',
+    memory: 'memoria',
+    hangman: 'akasztofa',
+    trivia: 'kviz',
   },
   id: {
     dailyWord: 'kata-harian',
@@ -247,6 +331,10 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     spellingBee: 'lebah-ejaan',
     wordLadder: 'tangga-kata',
     rosco: 'roda-kata',
+    sudoku: 'sudoku',
+    memory: 'ingatan',
+    hangman: 'tebak-kata',
+    trivia: 'trivia',
   },
   vi: {
     dailyWord: 'tu-ngay',
@@ -257,6 +345,10 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     spellingBee: 'ong-chinh-ta',
     wordLadder: 'thang-tu',
     rosco: 'banh-xe-tu-vung',
+    sudoku: 'sudoku',
+    memory: 'tri-nho',
+    hangman: 'nguoi-treo-co',
+    trivia: 'do-vui',
   },
   th: {
     dailyWord: 'kham-pra-jam-wan',
@@ -267,6 +359,10 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     spellingBee: 'phueng-sak-phaasa',
     wordLadder: 'bansai-kham',
     rosco: 'long-kham',
+    sudoku: 'sudoku',
+    memory: 'kwam-jam',
+    hangman: 'tua-tak',
+    trivia: 'kham-tam',
   },
   da: {
     dailyWord: 'dagens-ord',
@@ -277,6 +373,10 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     spellingBee: 'stavnings-bi',
     wordLadder: 'ordstige',
     rosco: 'ordhjul',
+    sudoku: 'sudoku',
+    memory: 'hukommelse',
+    hangman: 'galge',
+    trivia: 'trivia',
   },
   fi: {
     dailyWord: 'paivan-sana',
@@ -287,6 +387,10 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     spellingBee: 'oikeinkirjoitus-mehilainen',
     wordLadder: 'sanarappuset',
     rosco: 'sananpyora',
+    sudoku: 'sudoku',
+    memory: 'muisti',
+    hangman: 'hirttopuu',
+    trivia: 'trivia',
   },
   no: {
     dailyWord: 'dagens-ord',
@@ -297,6 +401,10 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     spellingBee: 'stave-bie',
     wordLadder: 'ordstige',
     rosco: 'ordhjul',
+    sudoku: 'sudoku',
+    memory: 'hukommelse',
+    hangman: 'hangman',
+    trivia: 'quiz',
   },
 };
 
@@ -347,7 +455,11 @@ const messages: Record<Locale, any> = {
       connections: { name: 'Connections', desc: 'Group words by theme' },
       spellingBee: { name: 'Spelling Bee', desc: 'Words from 7 letters' },
       wordLadder: { name: 'Word Ladder', desc: 'Chain words by one letter' },
-      rosco: { name: 'Word Wheel', desc: 'One word per letter' }
+      rosco: { name: 'Word Wheel', desc: 'One word per letter' },
+      sudoku: { name: 'Sudoku', desc: 'Fill the 9×9 grid with digits 1-9' },
+      memory: { name: 'Memory Match', desc: 'Find all matching pairs' },
+      hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
+      trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
     },
     footer: { games: 'Games', company: 'Company', legal: 'Legal', privacy: 'Privacy', terms: 'Terms', cookies: 'Cookies' }
   },
@@ -366,7 +478,11 @@ const messages: Record<Locale, any> = {
       connections: { name: 'Conexiones', desc: 'Agrupa palabras por tema' },
       spellingBee: { name: 'Colmena', desc: 'Palabras con 7 letras' },
       wordLadder: { name: 'Escalera de Palabras', desc: 'Encadena palabras cambiando una letra' },
-      rosco: { name: 'Rosco', desc: 'Una palabra por letra' }
+      rosco: { name: 'Rosco', desc: 'Una palabra por letra' },
+      sudoku: { name: 'Sudoku', desc: 'Llena la cuadrícula 9×9 con dígitos 1-9' },
+      memory: { name: 'Memoria', desc: 'Encuentra todos los pares coincidentes' },
+      hangman: { name: 'Ahorcado', desc: 'Adivina la palabra antes de que sea tarde' },
+      trivia: { name: 'Trivia', desc: 'Pon a prueba tu conocimiento del lenguaje' },
     },
     footer: { games: 'Juegos', company: 'Empresa', legal: 'Legal', privacy: 'Privacidad', terms: 'Términos', cookies: 'Cookies' }
   },
@@ -385,7 +501,11 @@ const messages: Record<Locale, any> = {
       connections: { name: '联想', desc: '按主题分组单词' },
       spellingBee: { name: '拼写比赛', desc: '用7个字母组词' },
       wordLadder: { name: '单词阶梯', desc: '每次改变一个字母' },
-      rosco: { name: '转轮盘', desc: '每个字母一个单词' }
+      rosco: { name: '转轮盘', desc: '每个字母一个单词' },
+      sudoku: { name: 'Sudoku', desc: 'Fill the 9×9 grid with digits 1-9' },
+      memory: { name: 'Memory Match', desc: 'Find all matching pairs' },
+      hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
+      trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
     },
     footer: { games: '游戏', company: '公司', legal: '法律', privacy: '隐私', terms: '条款', cookies: 'Cookie' }
   },
@@ -404,7 +524,11 @@ const messages: Record<Locale, any> = {
       connections: { name: 'संबंध', desc: 'शब्दों को विषय के अनुसार समूहित करें' },
       spellingBee: { name: 'वर्तनी मधुमक्खी', desc: '7 अक्षरों से शब्द बनाएं' },
       wordLadder: { name: 'शब्द सीढ़ी', desc: 'एक-एक अक्षर बदलकर शब्द जोड़ें' },
-      rosco: { name: 'शब्द चक्र', desc: 'प्रति अक्षर एक शब्द' }
+      rosco: { name: 'शब्द चक्र', desc: 'प्रति अक्षर एक शब्द' },
+      sudoku: { name: 'Sudoku', desc: 'Fill the 9×9 grid with digits 1-9' },
+      memory: { name: 'Memory Match', desc: 'Find all matching pairs' },
+      hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
+      trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
     },
     footer: { games: 'खेल', company: 'कंपनी', legal: 'कानूनी', privacy: 'गोपनीयता', terms: 'शर्तें', cookies: 'Cookies' }
   },
@@ -423,7 +547,11 @@ const messages: Record<Locale, any> = {
       connections: { name: 'Conexões', desc: 'Agrupe palavras por tema' },
       spellingBee: { name: 'Abelha de Ortografia', desc: 'Palavras com 7 letras' },
       wordLadder: { name: 'Escada de Palavras', desc: 'Encadeie palavras mudando uma letra' },
-      rosco: { name: 'Roda de Palavras', desc: 'Uma palavra por letra' }
+      rosco: { name: 'Roda de Palavras', desc: 'Uma palavra por letra' },
+      sudoku: { name: 'Sudoku', desc: 'Fill the 9×9 grid with digits 1-9' },
+      memory: { name: 'Memory Match', desc: 'Find all matching pairs' },
+      hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
+      trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
     },
     footer: { games: 'Jogos', company: 'Empresa', legal: 'Legal', privacy: 'Privacidade', terms: 'Termos', cookies: 'Cookies' }
   },
@@ -442,7 +570,11 @@ const messages: Record<Locale, any> = {
       connections: { name: 'সম্পর্ক', desc: 'শব্দগুলোকে থিম অনুযায়ী গ্রুপ করুন' },
       spellingBee: { name: 'বর্ণনা মৌমাছি', desc: '৭টি অক্ষর দিয়ে শব্দ তৈরি করুন' },
       wordLadder: { name: 'শব্দ সিঁড়ি', desc: 'একটি অক্ষর পরিবর্তন করে শব্দ যোগ করুন' },
-      rosco: { name: 'শব্দ চক্র', desc: 'প্রতি অক্ষরে একটি শব্দ' }
+      rosco: { name: 'শব্দ চক্র', desc: 'প্রতি অক্ষরে একটি শব্দ' },
+      sudoku: { name: 'Sudoku', desc: 'Fill the 9×9 grid with digits 1-9' },
+      memory: { name: 'Memory Match', desc: 'Find all matching pairs' },
+      hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
+      trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
     },
     footer: { games: 'খেলা', company: 'কোম্পানি', legal: 'আইনি', privacy: 'গোপনীয়তা', terms: 'শর্তাবলী', cookies: 'Cookies' }
   },
@@ -461,7 +593,11 @@ const messages: Record<Locale, any> = {
       connections: { name: 'Связи', desc: 'Сгруппируйте слова по теме' },
       spellingBee: { name: 'Пчела орфографии', desc: 'Слова из 7 букв' },
       wordLadder: { name: 'Лестница слов', desc: 'Связывайте слова, меняя одну букву' },
-      rosco: { name: 'Колесо слов', desc: 'По слову на каждую букву' }
+      rosco: { name: 'Колесо слов', desc: 'По слову на каждую букву' },
+      sudoku: { name: 'Sudoku', desc: 'Fill the 9×9 grid with digits 1-9' },
+      memory: { name: 'Memory Match', desc: 'Find all matching pairs' },
+      hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
+      trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
     },
     footer: { games: 'Игры', company: 'Компания', legal: 'Правовая информация', privacy: 'Конфиденциальность', terms: 'Условия', cookies: 'Cookies' }
   },
@@ -480,7 +616,11 @@ const messages: Record<Locale, any> = {
       connections: { name: '連想', desc: '単語をテーマごとにグループ化しよう' },
       spellingBee: { name: 'スペリングビー', desc: '7文字から単語を作ろう' },
       wordLadder: { name: '単語はしご', desc: '1文字ずつ変えて単語をつなごう' },
-      rosco: { name: '単語車輪', desc: '各文字1単語' }
+      rosco: { name: '単語車輪', desc: '各文字1単語' },
+      sudoku: { name: 'Sudoku', desc: 'Fill the 9×9 grid with digits 1-9' },
+      memory: { name: 'Memory Match', desc: 'Find all matching pairs' },
+      hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
+      trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
     },
     footer: { games: 'ゲーム', company: '会社', legal: '法的情報', privacy: 'プライバシー', terms: '規約', cookies: 'Cookie' }
   },
@@ -499,7 +639,11 @@ const messages: Record<Locale, any> = {
       connections: { name: 'Verbindungen', desc: 'Gruppiere Wörter nach Thema' },
       spellingBee: { name: 'Rechtschreib-Biene', desc: 'Wörter aus 7 Buchstaben' },
       wordLadder: { name: 'Wortleiter', desc: 'Verkette Wörter mit einem Buchstabenwechsel' },
-      rosco: { name: 'Wortrad', desc: 'Ein Wort pro Buchstabe' }
+      rosco: { name: 'Wortrad', desc: 'Ein Wort pro Buchstabe' },
+      sudoku: { name: 'Sudoku', desc: 'Fill the 9×9 grid with digits 1-9' },
+      memory: { name: 'Memory Match', desc: 'Find all matching pairs' },
+      hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
+      trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
     },
     footer: { games: 'Spiele', company: 'Unternehmen', legal: 'Rechtliches', privacy: 'Datenschutz', terms: 'Nutzungsbedingungen', cookies: 'Cookies' }
   },
@@ -518,7 +662,11 @@ const messages: Record<Locale, any> = {
       connections: { name: '연결', desc: '단어를 주제별로 그룹화하세요' },
       spellingBee: { name: '스펠링 비', desc: '7개 글자로 단어를 만드세요' },
       wordLadder: { name: '단어 사다리', desc: '한 글자씩 바꿔 단어를 연결하세요' },
-      rosco: { name: '단어 회전판', desc: '글자마다 한 단어' }
+      rosco: { name: '단어 회전판', desc: '글자마다 한 단어' },
+      sudoku: { name: 'Sudoku', desc: 'Fill the 9×9 grid with digits 1-9' },
+      memory: { name: 'Memory Match', desc: 'Find all matching pairs' },
+      hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
+      trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
     },
     footer: { games: '게임', company: '회사', legal: '법률', privacy: '개인정보', terms: '약관', cookies: 'Cookie' }
   },
@@ -537,7 +685,11 @@ const messages: Record<Locale, any> = {
       connections: { name: 'Connexions', desc: 'Groupez les mots par thème' },
       spellingBee: { name: 'Abeille d\'Orthographe', desc: 'Mots de 7 lettres' },
       wordLadder: { name: 'Échelle de Mots', desc: 'Enchaînez les mots en changeant une lettre' },
-      rosco: { name: 'Roue de Mots', desc: 'Un mot par lettre' }
+      rosco: { name: 'Roue de Mots', desc: 'Un mot par lettre' },
+      sudoku: { name: 'Sudoku', desc: 'Fill the 9×9 grid with digits 1-9' },
+      memory: { name: 'Memory Match', desc: 'Find all matching pairs' },
+      hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
+      trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
     },
     footer: { games: 'Jeux', company: 'Entreprise', legal: 'Mentions légales', privacy: 'Confidentialité', terms: 'Conditions', cookies: 'Cookies' }
   },
@@ -556,7 +708,11 @@ const messages: Record<Locale, any> = {
       connections: { name: 'Bağlantılar', desc: 'Kelimeleri temaya göre grupla' },
       spellingBee: { name: 'Yazım Arısı', desc: '7 harften kelime oluştur' },
       wordLadder: { name: 'Kelime Merdiveni', desc: 'Bir harf değiştirerek kelime zinciri oluştur' },
-      rosco: { name: 'Kelime Tekerleği', desc: 'Her harfe bir kelime' }
+      rosco: { name: 'Kelime Tekerleği', desc: 'Her harfe bir kelime' },
+      sudoku: { name: 'Sudoku', desc: 'Fill the 9×9 grid with digits 1-9' },
+      memory: { name: 'Memory Match', desc: 'Find all matching pairs' },
+      hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
+      trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
     },
     footer: { games: 'Oyunlar', company: 'Şirket', legal: 'Yasal', privacy: 'Gizlilik', terms: 'Koşullar', cookies: 'Cookies' }
   },
@@ -575,7 +731,11 @@ const messages: Record<Locale, any> = {
       connections: { name: 'Connessioni', desc: 'Raggruppa parole per tema' },
       spellingBee: { name: 'Ape Ortografica', desc: 'Parole di 7 lettere' },
       wordLadder: { name: 'Scala di Parole', desc: 'Concatena parole cambiando una lettera' },
-      rosco: { name: 'Ruota di Parole', desc: 'Una parola per lettera' }
+      rosco: { name: 'Ruota di Parole', desc: 'Una parola per lettera' },
+      sudoku: { name: 'Sudoku', desc: 'Fill the 9×9 grid with digits 1-9' },
+      memory: { name: 'Memory Match', desc: 'Find all matching pairs' },
+      hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
+      trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
     },
     footer: { games: 'Giochi', company: 'Azienda', legal: 'Legale', privacy: 'Privacy', terms: 'Termini', cookies: 'Cookies' }
   },
@@ -594,7 +754,11 @@ const messages: Record<Locale, any> = {
       connections: { name: 'Połączenia', desc: 'Grupuj słowa według tematu' },
       spellingBee: { name: 'Pszczoła Ortografii', desc: 'Słowa z 7 liter' },
       wordLadder: { name: 'Drabina Słów', desc: 'Łącz słowa zmieniając jedną literę' },
-      rosco: { name: 'Koło Słów', desc: 'Jedno słowo na literę' }
+      rosco: { name: 'Koło Słów', desc: 'Jedno słowo na literę' },
+      sudoku: { name: 'Sudoku', desc: 'Fill the 9×9 grid with digits 1-9' },
+      memory: { name: 'Memory Match', desc: 'Find all matching pairs' },
+      hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
+      trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
     },
     footer: { games: 'Gry', company: 'Firma', legal: 'Prawne', privacy: 'Prywatność', terms: 'Warunki', cookies: 'Cookies' }
   },
@@ -613,7 +777,11 @@ const messages: Record<Locale, any> = {
       connections: { name: 'Verbanden', desc: 'Groepeer woorden op thema' },
       spellingBee: { name: 'Spelling Bij', desc: 'Woorden van 7 letters' },
       wordLadder: { name: 'Woordladder', desc: 'Koppel woorden door één letter te wisselen' },
-      rosco: { name: 'Woordwiel', desc: 'Eén woord per letter' }
+      rosco: { name: 'Woordwiel', desc: 'Eén woord per letter' },
+      sudoku: { name: 'Sudoku', desc: 'Fill the 9×9 grid with digits 1-9' },
+      memory: { name: 'Memory Match', desc: 'Find all matching pairs' },
+      hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
+      trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
     },
     footer: { games: 'Spellen', company: 'Bedrijf', legal: 'Juridisch', privacy: 'Privacy', terms: 'Voorwaarden', cookies: 'Cookies' }
   },
@@ -632,7 +800,11 @@ const messages: Record<Locale, any> = {
       connections: { name: 'Зв\'язки', desc: 'Згрупуйте слова за темою' },
       spellingBee: { name: 'Бджола орфографії', desc: 'Слова з 7 літер' },
       wordLadder: { name: 'Драбинка слів', desc: "Поєднуйте слова, змінюючи одну літеру" },
-      rosco: { name: 'Колесо слів', desc: 'По слову на кожну літеру' }
+      rosco: { name: 'Колесо слів', desc: 'По слову на кожну літеру' },
+      sudoku: { name: 'Sudoku', desc: 'Fill the 9×9 grid with digits 1-9' },
+      memory: { name: 'Memory Match', desc: 'Find all matching pairs' },
+      hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
+      trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
     },
     footer: { games: 'Ігри', company: 'Компанія', legal: 'Правова інформація', privacy: 'Конфіденційність', terms: 'Умови', cookies: 'Cookies' }
   },
@@ -651,7 +823,11 @@ const messages: Record<Locale, any> = {
       connections: { name: 'Conexiuni', desc: 'Grupează cuvintele după temă' },
       spellingBee: { name: 'Albina Ortografiei', desc: 'Cuvinte de 7 litere' },
       wordLadder: { name: 'Scara Cuvintelor', desc: 'Înlănțuie cuvintele schimbând o literă' },
-      rosco: { name: 'Roata Cuvintelor', desc: 'Un cuvânt pe literă' }
+      rosco: { name: 'Roata Cuvintelor', desc: 'Un cuvânt pe literă' },
+      sudoku: { name: 'Sudoku', desc: 'Fill the 9×9 grid with digits 1-9' },
+      memory: { name: 'Memory Match', desc: 'Find all matching pairs' },
+      hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
+      trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
     },
     footer: { games: 'Jocuri', company: 'Companie', legal: 'Legal', privacy: 'Confidențialitate', terms: 'Termeni', cookies: 'Cookies' }
   },
@@ -670,7 +846,11 @@ const messages: Record<Locale, any> = {
       connections: { name: 'Συνδέσεις', desc: 'Ομαδοποίησε λέξεις ανά θέμα' },
       spellingBee: { name: 'Μέλισσα Ορθογραφίας', desc: 'Λέξεις από 7 γράμματα' },
       wordLadder: { name: 'Σκάλα Λέξεων', desc: 'Σύνδεσε λέξεις αλλάζοντας ένα γράμμα' },
-      rosco: { name: 'Τροχός Λέξεων', desc: 'Μια λέξη ανά γράμμα' }
+      rosco: { name: 'Τροχός Λέξεων', desc: 'Μια λέξη ανά γράμμα' },
+      sudoku: { name: 'Sudoku', desc: 'Fill the 9×9 grid with digits 1-9' },
+      memory: { name: 'Memory Match', desc: 'Find all matching pairs' },
+      hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
+      trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
     },
     footer: { games: 'Παιχνίδια', company: 'Εταιρεία', legal: 'Νομικά', privacy: 'Απόρρητο', terms: 'Όροι', cookies: 'Cookies' }
   },
@@ -689,7 +869,11 @@ const messages: Record<Locale, any> = {
       connections: { name: 'Spojení', desc: 'Seskup slova podle tématu' },
       spellingBee: { name: 'Včela Pravopisu', desc: 'Slova ze 7 písmen' },
       wordLadder: { name: 'Řetěz Slov', desc: 'Spoj slova změnou jednoho písmene' },
-      rosco: { name: 'Kolo Slov', desc: 'Jedno slovo na písmeno' }
+      rosco: { name: 'Kolo Slov', desc: 'Jedno slovo na písmeno' },
+      sudoku: { name: 'Sudoku', desc: 'Fill the 9×9 grid with digits 1-9' },
+      memory: { name: 'Memory Match', desc: 'Find all matching pairs' },
+      hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
+      trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
     },
     footer: { games: 'Hry', company: 'Společnost', legal: 'Právní', privacy: 'Soukromí', terms: 'Podmínky', cookies: 'Cookies' }
   },
@@ -708,7 +892,11 @@ const messages: Record<Locale, any> = {
       connections: { name: 'Kopplingar', desc: 'Gruppera ord efter tema' },
       spellingBee: { name: 'Stavnings-Bi', desc: 'Ord på 7 bokstäver' },
       wordLadder: { name: 'Ordstege', desc: 'Kedja ord genom att byta en bokstav' },
-      rosco: { name: 'Ordhjul', desc: 'Ett ord per bokstav' }
+      rosco: { name: 'Ordhjul', desc: 'Ett ord per bokstav' },
+      sudoku: { name: 'Sudoku', desc: 'Fill the 9×9 grid with digits 1-9' },
+      memory: { name: 'Memory Match', desc: 'Find all matching pairs' },
+      hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
+      trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
     },
     footer: { games: 'Spel', company: 'Företag', legal: 'Juridisk', privacy: 'Integritet', terms: 'Villkor', cookies: 'Cookies' }
   },
@@ -727,7 +915,11 @@ const messages: Record<Locale, any> = {
       connections: { name: 'Kapcsolatok', desc: 'Csoportosítsd a szavakat téma szerint' },
       spellingBee: { name: 'Helyesírási Méh', desc: 'Szavak 7 betűből' },
       wordLadder: { name: 'Szólétra', desc: 'Láncold a szavakat egy betű cseréjével' },
-      rosco: { name: 'Szókerék', desc: 'Betűnként egy szó' }
+      rosco: { name: 'Szókerék', desc: 'Betűnként egy szó' },
+      sudoku: { name: 'Sudoku', desc: 'Fill the 9×9 grid with digits 1-9' },
+      memory: { name: 'Memory Match', desc: 'Find all matching pairs' },
+      hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
+      trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
     },
     footer: { games: 'Játékok', company: 'Vállalat', legal: 'Jogi', privacy: 'Adatvédelem', terms: 'Feltételek', cookies: 'Cookies' }
   },
@@ -746,7 +938,11 @@ const messages: Record<Locale, any> = {
       connections: { name: 'Koneksi', desc: 'Kelompokkan kata berdasarkan tema' },
       spellingBee: { name: 'Lebah Ejaan', desc: 'Kata dari 7 huruf' },
       wordLadder: { name: 'Tangga Kata', desc: 'Rantai kata dengan mengubah satu huruf' },
-      rosco: { name: 'Roda Kata', desc: 'Satu kata per huruf' }
+      rosco: { name: 'Roda Kata', desc: 'Satu kata per huruf' },
+      sudoku: { name: 'Sudoku', desc: 'Fill the 9×9 grid with digits 1-9' },
+      memory: { name: 'Memory Match', desc: 'Find all matching pairs' },
+      hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
+      trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
     },
     footer: { games: 'Permainan', company: 'Perusahaan', legal: 'Hukum', privacy: 'Privasi', terms: 'Syarat', cookies: 'Cookies' }
   },
@@ -765,7 +961,11 @@ const messages: Record<Locale, any> = {
       connections: { name: 'Kết Nối', desc: 'Nhóm từ theo chủ đề' },
       spellingBee: { name: 'Ong Chính Tả', desc: 'Từ từ 7 chữ cái' },
       wordLadder: { name: 'Thang Từ', desc: 'Nối từ bằng cách thay đổi một chữ cái' },
-      rosco: { name: 'Bánh Xe Từ Vựng', desc: 'Một từ mỗi chữ cái' }
+      rosco: { name: 'Bánh Xe Từ Vựng', desc: 'Một từ mỗi chữ cái' },
+      sudoku: { name: 'Sudoku', desc: 'Fill the 9×9 grid with digits 1-9' },
+      memory: { name: 'Memory Match', desc: 'Find all matching pairs' },
+      hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
+      trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
     },
     footer: { games: 'Trò chơi', company: 'Công ty', legal: 'Pháp lý', privacy: 'Bảo mật', terms: 'Điều khoản', cookies: 'Cookies' }
   },
@@ -784,7 +984,11 @@ const messages: Record<Locale, any> = {
       connections: { name: 'ความสัมพันธ์', desc: 'จัดกลุ่มคำตามหัวข้อ' },
       spellingBee: { name: 'ผึ้งสะกดคำ', desc: 'คำจาก 7 ตัวอักษร' },
       wordLadder: { name: 'บันไดคำศัพท์', desc: 'เชื่อมคำโดยเปลี่ยนตัวอักษรทีละตัว' },
-      rosco: { name: 'วงล้อคำศัพท์', desc: 'คำละตัวอักษร' }
+      rosco: { name: 'วงล้อคำศัพท์', desc: 'คำละตัวอักษร' },
+      sudoku: { name: 'Sudoku', desc: 'Fill the 9×9 grid with digits 1-9' },
+      memory: { name: 'Memory Match', desc: 'Find all matching pairs' },
+      hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
+      trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
     },
     footer: { games: 'เกม', company: 'บริษัท', legal: 'กฎหมาย', privacy: 'ความเป็นส่วนตัว', terms: 'เงื่อนไข', cookies: 'Cookies' }
   },
@@ -803,7 +1007,11 @@ const messages: Record<Locale, any> = {
       connections: { name: 'Forbindelser', desc: 'Gruppér ord efter tema' },
       spellingBee: { name: 'Stave-Bi', desc: 'Ord på 7 bogstaver' },
       wordLadder: { name: 'Ordstige', desc: 'Kæd ord sammen ved at skifte ét bogstav' },
-      rosco: { name: 'Ordhjul', desc: 'Ét ord per bogstav' }
+      rosco: { name: 'Ordhjul', desc: 'Ét ord per bogstav' },
+      sudoku: { name: 'Sudoku', desc: 'Fill the 9×9 grid with digits 1-9' },
+      memory: { name: 'Memory Match', desc: 'Find all matching pairs' },
+      hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
+      trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
     },
     footer: { games: 'Spil', company: 'Virksomhed', legal: 'Juridisk', privacy: 'Privatliv', terms: 'Vilkår', cookies: 'Cookies' }
   },
@@ -822,7 +1030,11 @@ const messages: Record<Locale, any> = {
       connections: { name: 'Yhteydet', desc: 'Ryhmittele sanat teeman mukaan' },
       spellingBee: { name: 'Oikeinkirjoitus-Mehiläinen', desc: 'Sanoja 7 kirjaimesta' },
       wordLadder: { name: 'Sanarappuset', desc: 'Yhdistä sanat vaihtamalla yksi kirjain' },
-      rosco: { name: 'Sananpyörä', desc: 'Yksi sana per kirjain' }
+      rosco: { name: 'Sananpyörä', desc: 'Yksi sana per kirjain' },
+      sudoku: { name: 'Sudoku', desc: 'Fill the 9×9 grid with digits 1-9' },
+      memory: { name: 'Memory Match', desc: 'Find all matching pairs' },
+      hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
+      trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
     },
     footer: { games: 'Pelit', company: 'Yritys', legal: 'Laki', privacy: 'Tietosuoja', terms: 'Ehdot', cookies: 'Cookies' }
   },
@@ -841,7 +1053,11 @@ const messages: Record<Locale, any> = {
       connections: { name: 'Koblinger', desc: 'Grupper ord etter tema' },
       spellingBee: { name: 'Stave-Bie', desc: 'Ord på 7 bokstaver' },
       wordLadder: { name: 'Ordstige', desc: 'Kjede ord ved å bytte én bokstav' },
-      rosco: { name: 'Ordhjul', desc: 'Ett ord per bokstav' }
+      rosco: { name: 'Ordhjul', desc: 'Ett ord per bokstav' },
+      sudoku: { name: 'Sudoku', desc: 'Fill the 9×9 grid with digits 1-9' },
+      memory: { name: 'Memory Match', desc: 'Find all matching pairs' },
+      hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
+      trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
     },
     footer: { games: 'Spill', company: 'Selskap', legal: 'Juridisk', privacy: 'Personvern', terms: 'Vilkår', cookies: 'Cookies' }
   },

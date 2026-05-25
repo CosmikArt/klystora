@@ -1,0 +1,31 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import HangmanWrapper from '../../components/games/hangman/HangmanWrapper';
+
+const title = 'Hangman — Klystora';
+const description = "Guess the hidden word one letter at a time. Don't let the hangman complete!";
+const ogImage = '/og/default.jpg';
+---
+
+<Layout title={title} description={description} ogImage={ogImage}>
+  <div class="max-w-2xl mx-auto px-4 py-8">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-bold">Hangman</h1>
+      <p class="text-sand-500 mt-1">Guess the word before it's too late</p>
+    </div>
+    
+    <HangmanWrapper lang="cs" client:only="react" />
+    
+    <article class="mt-16 max-w-none">
+      <h2 class="text-2xl font-bold mb-4">How to Play Hangman</h2>
+      <p class="text-sand-500 mb-4">Hangman is a word-guessing game where you try to figure out a hidden word by suggesting letters one at a time.</p>
+      <ul class="space-y-2 mb-6">
+        <li>Guess letters using the on-screen keyboard or your physical keyboard</li>
+        <li>Correct guesses reveal the letter in the word</li>
+        <li>Wrong guesses add a part to the hangman drawing</li>
+        <li>You have 6 wrong guesses before the game ends</li>
+      </ul>
+      <p class="text-sand-500">Can you guess the word before the hangman is complete?</p>
+    </article>
+  </div>
+</Layout>

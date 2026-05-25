@@ -1,0 +1,30 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SudokuWrapper from '../../components/games/sudoku/SudokuWrapper';
+
+const title = 'Sudoku — Klystora';
+const description = 'Clásico puzzle Sudoku 9×9. Llena la cuadrícula para que cada fila, columna y caja 3×3 contenga los dígitos 1-9.';
+const ogImage = '/og/default.jpg';
+---
+
+<Layout title={title} description={description} ogImage={ogImage}>
+  <div class="max-w-2xl mx-auto px-4 py-8">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-bold">Sudoku</h1>
+      <p class="text-sand-500 mt-1">Llena la cuadrícula 9×9 con dígitos 1-9</p>
+    </div>
+    
+    <SudokuWrapper lang="es" client:only="react" />
+    
+    <article class="mt-16 max-w-none">
+      <h2 class="text-2xl font-bold mb-4">Cómo Jugar Sudoku</h2>
+      <p class="text-sand-500 mb-4">Sudoku es un puzzle de lógica numérica. El objetivo es llenar una cuadrícula de 9×9 para que cada columna, fila y caja de 3×3 contenga todos los dígitos del 1 al 9.</p>
+      <ul class="space-y-2 mb-6">
+        <li>Cada fila debe contener los números 1-9 exactamente una vez</li>
+        <li>Cada columna debe contener los números 1-9 exactamente una vez</li>
+        <li>Cada caja 3×3 debe contener los números 1-9 exactamente una vez</li>
+      </ul>
+      <p class="text-sand-500">Usa el teclado numérico debajo de la cuadrícula. Toca una celda para seleccionarla, luego toca un número. ¡Usa pistas si te atascas!</p>
+    </article>
+  </div>
+</Layout>

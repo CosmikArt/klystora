@@ -1,0 +1,31 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TriviaWrapper from '../../components/games/trivia/TriviaWrapper';
+
+const title = 'Trivia de Palabras — Klystora';
+const description = 'Pon a prueba tu conocimiento de palabras, lenguaje y lingüística con 5 preguntas diarias.';
+const ogImage = '/og/default.jpg';
+---
+
+<Layout title={title} description={description} ogImage={ogImage}>
+  <div class="max-w-2xl mx-auto px-4 py-8">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-bold">Trivia de Palabras</h1>
+      <p class="text-sand-500 mt-1">Pon a prueba tu conocimiento del lenguaje</p>
+    </div>
+    
+    <TriviaWrapper lang="es" client:only="react" />
+    
+    <article class="mt-16 max-w-none">
+      <h2 class="text-2xl font-bold mb-4">Cómo Jugar Trivia</h2>
+      <p class="text-sand-500 mb-4">Trivia de Palabras pone a prueba tu conocimiento de lenguaje, etimología y curiosidades sobre palabras. Cada juego tiene 5 preguntas aleatorias.</p>
+      <ul class="space-y-2 mb-6">
+        <li>Lee la pregunta con atención</li>
+        <li>Selecciona una de las cuatro opciones de respuesta</li>
+        <li>Las respuestas correctas se revelan inmediatamente</li>
+        <li>¡Intenta obtener una puntuación perfecta!</li>
+      </ul>
+      <p class="text-sand-500">Las preguntas cubren orígenes de palabras, palabras más largas, palíndromos y más curiosidades lingüísticas.</p>
+    </article>
+  </div>
+</Layout>

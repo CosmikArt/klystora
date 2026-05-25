@@ -1,0 +1,31 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TriviaWrapper from '../../components/games/trivia/TriviaWrapper';
+
+const title = 'Word Trivia — Klystora';
+const description = "Test your knowledge of words, language, and linguistics with 5 daily questions.";
+const ogImage = '/og/default.jpg';
+---
+
+<Layout title={title} description={description} ogImage={ogImage}>
+  <div class="max-w-2xl mx-auto px-4 py-8">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-bold">Word Trivia</h1>
+      <p class="text-sand-500 mt-1">Test your language knowledge</p>
+    </div>
+    
+    <TriviaWrapper lang="pt" client:only="react" />
+    
+    <article class="mt-16 max-w-none">
+      <h2 class="text-2xl font-bold mb-4">How to Play Word Trivia</h2>
+      <p class="text-sand-500 mb-4">Word Trivia tests your knowledge of language, etymology, and word facts. Each game has 5 random questions.</p>
+      <ul class="space-y-2 mb-6">
+        <li>Read the question carefully</li>
+        <li>Select one of the four answer choices</li>
+        <li>Correct answers are revealed immediately</li>
+        <li>Try to get a perfect score!</li>
+      </ul>
+      <p class="text-sand-500">Questions cover word origins, longest words, palindromes, and more linguistic trivia.</p>
+    </article>
+  </div>
+</Layout>
