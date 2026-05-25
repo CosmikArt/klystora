@@ -1,6 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import MemoryWrapper from '../../components/games/memory/MemoryWrapper';
+import LazyGameWrapper from '../../components/games/LazyGameWrapper';
 
 const title = 'Memory Match — Klystora';
 const description = "Test your memory! Find all matching pairs of cards in the fewest moves possible.";
@@ -14,7 +14,7 @@ const ogImage = '/og/default.jpg';
       <p class="text-sand-500 mt-1">Find all the matching pairs</p>
     </div>
     
-    <MemoryWrapper lang="fr" client:only="react" />
+    <LazyGameWrapper game="memory" lang="fr" client:only="react" />
     
     <article class="mt-16 max-w-none">
       <h2 class="text-2xl font-bold mb-4">How to Play Memory Match</h2>

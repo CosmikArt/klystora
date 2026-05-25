@@ -1,6 +1,5 @@
 ---
 // Plausible Analytics - privacy-first, no cookies, GDPR compliant
-// Replace klystora.com with your actual domain
 ---
 
 <script 
@@ -9,10 +8,19 @@
   src="https://plausible.io/js/script.js"
 ></script>
 
-<!-- Also track outbound links and file downloads -->
+<!-- Also track outbound links, file downloads, and custom events -->
 <script 
   defer 
   data-domain="klystora.com" 
   data-api="https://plausible.io/api/event"
-  src="https://plausible.io/js/script.outbound-links.file-downloads.js"
+  src="https://plausible.io/js/script.outbound-links.file-downloads.tagged-events.js"
 ></script>
+
+<!-- Helper for manual event tracking -->
+<script>
+  window.trackEvent = function(eventName, props = {}) {
+    if (window.plausible) {
+      plausible(eventName, { props });
+    }
+  };
+</script>

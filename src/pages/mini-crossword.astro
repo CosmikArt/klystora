@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import CrosswordWrapper from '../components/games/crossword/CrosswordWrapper';
+import LazyGameWrapper from '../components/games/LazyGameWrapper';
 
 const title = 'Crossword Mini — Klystora';
 const description = 'Solve the 5×5 crossword grid. A new puzzle every day.';
@@ -8,7 +8,7 @@ const description = 'Solve the 5×5 crossword grid. A new puzzle every day.';
 
 <Layout title={title} description={description}>
   <div class="min-h-[calc(100vh-200px)] flex flex-col items-center justify-start pt-8 px-4">
-    <CrosswordWrapper lang="en" client:only="react" />
+    <LazyGameWrapper game="mini-crossword" lang="en" client:only="react" />
 
     <article class="mt-16 max-w-none">
       <h2 class="text-2xl font-bold mb-4">How to Play Crossword Mini</h2>

@@ -1,6 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import SudokuWrapper from '../../components/games/sudoku/SudokuWrapper';
+import LazyGameWrapper from '../../components/games/LazyGameWrapper';
 
 const title = 'Sudoku — Klystora';
 const description = "Classic 9x9 Sudoku puzzle. Fill the grid so every row, column, and 3x3 box contains digits 1-9.";
@@ -14,7 +14,7 @@ const ogImage = '/og/default.jpg';
       <p class="text-sand-500 mt-1">Fill the 9×9 grid with digits 1-9</p>
     </div>
     
-    <SudokuWrapper lang="ru" client:only="react" />
+    <LazyGameWrapper game="sudoku" lang="ru" client:only="react" />
     
     <article class="mt-16 max-w-none">
       <h2 class="text-2xl font-bold mb-4">How to Play Sudoku</h2>

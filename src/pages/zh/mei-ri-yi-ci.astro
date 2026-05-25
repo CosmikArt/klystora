@@ -1,6 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import DailyWordWrapper from '../../components/games/DailyWordWrapper';
+import LazyGameWrapper from '../../components/games/LazyGameWrapper';
 import { getMessages, type Locale } from '../../lib/i18n';
 
 const locale: Locale = 'zh';
@@ -14,6 +14,6 @@ const gameInfo = messages.games.dailyWord;
       <h1 class="text-3xl font-bold">{gameInfo.name}</h1>
       <p class="text-sand-500 mt-1">{gameInfo.desc}</p>
     </div>
-    <DailyWordWrapper lang="zh" client:only="react" />
+    <LazyGameWrapper game="daily-word" lang="zh" client:only="react" />
   </div>
 </Layout>

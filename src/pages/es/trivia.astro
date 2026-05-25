@@ -1,6 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import TriviaWrapper from '../../components/games/trivia/TriviaWrapper';
+import LazyGameWrapper from '../../components/games/LazyGameWrapper';
 
 const title = 'Trivia de Palabras — Klystora';
 const description = 'Pon a prueba tu conocimiento de palabras, lenguaje y lingüística con 5 preguntas diarias.';
@@ -14,7 +14,7 @@ const ogImage = '/og/default.jpg';
       <p class="text-sand-500 mt-1">Pon a prueba tu conocimiento del lenguaje</p>
     </div>
     
-    <TriviaWrapper lang="es" client:only="react" />
+    <LazyGameWrapper game="trivia" lang="es" client:only="react" />
     
     <article class="mt-16 max-w-none">
       <h2 class="text-2xl font-bold mb-4">Cómo Jugar Trivia</h2>

@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import MinesweeperWrapper from '../components/games/minesweeper/MinesweeperWrapper';
+import LazyGameWrapper from '../components/games/LazyGameWrapper';
 
 const title = 'Minesweeper — Klystora';
 const description = 'Clear the minefield without detonating any mines. Classic logic puzzle.';
@@ -14,7 +14,7 @@ const ogImage = '/og/minesweeper.jpg';
       <p class="text-sand-500 mt-1">Clear the field without hitting mines</p>
     </div>
     
-    <MinesweeperWrapper lang="en" client:only="react" />
+    <LazyGameWrapper game="minesweeper" lang="en" client:only="react" />
     
     <article class="mt-16 max-w-none">
       <h2 class="text-2xl font-bold mb-4">How to Play Minesweeper</h2>

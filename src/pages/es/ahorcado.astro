@@ -1,6 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import HangmanWrapper from '../../components/games/hangman/HangmanWrapper';
+import LazyGameWrapper from '../../components/games/LazyGameWrapper';
 
 const title = 'Ahorcado — Klystora';
 const description = 'Adivina la palabra oculta letra por letra. ¡No dejes que se complete el ahorcado!';
@@ -14,7 +14,7 @@ const ogImage = '/og/default.jpg';
       <p class="text-sand-500 mt-1">Adivina la palabra antes de que sea tarde</p>
     </div>
     
-    <HangmanWrapper lang="es" client:only="react" />
+    <LazyGameWrapper game="hangman" lang="es" client:only="react" />
     
     <article class="mt-16 max-w-none">
       <h2 class="text-2xl font-bold mb-4">Cómo Jugar Ahorcado</h2>

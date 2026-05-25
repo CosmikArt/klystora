@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import RoscoWrapper from '../components/games/rosco/RoscoWrapper';
+import LazyGameWrapper from '../components/games/LazyGameWrapper';
 
 const title = 'Word Wheel — Klystora';
 const description = 'Find words for each letter of the alphabet. A new puzzle every day.';
@@ -8,7 +8,7 @@ const description = 'Find words for each letter of the alphabet. A new puzzle ev
 
 <Layout title={title} description={description}>
   <div class="min-h-[calc(100vh-200px)] flex flex-col items-center justify-start pt-8 px-4">
-    <RoscoWrapper lang="en" client:only="react" />
+    <LazyGameWrapper game="word-wheel" lang="en" client:only="react" />
 
     <article class="mt-16 max-w-none">
       <h2 class="text-2xl font-bold mb-4">How to Play Word Wheel</h2>

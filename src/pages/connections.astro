@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import ConnectionsWrapper from '../components/games/connections/ConnectionsWrapper';
+import LazyGameWrapper from '../components/games/LazyGameWrapper';
 
 const title = 'Connections — Klystora';
 const description = 'Find groups of 4 words that share a common theme. A new puzzle every day.';
@@ -8,7 +8,7 @@ const description = 'Find groups of 4 words that share a common theme. A new puz
 
 <Layout title={title} description={description}>
   <div class="min-h-[calc(100vh-200px)] flex flex-col items-center justify-start pt-8 px-4">
-    <ConnectionsWrapper lang="en" client:only="react" />
+    <LazyGameWrapper game="connections" lang="en" client:only="react" />
 
     <article class="mt-16 max-w-none">
       <h2 class="text-2xl font-bold mb-4">How to Play Connections</h2>

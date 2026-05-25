@@ -5,11 +5,11 @@ import type { Lang } from '@/lib/i18n';
 interface Props {
   game: 'daily-word' | 'mini-crossword' | 'word-search' | 'anagrams' | 
         'connections' | 'spelling-bee' | 'word-ladder' | 'word-wheel' |
-        'sudoku' | 'memory' | 'hangman' | 'trivia';
+        'sudoku' | 'memory' | 'hangman' | 'trivia' | '2048' | 'minesweeper';
   lang?: Lang;
 }
 
-// Mapa de imports lazy
+// Mapa de imports lazy — cada juego carga su propio chunk
 const gameComponents: Record<string, () => Promise<any>> = {
   'daily-word': () => import('./DailyWordWrapper'),
   'mini-crossword': () => import('./crossword/CrosswordWrapper'),
@@ -23,6 +23,8 @@ const gameComponents: Record<string, () => Promise<any>> = {
   'memory': () => import('./memory/MemoryWrapper'),
   'hangman': () => import('./hangman/HangmanWrapper'),
   'trivia': () => import('./trivia/TriviaWrapper'),
+  '2048': () => import('./game2048/Game2048Wrapper'),
+  'minesweeper': () => import('./minesweeper/MinesweeperWrapper'),
 };
 
 function GameSkeleton() {
@@ -57,5 +59,9 @@ export default function LazyGameWrapper({ game, lang }: Props) {
     return <GameSkeleton />;
   }
 
-  return <GameComponent lang={lang} />;
+  return (
+    <Suspense fallback={<GameSkeleton />}>
+      <GameComponent lang={lang} />
+    </Suspense>
+  );
 }

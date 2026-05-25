@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import WordLadderWrapper from '../components/games/wordladder/WordLadderWrapper';
+import LazyGameWrapper from '../components/games/LazyGameWrapper';
 
 const title = 'Word Ladder — Klystora';
 const description = 'Transform one word into another by changing one letter at a time. A new puzzle every day.';
@@ -8,7 +8,7 @@ const description = 'Transform one word into another by changing one letter at a
 
 <Layout title={title} description={description}>
   <div class="min-h-[calc(100vh-200px)] flex flex-col items-center justify-start pt-8 px-4">
-    <WordLadderWrapper lang="en" client:only="react" />
+    <LazyGameWrapper game="word-ladder" lang="en" client:only="react" />
 
     <article class="mt-16 max-w-none">
       <h2 class="text-2xl font-bold mb-4">How to Play Word Ladder</h2>

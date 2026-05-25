@@ -1,6 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import HangmanWrapper from '../../components/games/hangman/HangmanWrapper';
+import LazyGameWrapper from '../../components/games/LazyGameWrapper';
 
 const title = 'Hangman — Klystora';
 const description = "Guess the hidden word one letter at a time. Don't let the hangman complete!";
@@ -14,7 +14,7 @@ const ogImage = '/og/default.jpg';
       <p class="text-sand-500 mt-1">Guess the word before it's too late</p>
     </div>
     
-    <HangmanWrapper lang="ru" client:only="react" />
+    <LazyGameWrapper game="hangman" lang="ru" client:only="react" />
     
     <article class="mt-16 max-w-none">
       <h2 class="text-2xl font-bold mb-4">How to Play Hangman</h2>

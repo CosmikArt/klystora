@@ -55,13 +55,19 @@ const games = [
     <h2 class="text-3xl font-bold text-center mb-12">14 Ways to Play</h2>
     
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      {games.map(game => (
-        <a href={getGameUrl(game.key, locale as Locale)} class="group block bg-white border border-sand-200 rounded-2xl overflow-hidden hover:shadow-lg hover:border-violet-300 transition-all">
-          <div class="aspect-[4/3] bg-sand-100 overflow-hidden">
-            <img src={game.img} alt={messages.games[game.key].name} class="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+      {games.map((game, idx) => (
+        <a 
+          href={getGameUrl(game.key, locale as Locale)} 
+          class="group block bg-white border border-sand-200 rounded-2xl overflow-hidden hover:shadow-lg hover:border-violet-300 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 transition-all"
+          tabindex="0"
+          aria-label={`Play ${messages.games[game.key].name}: ${messages.games[game.key].desc}`}
+        >
+          <div class="aspect-[4/3] bg-sand-100 overflow-hidden relative">
+            <img src={game.img} alt={messages.games[game.key].name} class="w-full h-full object-cover group-hover:scale-105 transition-transform" loading="lazy" />
+            <div class="absolute inset-0 bg-violet-500/0 group-hover:bg-violet-500/10 group-focus:bg-violet-500/20 transition-colors" />
           </div>
           <div class="p-5">
-            <h3 class="font-semibold text-coal group-hover:text-violet-500 transition">{messages.games[game.key].name}</h3>
+            <h3 class="font-semibold text-coal group-hover:text-violet-500 group-focus:text-violet-600 transition">{messages.games[game.key].name}</h3>
             <p class="text-sm text-sand-500 mt-1">{messages.games[game.key].desc}</p>
           </div>
         </a>

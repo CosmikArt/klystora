@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import DailyWordWrapper from '../components/games/DailyWordWrapper';
+import LazyGameWrapper from '../components/games/LazyGameWrapper';
 
 const title = 'Daily Word — Klystora';
 const description = 'Guess the 5-letter word in 6 tries. A new puzzle every day. No signup needed.';
@@ -14,7 +14,7 @@ const ogImage = '/og-images/daily-word.png';
       <p class="text-sand-500 mt-1">Guess the 5-letter word in 6 tries</p>
     </div>
     
-    <DailyWordWrapper lang="en" client:only="react" />
+    <LazyGameWrapper game="daily-word" lang="en" client:only="react" />
     
     <article class="mt-16 max-w-none">
       <h2 class="text-2xl font-bold mb-4">How to Play Daily Word</h2>

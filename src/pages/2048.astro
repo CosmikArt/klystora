@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Game2048Wrapper from '../components/games/game2048/Game2048Wrapper';
+import LazyGameWrapper from '../components/games/LazyGameWrapper';
 
 const title = '2048 — Klystora';
 const description = 'Merge numbered tiles to reach 2048. A classic puzzle game.';
@@ -14,7 +14,7 @@ const ogImage = '/og/2048.jpg';
       <p class="text-sand-500 mt-1">Merge tiles to reach 2048</p>
     </div>
     
-    <Game2048Wrapper lang="en" client:only="react" />
+    <LazyGameWrapper game="2048" lang="en" client:only="react" />
     
     <article class="mt-16 max-w-none">
       <h2 class="text-2xl font-bold mb-4">How to Play 2048</h2>
