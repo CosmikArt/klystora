@@ -1,0 +1,49 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Pricing — Klystora" description="Free forever. Upgrade for unlimited practice, archives, and advanced stats.">
+  <div class="max-w-4xl mx-auto px-4 py-16">
+    <div class="text-center mb-16">
+      <h1 class="text-4xl font-bold mb-4">Simple Pricing</h1>
+      <p class="text-sand-500 text-lg">Free forever. Upgrade for power users.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+      <!-- Free -->
+      <div class="border border-sand-200 dark:border-sand-800 rounded-2xl p-8">
+        <h2 class="text-2xl font-bold mb-2">Free</h2>
+        <p class="text-sand-500 mb-6">For casual players</p>
+        <div class="text-4xl font-bold mb-8">$0<span class="text-lg text-sand-500 font-normal">/month</span></div>
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-center gap-2 text-sm"><svg class="w-5 h-5 text-correct" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>8 daily games</li>
+          <li class="flex items-center gap-2 text-sm"><svg class="w-5 h-5 text-correct" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>27 languages</li>
+          <li class="flex items-center gap-2 text-sm"><svg class="w-5 h-5 text-correct" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Basic stats</li>
+          <li class="flex items-center gap-2 text-sm"><svg class="w-5 h-5 text-correct" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>PWA install</li>
+        </ul>
+        <a href="/daily-word" class="block w-full text-center bg-sand-100 dark:bg-sand-800 text-sand-700 dark:text-sand-300 font-medium py-3 rounded-lg hover:bg-sand-200 dark:hover:bg-sand-700 transition">Play Free</a>
+      </div>
+
+      <!-- Pro -->
+      <div class="border-2 border-violet-500 rounded-2xl p-8 relative">
+        <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-violet-500 text-white text-xs font-bold px-3 py-1 rounded-full">MOST POPULAR</div>
+        <h2 class="text-2xl font-bold mb-2">Pro</h2>
+        <p class="text-sand-500 mb-6">For serious players</p>
+        <div class="text-4xl font-bold mb-8">$4<span class="text-lg text-sand-500 font-normal">/month</span></div>
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-center gap-2 text-sm"><svg class="w-5 h-5 text-correct" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Everything in Free</li>
+          <li class="flex items-center gap-2 text-sm"><svg class="w-5 h-5 text-correct" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Unlimited practice mode</li>
+          <li class="flex items-center gap-2 text-sm"><svg class="w-5 h-5 text-correct" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Full archive (past puzzles)</li>
+          <li class="flex items-center gap-2 text-sm"><svg class="w-5 h-5 text-correct" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Advanced stats & streaks</li>
+          <li class="flex items-center gap-2 text-sm"><svg class="w-5 h-5 text-correct" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>No ads</li>
+          <li class="flex items-center gap-2 text-sm"><svg class="w-5 h-5 text-correct" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Export data</li>
+        </ul>
+        <button class="block w-full text-center bg-violet-600 text-white font-medium py-3 rounded-lg hover:bg-violet-700 transition opacity-50 cursor-not-allowed" disabled>Coming Soon</button>
+      </div>
+    </div>
+
+    <div class="text-center mt-16">
+      <p class="text-sand-500 text-sm">Pro tier launching Q3 2026. <a href="/" class="text-violet-600 hover:text-violet-500">Join the waitlist</a> for early access.</p>
+    </div>
+  </div>
+</Layout>
