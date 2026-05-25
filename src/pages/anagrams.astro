@@ -8,6 +8,29 @@ const description = 'Form words from scrambled letters. A new puzzle every day.'
 
 <Layout title={title} description={description}>
   <div class="min-h-[calc(100vh-200px)] flex flex-col items-center justify-start pt-8 px-4">
-    <AnagramsWrapper client:only="react" />
+    <AnagramsWrapper lang="en" client:only="react" />
+
+    <article class="mt-16 max-w-none">
+      <h2 class="text-2xl font-bold mb-4">How to Play Anagrams</h2>
+      <p class="text-sand-500 mb-4">Form as many words as possible from the given letters. Longer words score more points:</p>
+      <ul class="space-y-2 mb-6">
+        <li><strong style="color:#4A8B5B">3 letters</strong> — = 1 point</li>
+        <li><strong style="color:#D9A93E">4 letters</strong> — = 2 points</li>
+        <li><strong style="color:#7A7268">5 letters</strong> — = 4 points</li>
+        <li><strong style="color:#6845BC">6+ letters</strong> — = 8 points</li>
+      </ul>
+      <p class="text-sand-500">Find all possible words to achieve a perfect score!</p>
+    </article>
+    <section class="mt-12">
+      <h2 class="text-2xl font-bold mb-4">FAQ</h2>
+        <details class="mb-3">
+          <summary class="font-medium cursor-pointer">How many words are there?</summary>
+          <p class="text-sand-500 mt-2">Each puzzle has between 15 and 40 valid words.</p>
+        </details>
+        <details class="mb-3">
+          <summary class="font-medium cursor-pointer">Do I need to find all words?</summary>
+          <p class="text-sand-500 mt-2">No, but finding more words gives you a higher score and rank.</p>
+        </details>
+    </section>
   </div>
 </Layout>

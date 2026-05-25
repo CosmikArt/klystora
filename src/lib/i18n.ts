@@ -3,12 +3,18 @@ export type Locale =
   | 'fr' | 'tr' | 'it' | 'pl' | 'nl' | 'uk' | 'ro' | 'el' | 'cs' | 'sv'
   | 'hu' | 'id' | 'vi' | 'th' | 'da' | 'fi' | 'no';
 
+// Alias for compatibility with hooks/useLanguage.tsx
+export type Lang = Locale;
+
 export const defaultLocale: Locale = 'en';
 export const locales: Locale[] = [
   'en', 'es', 'zh', 'hi', 'pt', 'bn', 'ru', 'ja', 'de', 'ko',
   'fr', 'tr', 'it', 'pl', 'nl', 'uk', 'ro', 'el', 'cs', 'sv',
   'hu', 'id', 'vi', 'th', 'da', 'fi', 'no'
 ];
+
+// Alias for compatibility
+export const supportedLanguages = locales;
 
 export function getLocaleFromPath(path: string): Locale {
   const match = path.match(/^\/([a-z]{2})(\/|$)/);

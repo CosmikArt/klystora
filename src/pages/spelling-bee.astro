@@ -8,6 +8,28 @@ const description = 'Form words using 7 letters. A new puzzle every day.';
 
 <Layout title={title} description={description}>
   <div class="min-h-[calc(100vh-200px)] flex flex-col items-center justify-start pt-8 px-4">
-    <SpellingBeeWrapper client:only="react" />
+    <SpellingBeeWrapper lang="en" client:only="react" />
+
+    <article class="mt-16 max-w-none">
+      <h2 class="text-2xl font-bold mb-4">How to Play Spelling Bee</h2>
+      <p class="text-sand-500 mb-4">Form words using the 7 letters shown. The center letter must appear in every word.</p>
+      <ul class="space-y-2 mb-6">
+        <li><strong style="color:#4A8B5B">4+ letters</strong> — minimum word length</li>
+        <li><strong style="color:#D9A93E">Center letter</strong> — must be used in every word</li>
+        <li><strong style="color:#6845BC">Pangram</strong> — use all 7 letters for bonus points</li>
+      </ul>
+      <p class="text-sand-500">Find the pangram and reach Genius rank!</p>
+    </article>
+    <section class="mt-12">
+      <h2 class="text-2xl font-bold mb-4">FAQ</h2>
+        <details class="mb-3">
+          <summary class="font-medium cursor-pointer">What is a pangram?</summary>
+          <p class="text-sand-500 mt-2">A word that uses all 7 available letters at least once.</p>
+        </details>
+        <details class="mb-3">
+          <summary class="font-medium cursor-pointer">How many words are there?</summary>
+          <p class="text-sand-500 mt-2">Each puzzle has 20-50 valid words.</p>
+        </details>
+    </section>
   </div>
 </Layout>

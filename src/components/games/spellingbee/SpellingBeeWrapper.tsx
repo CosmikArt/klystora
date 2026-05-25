@@ -1,9 +1,14 @@
 import { LanguageProvider } from '@/hooks/useLanguage';
+import type { Lang } from '@/lib/i18n';
 import SpellingBeeGame from './SpellingBeeGame';
 
-export default function SpellingBeeWrapper() {
+interface Props {
+  lang?: Lang;
+}
+
+export default function SpellingBeeWrapper({ lang }: Props) {
   return (
-    <LanguageProvider>
+    <LanguageProvider initialLang={lang}>
       <SpellingBeeGame />
     </LanguageProvider>
   );

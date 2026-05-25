@@ -1,9 +1,14 @@
 import { LanguageProvider } from '@/hooks/useLanguage';
+import type { Lang } from '@/lib/i18n';
 import AnagramsGame from './AnagramsGame';
 
-export default function AnagramsWrapper() {
+interface Props {
+  lang?: Lang;
+}
+
+export default function AnagramsWrapper({ lang }: Props) {
   return (
-    <LanguageProvider>
+    <LanguageProvider initialLang={lang}>
       <AnagramsGame />
     </LanguageProvider>
   );

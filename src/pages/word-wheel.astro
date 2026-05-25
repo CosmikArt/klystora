@@ -8,6 +8,28 @@ const description = 'Find words for each letter of the alphabet. A new puzzle ev
 
 <Layout title={title} description={description}>
   <div class="min-h-[calc(100vh-200px)] flex flex-col items-center justify-start pt-8 px-4">
-    <RoscoWrapper client:only="react" />
+    <RoscoWrapper lang="en" client:only="react" />
+
+    <article class="mt-16 max-w-none">
+      <h2 class="text-2xl font-bold mb-4">How to Play Word Wheel</h2>
+      <p class="text-sand-500 mb-4">One word for each letter of the alphabet, based on the given definitions.</p>
+      <ul class="space-y-2 mb-6">
+        <li><strong style="color:#4A8B5B">A-Z</strong> — one word per letter</li>
+        <li><strong style="color:#D9A93E">Definition</strong> — read the clue for each letter</li>
+        <li><strong style="color:#7A7268">Timer</strong> — optional — beat the clock!</li>
+      </ul>
+      <p class="text-sand-500">Complete all 26 letters to finish the rosco!</p>
+    </article>
+    <section class="mt-12">
+      <h2 class="text-2xl font-bold mb-4">FAQ</h2>
+        <details class="mb-3">
+          <summary class="font-medium cursor-pointer">What is a rosco?</summary>
+          <p class="text-sand-500 mt-2">Inspired by the Spanish game show Pasapalabra — a word per letter.</p>
+        </details>
+        <details class="mb-3">
+          <summary class="font-medium cursor-pointer">How do I skip a letter?</summary>
+          <p class="text-sand-500 mt-2">Tap the skip button and come back to it later.</p>
+        </details>
+    </section>
   </div>
 </Layout>

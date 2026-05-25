@@ -14,6 +14,32 @@ const gameInfo = messages.games.dailyWord;
       <h1 class="text-3xl font-bold">{gameInfo.name}</h1>
       <p class="text-sand-500 mt-1">{gameInfo.desc}</p>
     </div>
-    <DailyWordWrapper client:only="react" />
+    <DailyWordWrapper lang="es" client:only="react" />
+
+    <article class="mt-16 max-w-none">
+      <h2 class="text-2xl font-bold mb-4">Cómo Jugar Palabra Diaria</h2>
+      <p class="text-sand-500 mb-4">Palabra Diaria es un juego de adivinar palabras donde tienes 6 intentos para encontrar una palabra oculta de 5 letras. Después de cada intento, las casillas cambian de color para mostrar qué tan cerca estás:</p>
+      <ul class="space-y-2 mb-6">
+        <li><strong style="color:#4A8B5B">Verde</strong> — la letra es correcta y está en la posición correcta</li>
+        <li><strong style="color:#D9A93E">Amarillo</strong> — la letra está en la palabra pero en posición incorrecta</li>
+        <li><strong style="color:#7A7268">Gris</strong> — la letra no está en la palabra</li>
+      </ul>
+      <p class="text-sand-500">¡Un nuevo puzzle se publica cada día a medianoche! Vuelve mañana para un nuevo reto.</p>
+    </article>
+    <section class="mt-12">
+      <h2 class="text-2xl font-bold mb-4">FAQ</h2>
+        <details class="mb-3">
+          <summary class="font-medium cursor-pointer">¿Puedo jugar puzzles anteriores?</summary>
+          <p class="text-sand-500 mt-2">¡Sí! Los usuarios Pro tienen acceso al archivo completo de todos los puzzles pasados.</p>
+        </details>
+        <details class="mb-3">
+          <summary class="font-medium cursor-pointer">¿Hay modo práctica?</summary>
+          <p class="text-sand-500 mt-2">Sí, puedes jugar puzzles de práctica ilimitados en cualquier momento.</p>
+        </details>
+        <details class="mb-3">
+          <summary class="font-medium cursor-pointer">¿Qué diccionario se usa?</summary>
+          <p class="text-sand-500 mt-2">Usamos un diccionario curado de palabras comunes en español. Sin nombres propios ni términos oscuros.</p>
+        </details>
+    </section>
   </div>
 </Layout>

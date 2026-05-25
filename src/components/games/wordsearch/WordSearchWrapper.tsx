@@ -1,9 +1,14 @@
 import { LanguageProvider } from '@/hooks/useLanguage';
+import type { Lang } from '@/lib/i18n';
 import WordSearchGame from './WordSearchGame';
 
-export default function WordSearchWrapper() {
+interface Props {
+  lang?: Lang;
+}
+
+export default function WordSearchWrapper({ lang }: Props) {
   return (
-    <LanguageProvider>
+    <LanguageProvider initialLang={lang}>
       <WordSearchGame />
     </LanguageProvider>
   );

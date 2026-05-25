@@ -1,10 +1,23 @@
----
-// Redirect to browser language or default to English
-const acceptLang = Astro.request.headers.get('accept-language') || '';
-const browserLang = acceptLang.split(',')[0]?.split('-')[0]?.toLowerCase() || 'en';
-
-const supportedLangs = ['en', 'es', 'zh', 'hi', 'pt', 'bn', 'ru', 'ja', 'de', 'ko', 'fr', 'tr', 'it', 'pl', 'nl', 'uk', 'ro', 'el', 'cs', 'sv', 'hu', 'id', 'vi', 'th', 'da', 'fi', 'no'];
-const targetLang = supportedLangs.includes(browserLang) ? browserLang : 'en';
-
-return Astro.redirect(targetLang === 'en' ? '/' : `/${targetLang}/`);
----
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Klystora — Word games. New every day.</title>
+  <script>
+    const supportedLangs = ['en','es','zh','hi','pt','bn','ru','ja','de','ko','fr','tr','it','pl','nl','uk','ro','el','cs','sv','hu','id','vi','th','da','fi','no'];
+    const stored = localStorage.getItem('klystora-lang');
+    let target = 'en';
+    if (stored && supportedLangs.includes(stored)) {
+      target = stored;
+    } else {
+      const browserLang = (navigator.language || 'en').split('-')[0].toLowerCase();
+      if (supportedLangs.includes(browserLang)) target = browserLang;
+    }
+    window.location.replace(target === 'en' ? '/' : '/' + target + '/');
+  </script>
+</head>
+<body>
+  <p style="text-align:center;padding:40px;font-family:system-ui,sans-serif;color:#666;">Redirecting...</p>
+</body>
+</html>

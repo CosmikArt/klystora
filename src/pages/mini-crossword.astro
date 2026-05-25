@@ -8,6 +8,28 @@ const description = 'Solve the 5×5 crossword grid. A new puzzle every day.';
 
 <Layout title={title} description={description}>
   <div class="min-h-[calc(100vh-200px)] flex flex-col items-center justify-start pt-8 px-4">
-    <CrosswordWrapper client:only="react" />
+    <CrosswordWrapper lang="en" client:only="react" />
+
+    <article class="mt-16 max-w-none">
+      <h2 class="text-2xl font-bold mb-4">How to Play Crossword Mini</h2>
+      <p class="text-sand-500 mb-4">Solve the compact crossword grid using the clues provided. Tap a cell to see its clue.</p>
+      <ul class="space-y-2 mb-6">
+        <li><strong style="color:#4A8B5B">Across</strong> — clues go left to right</li>
+        <li><strong style="color:#D9A93E">Down</strong> — clues go top to bottom</li>
+        <li><strong style="color:#7A7268">Check</strong> — your answers anytime</li>
+      </ul>
+      <p class="text-sand-500">Complete the entire grid to solve the puzzle!</p>
+    </article>
+    <section class="mt-12">
+      <h2 class="text-2xl font-bold mb-4">FAQ</h2>
+        <details class="mb-3">
+          <summary class="font-medium cursor-pointer">How big is the grid?</summary>
+          <p class="text-sand-500 mt-2">Our mini crosswords are 5×5 grids — perfect for a quick brain workout.</p>
+        </details>
+        <details class="mb-3">
+          <summary class="font-medium cursor-pointer">Can I get hints?</summary>
+          <p class="text-sand-500 mt-2">Yes, tap the hint button to reveal a letter.</p>
+        </details>
+    </section>
   </div>
 </Layout>

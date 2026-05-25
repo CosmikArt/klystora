@@ -1,9 +1,14 @@
 import { LanguageProvider } from '@/hooks/useLanguage';
+import type { Lang } from '@/lib/i18n';
 import ConnectionsGame from './ConnectionsGame';
 
-export default function ConnectionsWrapper() {
+interface Props {
+  lang?: Lang;
+}
+
+export default function ConnectionsWrapper({ lang }: Props) {
   return (
-    <LanguageProvider>
+    <LanguageProvider initialLang={lang}>
       <ConnectionsGame />
     </LanguageProvider>
   );

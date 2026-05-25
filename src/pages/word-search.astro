@@ -8,6 +8,28 @@ const description = 'Find hidden words in the grid. A new puzzle every day.';
 
 <Layout title={title} description={description}>
   <div class="min-h-[calc(100vh-200px)] flex flex-col items-center justify-start pt-8 px-4">
-    <WordSearchWrapper client:only="react" />
+    <WordSearchWrapper lang="en" client:only="react" />
+
+    <article class="mt-16 max-w-none">
+      <h2 class="text-2xl font-bold mb-4">How to Play Word Search</h2>
+      <p class="text-sand-500 mb-4">Find all the hidden words in the grid. Words can go horizontally, vertically, or diagonally.</p>
+      <ul class="space-y-2 mb-6">
+        <li><strong style="color:#4A8B5B">Forward</strong> — words read left-to-right or top-to-bottom</li>
+        <li><strong style="color:#D9A93E">Backward</strong> — words can also be reversed</li>
+        <li><strong style="color:#6845BC">Diagonal</strong> — words can go diagonally too</li>
+      </ul>
+      <p class="text-sand-500">Find all words to complete the puzzle! Each day has a new theme.</p>
+    </article>
+    <section class="mt-12">
+      <h2 class="text-2xl font-bold mb-4">FAQ</h2>
+        <details class="mb-3">
+          <summary class="font-medium cursor-pointer">How many words are hidden?</summary>
+          <p class="text-sand-500 mt-2">Between 10 and 20 words per puzzle.</p>
+        </details>
+        <details class="mb-3">
+          <summary class="font-medium cursor-pointer">What themes are there?</summary>
+          <p class="text-sand-500 mt-2">Animals, countries, sports, food, and many more rotating daily.</p>
+        </details>
+    </section>
   </div>
 </Layout>

@@ -8,6 +8,28 @@ const description = 'Find groups of 4 words that share a common theme. A new puz
 
 <Layout title={title} description={description}>
   <div class="min-h-[calc(100vh-200px)] flex flex-col items-center justify-start pt-8 px-4">
-    <ConnectionsWrapper client:only="react" />
+    <ConnectionsWrapper lang="en" client:only="react" />
+
+    <article class="mt-16 max-w-none">
+      <h2 class="text-2xl font-bold mb-4">How to Play Connections</h2>
+      <p class="text-sand-500 mb-4">Find groups of 4 words that share a common theme. You have 4 mistakes allowed.</p>
+      <ul class="space-y-2 mb-6">
+        <li><strong style="color:#4A8B5B">Select</strong> — 4 words you think belong together</li>
+        <li><strong style="color:#D9A93E">Correct</strong> — groups are locked in place</li>
+        <li><strong style="color:#7A7268">Wrong</strong> — counts as one mistake</li>
+      </ul>
+      <p class="text-sand-500">Find all 4 groups to win! Categories range from easy to expert difficulty.</p>
+    </article>
+    <section class="mt-12">
+      <h2 class="text-2xl font-bold mb-4">FAQ</h2>
+        <details class="mb-3">
+          <summary class="font-medium cursor-pointer">How many groups are there?</summary>
+          <p class="text-sand-500 mt-2">Each puzzle has exactly 4 groups of 4 words.</p>
+        </details>
+        <details class="mb-3">
+          <summary class="font-medium cursor-pointer">What happens if I make 4 mistakes?</summary>
+          <p class="text-sand-500 mt-2">The puzzle ends. You can try again in practice mode.</p>
+        </details>
+    </section>
   </div>
 </Layout>

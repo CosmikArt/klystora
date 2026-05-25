@@ -1,9 +1,14 @@
 import { LanguageProvider } from '@/hooks/useLanguage';
+import type { Lang } from '@/lib/i18n';
 import WordLadderGame from './WordLadderGame';
 
-export default function WordLadderWrapper() {
+interface Props {
+  lang?: Lang;
+}
+
+export default function WordLadderWrapper({ lang }: Props) {
   return (
-    <LanguageProvider>
+    <LanguageProvider initialLang={lang}>
       <WordLadderGame />
     </LanguageProvider>
   );
