@@ -9,7 +9,8 @@ interface Props {
         'typing-race' |
         'word-scramble' |
         'cryptogram' |
-        'letter-boxed';
+        'letter-boxed' |
+        'multi-wordle';
   lang?: Lang;
 }
 
@@ -33,6 +34,7 @@ const gameComponents: Record<string, () => Promise<any>> = {
   'word-scramble': () => import('./word-scramble/WordScrambleWrapper'),
   'cryptogram': () => import('./cryptogram/CryptogramWrapper'),
   'letter-boxed': () => import('./letter-boxed/LetterBoxedWrapper'),
+  'multi-wordle': () => import('./multi-wordle/MultiWordleWrapper'),
 };
 
 function GameSkeleton() {

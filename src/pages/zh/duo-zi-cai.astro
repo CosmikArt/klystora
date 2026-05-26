@@ -1,0 +1,21 @@
+---
+import PwaInstallPrompt from '@/components/PwaInstallPrompt';
+import Layout from '../../layouts/Layout.astro';
+import LazyGameWrapper from '../../components/games/LazyGameWrapper';
+
+const title = '多字猜 — Klystora';
+const description = '同时解决多个Wordle面板. Free in 27 languages.';
+const ogImage = '/og/default.jpg';
+---
+
+<Layout title={title} description={description} ogImage={ogImage}>
+  <div class="max-w-4xl mx-auto px-4 py-8">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-bold">多字猜</h1>
+      <p class="text-sand-500 mt-1">同时解决多个Wordle面板</p>
+    </div>
+    
+    <LazyGameWrapper game="multi-wordle" lang="zh" client:only="react" />
+  </div>
+  <PwaInstallPrompt client:only="react" />
+</Layout>

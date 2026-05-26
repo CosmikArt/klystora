@@ -1,0 +1,35 @@
+---
+import PwaInstallPrompt from '@/components/PwaInstallPrompt';
+import Layout from '../layouts/Layout.astro';
+import LazyGameWrapper from '../components/games/LazyGameWrapper';
+
+const title = 'Multi-Wordle — Dordle & Quordle | Klystora';
+const description = 'Solve multiple Wordle boards simultaneously. Dordle (2 boards) and Quordle (4 boards). Free in 27 languages.';
+const ogImage = '/og/default.jpg';
+---
+
+<Layout title={{title}} description={{description}} ogImage={{ogImage}}>
+  <div class="max-w-4xl mx-auto px-4 py-8">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-bold">Multi-Wordle</h1>
+      <p class="text-sand-500 mt-1">Solve multiple Wordle boards at once. Dordle (2) or Quordle (4)!</p>
+    </div>
+    
+    <LazyGameWrapper game="multi-wordle" lang="en" client:only="react" />
+    
+    <article class="mt-16 max-w-none">
+      <h2 class="text-2xl font-bold mb-4">How to Play Multi-Wordle</h2>
+      <p class="text-sand-500 mb-4">Multi-Wordle takes the classic Wordle formula and multiplies the challenge. Instead of guessing one word, you're solving multiple boards simultaneously with the same guesses.</p>
+      <ul class="space-y-2 mb-6">
+        <li>Choose between Dordle (2 boards) or Quordle (4 boards)</li>
+        <li>Each guess applies to ALL active boards</li>
+        <li>Green = correct letter in correct position</li>
+        <li>Yellow = correct letter, wrong position</li>
+        <li>Gray = letter not in the word</li>
+        <li>Solve all boards within 6 guesses per board</li>
+      </ul>
+      <p class="text-sand-500">Multi-Wordle tests your ability to process multiple word puzzles at once. It's Wordle for advanced players!</p>
+    </article>
+  </div>
+  <PwaInstallPrompt client:only="react" />
+</Layout>

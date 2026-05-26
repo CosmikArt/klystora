@@ -1,0 +1,21 @@
+---
+import PwaInstallPrompt from '@/components/PwaInstallPrompt';
+import Layout from '../../layouts/Layout.astro';
+import LazyGameWrapper from '../../components/games/LazyGameWrapper';
+
+const title = 'Multi-Wordle — Klystora';
+const description = 'Solve multiple Wordle boards simultaneously. Free in 27 languages.';
+const ogImage = '/og/default.jpg';
+---
+
+<Layout title={title} description={description} ogImage={ogImage}>
+  <div class="max-w-4xl mx-auto px-4 py-8">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-bold">Multi-Wordle</h1>
+      <p class="text-sand-500 mt-1">Solve multiple Wordle boards at once. Dordle (2) or Quordle (4)!</p>
+    </div>
+    
+    <LazyGameWrapper game="multi-wordle" lang="uk" client:only="react" />
+  </div>
+  <PwaInstallPrompt client:only="react" />
+</Layout>
