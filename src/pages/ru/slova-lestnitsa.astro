@@ -1,0 +1,21 @@
+---
+import PwaInstallPrompt from '@/components/PwaInstallPrompt';
+import Layout from '../../layouts/Layout.astro';
+import LazyGameWrapper from '../../components/games/LazyGameWrapper';
+
+const title = 'Словесная Лестница — Klystora';
+const description = 'Меняйте по одной букве, чтобы достичь целевого слова. Free in 27 languages.';
+const ogImage = '/og/default.jpg';
+---
+
+<Layout title={title} description={description} ogImage={ogImage}>
+  <div class="max-w-3xl mx-auto px-4 py-8">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-bold">Словесная Лестница</h1>
+      <p class="text-sand-500 mt-1">Меняйте по одной букве, чтобы достичь целевого слова</p>
+    </div>
+    
+    <LazyGameWrapper game="word-ladder" lang="ru" client:only="react" />
+  </div>
+  <PwaInstallPrompt client:only="react" />
+</Layout>

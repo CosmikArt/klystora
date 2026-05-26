@@ -2,19 +2,19 @@
 import PwaInstallPrompt from '@/components/PwaInstallPrompt';
 import Layout from '../../layouts/Layout.astro';
 import LazyGameWrapper from '../../components/games/LazyGameWrapper';
-import { getMessages, type Locale } from '../../lib/i18n';
 
-const locale: Locale = 'fr';
-const messages = getMessages(locale);
-const gameInfo = messages.games.wordLadder;
+const title = 'Échelle de Mots — Klystora';
+const description = 'Changez une lettre à la fois pour atteindre le mot cible. Free in 27 languages.';
+const ogImage = '/og/default.jpg';
 ---
 
-<Layout title={`${gameInfo.name} — Klystora`} description={gameInfo.desc} ogImage="/og/default.jpg">
-  <div class="max-w-2xl mx-auto px-4 py-8">
+<Layout title={title} description={description} ogImage={ogImage}>
+  <div class="max-w-3xl mx-auto px-4 py-8">
     <div class="text-center mb-6">
-      <h1 class="text-3xl font-bold">{gameInfo.name}</h1>
-      <p class="text-sand-500 mt-1">{gameInfo.desc}</p>
+      <h1 class="text-3xl font-bold">Échelle de Mots</h1>
+      <p class="text-sand-500 mt-1">Changez une lettre à la fois pour atteindre le mot cible</p>
     </div>
+    
     <LazyGameWrapper game="word-ladder" lang="fr" client:only="react" />
   </div>
   <PwaInstallPrompt client:only="react" />

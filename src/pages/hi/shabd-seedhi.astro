@@ -1,0 +1,21 @@
+---
+import PwaInstallPrompt from '@/components/PwaInstallPrompt';
+import Layout from '../../layouts/Layout.astro';
+import LazyGameWrapper from '../../components/games/LazyGameWrapper';
+
+const title = 'शब्द सीढ़ी — Klystora';
+const description = 'एक-एक अक्षर बदलकर लक्ष्य शब्द तक पहुंचें. Free in 27 languages.';
+const ogImage = '/og/default.jpg';
+---
+
+<Layout title={title} description={description} ogImage={ogImage}>
+  <div class="max-w-3xl mx-auto px-4 py-8">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-bold">शब्द सीढ़ी</h1>
+      <p class="text-sand-500 mt-1">एक-एक अक्षर बदलकर लक्ष्य शब्द तक पहुंचें</p>
+    </div>
+    
+    <LazyGameWrapper game="word-ladder" lang="hi" client:only="react" />
+  </div>
+  <PwaInstallPrompt client:only="react" />
+</Layout>

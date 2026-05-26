@@ -15,7 +15,8 @@ interface Props {
         'acrostic' |
         'word-search' |
         'spelling-bee' |
-        'anagrams';
+        'anagrams' |
+        'word-ladder';
   lang?: Lang;
 }
 
@@ -25,6 +26,7 @@ const gameComponents: Record<string, () => Promise<any>> = {
   'mini-crossword': () => import('./crossword/CrosswordWrapper'),
   'word-search': () => import('./wordsearch/WordSearchWrapper'),
   'anagrams': () => import('./anagrams/AnagramsWrapper'),
+  'word-ladder': () => import('./word-ladder/WordLadderWrapper'),
   'connections': () => import('./connections/ConnectionsWrapper'),
   'spelling-bee': () => import('./spellingbee/SpellingBeeWrapper'),
   'word-ladder': () => import('./wordladder/WordLadderWrapper'),
@@ -45,6 +47,7 @@ const gameComponents: Record<string, () => Promise<any>> = {
   'word-search': () => import('./word-search/WordSearchWrapper'),
   'spelling-bee': () => import('./spelling-bee/SpellingBeeWrapper'),
   'anagrams': () => import('./anagrams/AnagramsWrapper'),
+  'word-ladder': () => import('./word-ladder/WordLadderWrapper'),
 };
 
 function GameSkeleton() {

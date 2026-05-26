@@ -3,19 +3,19 @@ import PwaInstallPrompt from '@/components/PwaInstallPrompt';
 import Layout from '../../layouts/Layout.astro';
 import LazyGameWrapper from '../../components/games/LazyGameWrapper';
 
-const title = 'Escalera de Palabras — Klystora';
-const description = 'Cambia una letra cada vez para llegar a la palabra objetivo. Free in 27 languages.';
+const title = 'Word Ladder — Klystora';
+const description = 'Change one letter at a time to reach the target word. Free in 27 languages.';
 const ogImage = '/og/default.jpg';
 ---
 
 <Layout title={title} description={description} ogImage={ogImage}>
   <div class="max-w-3xl mx-auto px-4 py-8">
     <div class="text-center mb-6">
-      <h1 class="text-3xl font-bold">Escalera de Palabras</h1>
-      <p class="text-sand-500 mt-1">Cambia una letra cada vez para llegar a la palabra objetivo</p>
+      <h1 class="text-3xl font-bold">Word Ladder</h1>
+      <p class="text-sand-500 mt-1">Change one letter at a time to reach the target word. Every step must be a valid word.</p>
     </div>
     
-    <LazyGameWrapper game="word-ladder" lang="es" client:only="react" />
+    <LazyGameWrapper game="word-ladder" lang="hu" client:only="react" />
   </div>
   <PwaInstallPrompt client:only="react" />
 </Layout>

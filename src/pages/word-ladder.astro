@@ -3,35 +3,31 @@ import PwaInstallPrompt from '@/components/PwaInstallPrompt';
 import Layout from '../layouts/Layout.astro';
 import LazyGameWrapper from '../components/games/LazyGameWrapper';
 
-const title = 'Word Ladder — Klystora';
-const description = 'Transform one word into another by changing one letter at a time. A new puzzle every day.';
+const title = 'Word Ladder — Change One Letter | Klystora';
+const description = 'Transform one word into another by changing one letter at a time. Each step must be a valid word. Free in 27 languages.';
+const ogImage = '/og/default.jpg';
 ---
 
-<Layout title={title} description={description}>
-  <div class="min-h-[calc(100vh-200px)] flex flex-col items-center justify-start pt-8 px-4">
+<Layout title={{title}} description={{description}} ogImage={{ogImage}}>
+  <div class="max-w-3xl mx-auto px-4 py-8">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-bold">Word Ladder</h1>
+      <p class="text-sand-500 mt-1">Change one letter at a time to reach the target word. Every step must be a valid word.</p>
+    </div>
+    
     <LazyGameWrapper game="word-ladder" lang="en" client:only="react" />
-
+    
     <article class="mt-16 max-w-none">
       <h2 class="text-2xl font-bold mb-4">How to Play Word Ladder</h2>
-      <p class="text-sand-500 mb-4">Transform the starting word into the target word by changing one letter at a time.</p>
+      <p class="text-sand-500 mb-4">Word Ladder is a classic word puzzle invented by Lewis Carroll. The goal is to transform one word into another by changing exactly one letter at a time.</p>
       <ul class="space-y-2 mb-6">
-        <li><strong style="color:#4A8B5B">Change</strong> — exactly one letter per step</li>
-        <li><strong style="color:#D9A93E">Valid</strong> — each step must be a real word</li>
-        <li><strong style="color:#6845BC">Shortest</strong> — path wins the most points</li>
+        <li>Start with the given word</li>
+        <li>Change exactly one letter to form a new valid word</li>
+        <li>Continue until you reach the target word</li>
+        <li>Try to find the shortest path</li>
       </ul>
-      <p class="text-sand-500">Find the shortest path between the two words!</p>
+      <p class="text-sand-500">Word Ladder tests your vocabulary and lateral thinking. It's a favorite among word puzzle enthusiasts!</p>
     </article>
-    <section class="mt-12">
-      <h2 class="text-2xl font-bold mb-4">FAQ</h2>
-        <details class="mb-3">
-          <summary class="font-medium cursor-pointer">Can I reuse words?</summary>
-          <p class="text-sand-500 mt-2">No, each word in the chain must be unique.</p>
-        </details>
-        <details class="mb-3">
-          <summary class="font-medium cursor-pointer">What if I get stuck?</summary>
-          <p class="text-sand-500 mt-2">Use a hint to reveal the next word in the optimal path.</p>
-        </details>
-    </section>
   </div>
   <PwaInstallPrompt client:only="react" />
 </Layout>
