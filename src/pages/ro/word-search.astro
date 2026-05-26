@@ -3,19 +3,19 @@ import PwaInstallPrompt from '@/components/PwaInstallPrompt';
 import Layout from '../../layouts/Layout.astro';
 import LazyGameWrapper from '../../components/games/LazyGameWrapper';
 
-const title = 'Поиск Слов — Klystora';
-const description = 'Найдите все скрытые слова в сетке. Free in 27 languages.';
+const title = 'Word Search — Klystora';
+const description = 'Find all hidden words in the grid. Free in 27 languages.';
 const ogImage = '/og/default.jpg';
 ---
 
 <Layout title={title} description={description} ogImage={ogImage}>
   <div class="max-w-3xl mx-auto px-4 py-8">
     <div class="text-center mb-6">
-      <h1 class="text-3xl font-bold">Поиск Слов</h1>
-      <p class="text-sand-500 mt-1">Найдите все скрытые слова в сетке</p>
+      <h1 class="text-3xl font-bold">Word Search</h1>
+      <p class="text-sand-500 mt-1">Find all hidden words in the grid. Click and drag to select!</p>
     </div>
     
-    <LazyGameWrapper game="word-search" lang="ru" client:only="react" />
+    <LazyGameWrapper game="word-search" lang="ro" client:only="react" />
   </div>
   <PwaInstallPrompt client:only="react" />
 </Layout>

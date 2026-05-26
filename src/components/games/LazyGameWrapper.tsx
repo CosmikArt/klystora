@@ -12,7 +12,8 @@ interface Props {
         'letter-boxed' |
         'multi-wordle' |
         'crossword' |
-        'acrostic';
+        'acrostic' |
+        'word-search';
   lang?: Lang;
 }
 
@@ -39,6 +40,7 @@ const gameComponents: Record<string, () => Promise<any>> = {
   'multi-wordle': () => import('./multi-wordle/MultiWordleWrapper'),
   'crossword': () => import('./crossword/CrosswordWrapper'),
   'acrostic': () => import('./acrostic/AcrosticWrapper'),
+  'word-search': () => import('./word-search/WordSearchWrapper'),
 };
 
 function GameSkeleton() {

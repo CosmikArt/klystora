@@ -2,19 +2,19 @@
 import PwaInstallPrompt from '@/components/PwaInstallPrompt';
 import Layout from '../../layouts/Layout.astro';
 import LazyGameWrapper from '../../components/games/LazyGameWrapper';
-import { getMessages, type Locale } from '../../lib/i18n';
 
-const locale: Locale = 'pt';
-const messages = getMessages(locale);
-const gameInfo = messages.games.wordSearch;
+const title = 'Caça-Palavras — Klystora';
+const description = 'Encontre todas as palavras ocultas na grade. Free in 27 languages.';
+const ogImage = '/og/default.jpg';
 ---
 
-<Layout title={`${gameInfo.name} — Klystora`} description={gameInfo.desc} ogImage="/og/default.jpg">
-  <div class="max-w-2xl mx-auto px-4 py-8">
+<Layout title={title} description={description} ogImage={ogImage}>
+  <div class="max-w-3xl mx-auto px-4 py-8">
     <div class="text-center mb-6">
-      <h1 class="text-3xl font-bold">{gameInfo.name}</h1>
-      <p class="text-sand-500 mt-1">{gameInfo.desc}</p>
+      <h1 class="text-3xl font-bold">Caça-Palavras</h1>
+      <p class="text-sand-500 mt-1">Encontre todas as palavras ocultas na grade</p>
     </div>
+    
     <LazyGameWrapper game="word-search" lang="pt" client:only="react" />
   </div>
   <PwaInstallPrompt client:only="react" />
