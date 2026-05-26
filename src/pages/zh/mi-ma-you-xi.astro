@@ -1,0 +1,21 @@
+---
+import PwaInstallPrompt from '@/components/PwaInstallPrompt';
+import Layout from '../../layouts/Layout.astro';
+import LazyGameWrapper from '../../components/games/LazyGameWrapper';
+
+const title = '密码游戏 — Klystora';
+const description = '破解替换密码，揭示隐藏的名言. Free daily puzzle in 27 languages.';
+const ogImage = '/og/default.jpg';
+---
+
+<Layout title={title} description={description} ogImage={ogImage}>
+  <div class="max-w-3xl mx-auto px-4 py-8">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-bold">密码游戏</h1>
+      <p class="text-sand-500 mt-1">破解替换密码，揭示隐藏的名言</p>
+    </div>
+    
+    <LazyGameWrapper game="cryptogram" lang="zh" client:only="react" />
+  </div>
+  <PwaInstallPrompt client:only="react" />
+</Layout>

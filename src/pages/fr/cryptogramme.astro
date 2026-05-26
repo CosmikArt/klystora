@@ -1,0 +1,21 @@
+---
+import PwaInstallPrompt from '@/components/PwaInstallPrompt';
+import Layout from '../../layouts/Layout.astro';
+import LazyGameWrapper from '../../components/games/LazyGameWrapper';
+
+const title = 'Cryptogramme — Klystora';
+const description = 'Cassez le chiffre et révélez la citation cachée. Free daily puzzle in 27 languages.';
+const ogImage = '/og/default.jpg';
+---
+
+<Layout title={title} description={description} ogImage={ogImage}>
+  <div class="max-w-3xl mx-auto px-4 py-8">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-bold">Cryptogramme</h1>
+      <p class="text-sand-500 mt-1">Cassez le chiffre et révélez la citation cachée</p>
+    </div>
+    
+    <LazyGameWrapper game="cryptogram" lang="fr" client:only="react" />
+  </div>
+  <PwaInstallPrompt client:only="react" />
+</Layout>

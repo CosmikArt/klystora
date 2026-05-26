@@ -1,0 +1,34 @@
+---
+import PwaInstallPrompt from '@/components/PwaInstallPrompt';
+import Layout from '../layouts/Layout.astro';
+import LazyGameWrapper from '../components/games/LazyGameWrapper';
+
+const title = 'Cryptogram — Crack the Code | Klystora';
+const description = 'Daily cryptogram puzzles. Decode famous quotes encrypted with substitution cipher. Free in 27 languages.';
+const ogImage = '/og/default.jpg';
+---
+
+<Layout title={{title}} description={{description}} ogImage={{ogImage}}>
+  <div class="max-w-3xl mx-auto px-4 py-8">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-bold">Cryptogram</h1>
+      <p class="text-sand-500 mt-1">Crack the substitution cipher and reveal the hidden quote</p>
+    </div>
+    
+    <LazyGameWrapper game="cryptogram" lang="en" client:only="react" />
+    
+    <article class="mt-16 max-w-none">
+      <h2 class="text-2xl font-bold mb-4">How to Solve Cryptograms</h2>
+      <p class="text-sand-500 mb-4">A cryptogram is a puzzle where each letter has been substituted with another letter. Your goal is to decode the message and reveal the hidden quote.</p>
+      <ul class="space-y-2 mb-6">
+        <li>Each letter is consistently replaced with the same letter throughout</li>
+        <li>Click a cipher letter, then select its real letter from the alphabet</li>
+        <li>Use frequency analysis: E, T, A are the most common letters in English</li>
+        <li>Look for short words like THE, AND, THAT as starting points</li>
+        <li>Use hints if you get stuck — they reveal one letter at a time</li>
+      </ul>
+      <p class="text-sand-500">Cryptograms have been popular puzzles since ancient times. They exercise your pattern recognition and logical thinking skills.</p>
+    </article>
+  </div>
+  <PwaInstallPrompt client:only="react" />
+</Layout>

@@ -7,7 +7,8 @@ interface Props {
         'connections' | 'spelling-bee' | 'word-ladder' | 'word-wheel' |
         'sudoku' | 'memory' | 'hangman' | 'trivia' | '2048' | 'minesweeper' |
         'typing-race' |
-        'word-scramble';
+        'word-scramble' |
+        'cryptogram';
   lang?: Lang;
 }
 
@@ -29,6 +30,7 @@ const gameComponents: Record<string, () => Promise<any>> = {
   'minesweeper': () => import('./minesweeper/MinesweeperWrapper'),
   'typing-race': () => import('./typing-race/TypingRaceWrapper'),
   'word-scramble': () => import('./word-scramble/WordScrambleWrapper'),
+  'cryptogram': () => import('./cryptogram/CryptogramWrapper'),
 };
 
 function GameSkeleton() {
