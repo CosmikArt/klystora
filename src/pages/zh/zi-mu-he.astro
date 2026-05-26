@@ -1,0 +1,21 @@
+---
+import PwaInstallPrompt from '@/components/PwaInstallPrompt';
+import Layout from '../../layouts/Layout.astro';
+import LazyGameWrapper from '../../components/games/LazyGameWrapper';
+
+const title = '字母盒 — Klystora';
+const description = '从不同边连接字母组成单词. Free puzzle in 27 languages.';
+const ogImage = '/og/default.jpg';
+---
+
+<Layout title={title} description={description} ogImage={ogImage}>
+  <div class="max-w-3xl mx-auto px-4 py-8">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-bold">字母盒</h1>
+      <p class="text-sand-500 mt-1">从不同边连接字母组成单词</p>
+    </div>
+    
+    <LazyGameWrapper game="letter-boxed" lang="zh" client:only="react" />
+  </div>
+  <PwaInstallPrompt client:only="react" />
+</Layout>

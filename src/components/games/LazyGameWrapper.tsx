@@ -8,7 +8,8 @@ interface Props {
         'sudoku' | 'memory' | 'hangman' | 'trivia' | '2048' | 'minesweeper' |
         'typing-race' |
         'word-scramble' |
-        'cryptogram';
+        'cryptogram' |
+        'letter-boxed';
   lang?: Lang;
 }
 
@@ -31,6 +32,7 @@ const gameComponents: Record<string, () => Promise<any>> = {
   'typing-race': () => import('./typing-race/TypingRaceWrapper'),
   'word-scramble': () => import('./word-scramble/WordScrambleWrapper'),
   'cryptogram': () => import('./cryptogram/CryptogramWrapper'),
+  'letter-boxed': () => import('./letter-boxed/LetterBoxedWrapper'),
 };
 
 function GameSkeleton() {

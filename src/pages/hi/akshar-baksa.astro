@@ -1,0 +1,21 @@
+---
+import PwaInstallPrompt from '@/components/PwaInstallPrompt';
+import Layout from '../../layouts/Layout.astro';
+import LazyGameWrapper from '../../components/games/LazyGameWrapper';
+
+const title = 'अक्षर बक्सा — Klystora';
+const description = 'विभिन्न पक्षों से अक्षर जोड़कर शब्द बनाएं. Free puzzle in 27 languages.';
+const ogImage = '/og/default.jpg';
+---
+
+<Layout title={title} description={description} ogImage={ogImage}>
+  <div class="max-w-3xl mx-auto px-4 py-8">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-bold">अक्षर बक्सा</h1>
+      <p class="text-sand-500 mt-1">विभिन्न पक्षों से अक्षर जोड़कर शब्द बनाएं</p>
+    </div>
+    
+    <LazyGameWrapper game="letter-boxed" lang="hi" client:only="react" />
+  </div>
+  <PwaInstallPrompt client:only="react" />
+</Layout>
