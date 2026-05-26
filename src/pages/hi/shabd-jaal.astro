@@ -1,0 +1,21 @@
+---
+import PwaInstallPrompt from '@/components/PwaInstallPrompt';
+import Layout from '../../layouts/Layout.astro';
+import LazyGameWrapper from '../../components/games/LazyGameWrapper';
+
+const title = 'शब्द जाल — Klystora';
+const description = 'सुरागों से मेल खाते शब्दों से ग्रिड भरें. Free in 27 languages.';
+const ogImage = '/og/default.jpg';
+---
+
+<Layout title={title} description={description} ogImage={ogImage}>
+  <div class="max-w-3xl mx-auto px-4 py-8">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-bold">शब्द जाल</h1>
+      <p class="text-sand-500 mt-1">सुरागों से मेल खाते शब्दों से ग्रिड भरें</p>
+    </div>
+    
+    <LazyGameWrapper game="crossword" lang="hi" client:only="react" />
+  </div>
+  <PwaInstallPrompt client:only="react" />
+</Layout>

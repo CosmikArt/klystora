@@ -10,7 +10,8 @@ interface Props {
         'word-scramble' |
         'cryptogram' |
         'letter-boxed' |
-        'multi-wordle';
+        'multi-wordle' |
+        'crossword';
   lang?: Lang;
 }
 
@@ -35,6 +36,7 @@ const gameComponents: Record<string, () => Promise<any>> = {
   'cryptogram': () => import('./cryptogram/CryptogramWrapper'),
   'letter-boxed': () => import('./letter-boxed/LetterBoxedWrapper'),
   'multi-wordle': () => import('./multi-wordle/MultiWordleWrapper'),
+  'crossword': () => import('./crossword/CrosswordWrapper'),
 };
 
 function GameSkeleton() {

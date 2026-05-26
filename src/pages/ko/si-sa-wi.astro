@@ -1,0 +1,21 @@
+---
+import PwaInstallPrompt from '@/components/PwaInstallPrompt';
+import Layout from '../../layouts/Layout.astro';
+import LazyGameWrapper from '../../components/games/LazyGameWrapper';
+
+const title = '시사위 — Klystora';
+const description = '단서에 맞는 단어로 그리드를 채우세요. Free in 27 languages.';
+const ogImage = '/og/default.jpg';
+---
+
+<Layout title={title} description={description} ogImage={ogImage}>
+  <div class="max-w-3xl mx-auto px-4 py-8">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-bold">시사위</h1>
+      <p class="text-sand-500 mt-1">단서에 맞는 단어로 그리드를 채우세요</p>
+    </div>
+    
+    <LazyGameWrapper game="crossword" lang="ko" client:only="react" />
+  </div>
+  <PwaInstallPrompt client:only="react" />
+</Layout>

@@ -1,0 +1,21 @@
+---
+import PwaInstallPrompt from '@/components/PwaInstallPrompt';
+import Layout from '../../layouts/Layout.astro';
+import LazyGameWrapper from '../../components/games/LazyGameWrapper';
+
+const title = '填字游戏 — Klystora';
+const description = '根据线索用单词填满网格. Free in 27 languages.';
+const ogImage = '/og/default.jpg';
+---
+
+<Layout title={title} description={description} ogImage={ogImage}>
+  <div class="max-w-3xl mx-auto px-4 py-8">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-bold">填字游戏</h1>
+      <p class="text-sand-500 mt-1">根据线索用单词填满网格</p>
+    </div>
+    
+    <LazyGameWrapper game="crossword" lang="zh" client:only="react" />
+  </div>
+  <PwaInstallPrompt client:only="react" />
+</Layout>

@@ -1,0 +1,34 @@
+---
+import PwaInstallPrompt from '@/components/PwaInstallPrompt';
+import Layout from '../layouts/Layout.astro';
+import LazyGameWrapper from '../components/games/LazyGameWrapper';
+
+const title = 'Crossword Puzzle — Classic Word Grid | Klystora';
+const description = 'Daily crossword puzzles with clues. Fill the grid with words that match the definitions. Free in 27 languages.';
+const ogImage = '/og/default.jpg';
+---
+
+<Layout title={{title}} description={{description}} ogImage={{ogImage}}>
+  <div class="max-w-3xl mx-auto px-4 py-8">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-bold">Crossword Puzzle</h1>
+      <p class="text-sand-500 mt-1">Fill the grid with words that match the clues. Click a clue or cell to start!</p>
+    </div>
+    
+    <LazyGameWrapper game="crossword" lang="en" client:only="react" />
+    
+    <article class="mt-16 max-w-none">
+      <h2 class="text-2xl font-bold mb-4">How to Solve Crosswords</h2>
+      <p class="text-sand-500 mb-4">Crossword puzzles are word games where you fill a grid with words based on clues. Each word intersects with others, sharing letters.</p>
+      <ul class="space-y-2 mb-6">
+        <li>Read the clue and think of a word that fits</li>
+        <li>Click on the grid or a clue to select a word</li>
+        <li>Type letters to fill in the selected word</li>
+        <li>Use arrow keys to navigate the grid</li>
+        <li>Use hints if you get stuck</li>
+      </ul>
+      <p class="text-sand-500">Crosswords improve vocabulary, general knowledge, and pattern recognition. They've been popular since 1913!</p>
+    </article>
+  </div>
+  <PwaInstallPrompt client:only="react" />
+</Layout>

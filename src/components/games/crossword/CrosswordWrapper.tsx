@@ -10,18 +10,18 @@ interface Props {
 
 function AnalyticsWrapper({ children, game }: { children: React.ReactNode; game: string }) {
   const { trackGameStart } = useAnalytics();
-  
+
   useEffect(() => {
     trackGameStart(game);
   }, [trackGameStart, game]);
-  
+
   return <>{children}</>;
 }
 
 export default function CrosswordWrapper({ lang }: Props) {
   return (
     <LanguageProvider initialLang={lang}>
-      <AnalyticsWrapper game="mini-crossword">
+      <AnalyticsWrapper game="crossword">
         <CrosswordGame />
       </AnalyticsWrapper>
     </LanguageProvider>
