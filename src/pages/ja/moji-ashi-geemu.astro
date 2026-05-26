@@ -1,0 +1,34 @@
+---
+import PwaInstallPrompt from '@/components/PwaInstallPrompt';
+import Layout from '../../layouts/Layout.astro';
+import LazyGameWrapper from '../../components/games/LazyGameWrapper';
+
+const title = '文字足しゲーム — Klystora';
+const description = '7文字で単語を作る. Free daily puzzle in 27 languages.';
+const ogImage = '/og/default.jpg';
+---
+
+<Layout title={title} description={description} ogImage={ogImage}>
+  <div class="max-w-2xl mx-auto px-4 py-8">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-bold">文字足しゲーム</h1>
+      <p class="text-sand-500 mt-1">7文字で単語を作る</p>
+    </div>
+    
+    <LazyGameWrapper game="word-scramble" lang="ja" client:only="react" />
+    
+    <article class="mt-16 max-w-none">
+      <h2 class="text-2xl font-bold mb-4">文字足しゲームの遊び方</h2>
+      <p class="text-sand-500 mb-4">文字足しゲームは7つの文字からできるだけ多くの単語を作る挑戦です。中央の文字はすべての単語に含める必要があります。</p>
+      <ul class="space-y-2 mb-6">
+        <li>単語は最低3文字必要</li>
+        <li>すべての単語に中央の文字を含める</li>
+        <li>文字は複数回使用可能</li>
+        <li>3文字=100点、4=200点、5=400点、6=800点、7+=1500点</li>
+        <li>パングラム（7文字すべてを使用）を見つけると2倍ボーナス</li>
+      </ul>
+      <p class="text-sand-500">プレイするたびに新しいパズルが生成されます。Queen Beeランクを目指して挑戦！</p>
+    </article>
+  </div>
+  <PwaInstallPrompt client:only="react" />
+</Layout>

@@ -1,0 +1,21 @@
+---
+import PwaInstallPrompt from '@/components/PwaInstallPrompt';
+import Layout from '../../layouts/Layout.astro';
+import LazyGameWrapper from '../../components/games/LazyGameWrapper';
+
+const title = 'Word Scramble — Klystora';
+const description = 'Make words from 7 letters. Free daily puzzle in 27 languages.';
+const ogImage = '/og/default.jpg';
+---
+
+<Layout title={title} description={description} ogImage={ogImage}>
+  <div class="max-w-2xl mx-auto px-4 py-8">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-bold">Word Scramble</h1>
+      <p class="text-sand-500 mt-1">Make words from 7 letters — find the pangram!</p>
+    </div>
+    
+    <LazyGameWrapper game="word-scramble" lang="vi" client:only="react" />
+  </div>
+  <PwaInstallPrompt client:only="react" />
+</Layout>

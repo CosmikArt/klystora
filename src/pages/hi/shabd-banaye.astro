@@ -1,0 +1,34 @@
+---
+import PwaInstallPrompt from '@/components/PwaInstallPrompt';
+import Layout from '../../layouts/Layout.astro';
+import LazyGameWrapper from '../../components/games/LazyGameWrapper';
+
+const title = 'शब्द बनाएं — Klystora';
+const description = '7 अक्षरों से शब्द बनाएं. Free daily puzzle in 27 languages.';
+const ogImage = '/og/default.jpg';
+---
+
+<Layout title={title} description={description} ogImage={ogImage}>
+  <div class="max-w-2xl mx-auto px-4 py-8">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-bold">शब्द बनाएं</h1>
+      <p class="text-sand-500 mt-1">7 अक्षरों से शब्द बनाएं</p>
+    </div>
+    
+    <LazyGameWrapper game="word-scramble" lang="hi" client:only="react" />
+    
+    <article class="mt-16 max-w-none">
+      <h2 class="text-2xl font-bold mb-4">शब्द बनाएं कैसे खेलें</h2>
+      <p class="text-sand-500 mb-4">शब्द बनाएं आपको 7 दिए गए अक्षरों से जितने शब्द बना सकें बनाने की चुनौती देता है। केंद्रीय अक्षर हर शब्द में उपयोग होना चाहिए।</p>
+      <ul class="space-y-2 mb-6">
+        <li>शब्द कम से कम 3 अक्षर के होने चाहिए</li>
+        <li>हर शब्द में केंद्रीय अक्षर होना चाहिए</li>
+        <li>अक्षरों को कई बार उपयोग किया जा सकता है</li>
+        <li>3 अक्षर = 100pts, 4 = 200pts, 5 = 400pts, 6 = 800pts, 7+ = 1500pts</li>
+        <li>सभी 7 अक्षरों का उपयोग करने वाला शब्द खोजें (2x बोनस)</li>
+      </ul>
+      <p class="text-sand-500">हर बार नया पज़ल जनरेट होता है। Queen Bee रैंक हासिल करें!</p>
+    </article>
+  </div>
+  <PwaInstallPrompt client:only="react" />
+</Layout>

@@ -1,0 +1,34 @@
+---
+import PwaInstallPrompt from '@/components/PwaInstallPrompt';
+import Layout from '../../layouts/Layout.astro';
+import LazyGameWrapper from '../../components/games/LazyGameWrapper';
+
+const title = '拼词游戏 — Klystora';
+const description = '用7个字母组词. Free daily puzzle in 27 languages.';
+const ogImage = '/og/default.jpg';
+---
+
+<Layout title={title} description={description} ogImage={ogImage}>
+  <div class="max-w-2xl mx-auto px-4 py-8">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-bold">拼词游戏</h1>
+      <p class="text-sand-500 mt-1">用7个字母组词</p>
+    </div>
+    
+    <LazyGameWrapper game="word-scramble" lang="zh" client:only="react" />
+    
+    <article class="mt-16 max-w-none">
+      <h2 class="text-2xl font-bold mb-4">如何进行拼词游戏</h2>
+      <p class="text-sand-500 mb-4">拼词游戏挑战你用7个给定字母组成尽可能多的单词。中心字母必须在每个单词中使用。</p>
+      <ul class="space-y-2 mb-6">
+        <li>单词至少3个字母</li>
+        <li>每个单词必须包含中心字母</li>
+        <li>字母可以重复使用</li>
+        <li>3字母=100分，4=200分，5=400分，6=800分，7+=1500分</li>
+        <li>找到全字母词（使用全部7个字母）获得2倍奖励</li>
+      </ul>
+      <p class="text-sand-500">每次玩都会生成新谜题。挑战自己达到Queen Bee等级！</p>
+    </article>
+  </div>
+  <PwaInstallPrompt client:only="react" />
+</Layout>

@@ -44,6 +44,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     game2048: '2048',
     minesweeper: 'minesweeper',
     typingRace: 'typing-race',
+    wordScramble: 'word-scramble',
   },
   es: {
     dailyWord: 'palabra-diaria',
@@ -61,6 +62,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     game2048: '2048',
     minesweeper: 'buscaminas',
     typingRace: 'prueba-de-escritura',
+    wordScramble: 'formar-palabras',
   },
   zh: {
     dailyWord: 'mei-ri-yi-ci',
@@ -78,6 +80,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     game2048: '2048',
     minesweeper: 'saolei',
     typingRace: 'da-zi-ce-shi',
+    wordScramble: 'pin-ci-you-xi',
   },
   hi: {
     dailyWord: 'din-bhar-ka-shabd',
@@ -95,6 +98,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     game2048: '2048',
     minesweeper: 'minesweeper',
     typingRace: 'taipin-test',
+    wordScramble: 'shabd-banaye',
   },
   pt: {
     dailyWord: 'palavra-diaria',
@@ -112,6 +116,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     game2048: '2048',
     minesweeper: 'campo-minado',
     typingRace: 'teste-de-digitacao',
+    wordScramble: 'formar-palavras',
   },
   bn: {
     dailyWord: 'doinik-shobdo',
@@ -129,6 +134,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     game2048: '2048',
     minesweeper: 'minesweeper',
     typingRace: 'taipin-test',
+    wordScramble: 'shobdo-tori',
   },
   ru: {
     dailyWord: 'slovo-dnya',
@@ -146,6 +152,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     game2048: '2048',
     minesweeper: 'saper',
     typingRace: 'test-skorosti-pechati',
+    wordScramble: 'sostavit-slova',
   },
   ja: {
     dailyWord: 'mainichi-no-kotoba',
@@ -163,6 +170,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     game2048: '2048',
     minesweeper: 'mainusuiipa',
     typingRace: 'taipingu-tesuto',
+    wordScramble: 'moji-ashi-geemu',
   },
   de: {
     dailyWord: 'taegliches-wort',
@@ -180,6 +188,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     game2048: '2048',
     minesweeper: 'minesweeper',
     typingRace: 'tipptest',
+    wordScramble: 'woerter-bilden',
   },
   ko: {
     dailyWord: 'maeil-han-geul',
@@ -197,6 +206,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     game2048: '2048',
     minesweeper: 'maineu-swip-eo',
     typingRace: 'taipin-sokdo-teseuteu',
+    wordScramble: 'daneo-mandeulgi',
   },
   fr: {
     dailyWord: 'mot-du-jour',
@@ -214,6 +224,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     game2048: '2048',
     minesweeper: 'demineur',
     typingRace: 'test-de-dactylo',
+    wordScramble: 'former-mots',
   },
   tr: {
     dailyWord: 'gunun-kelimesi',
@@ -231,6 +242,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     game2048: '2048',
     minesweeper: 'mayin-tarlasi',
     typingRace: 'yazma-hizi-testi',
+    wordScramble: 'kelime-olustur',
   },
   it: {
     dailyWord: 'parola-del-giorno',
@@ -248,6 +260,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     game2048: '2048',
     minesweeper: 'campo-minato',
     typingRace: 'test-di-digitazione',
+    wordScramble: 'formare-parole',
   },
   pl: {
     dailyWord: 'slowo-dnia',
@@ -265,6 +278,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     game2048: '2048',
     minesweeper: 'sapper',
     typingRace: 'test-pisania',
+    wordScramble: 'tworzenie-slow',
   },
   nl: {
     dailyWord: 'dagelijks-woord',
@@ -282,6 +296,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     game2048: '2048',
     minesweeper: 'mijnenveger',
     typingRace: 'typetest',
+    wordScramble: 'woorden-vormen',
   },
   uk: {
     dailyWord: 'slovo-dnya',
@@ -299,6 +314,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     game2048: '2048',
     minesweeper: 'sap-er',
     typingRace: 'test-shvidkosti-druku',
+    wordScramble: 'skladati-slova',
   },
   ro: {
     dailyWord: 'cuvantul-zilei',
@@ -316,6 +332,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     game2048: '2048',
     minesweeper: 'minesweeper',
     typingRace: 'test-de-scriere',
+    wordScramble: 'formare-cuvinte',
   },
   el: {
     dailyWord: 'i-lexi-tis-imeras',
@@ -333,6 +350,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     game2048: '2048',
     minesweeper: 'minesweeper',
     typingRace: 'test-pliroforisis',
+    wordScramble: 'dhmiourgia-lekseon',
   },
   cs: {
     dailyWord: 'slovo-dne',
@@ -350,6 +368,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     game2048: '2048',
     minesweeper: 'minesweeper',
     typingRace: 'test-psani',
+    wordScramble: 'tvoreni-slov',
   },
   sv: {
     dailyWord: 'dagens-ord',
@@ -367,6 +386,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     game2048: '2048',
     minesweeper: 'minesweeper',
     typingRace: 'skrivtest',
+    wordScramble: 'bilda-ord',
   },
   hu: {
     dailyWord: 'a-napi-szo',
@@ -384,6 +404,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     game2048: '2048',
     minesweeper: 'aknakereso',
     typingRace: 'gepelesi-teszt',
+    wordScramble: 'szokepz-es',
   },
   id: {
     dailyWord: 'kata-harian',
@@ -401,6 +422,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     game2048: '2048',
     minesweeper: 'minesweeper',
     typingRace: 'tes-mengetik',
+    wordScramble: 'membentuk-kata',
   },
   vi: {
     dailyWord: 'tu-ngay',
@@ -418,6 +440,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     game2048: '2048',
     minesweeper: 'do-mine',
     typingRace: 'kiem-tra-go-chu',
+    wordScramble: 'tao-tu',
   },
   th: {
     dailyWord: 'kham-pra-jam-wan',
@@ -435,6 +458,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     game2048: '2048',
     minesweeper: 'minesweeper',
     typingRace: 'kaan-thaai-khat-phim',
+    wordScramble: 'sang-kham',
   },
   da: {
     dailyWord: 'dagens-ord',
@@ -452,6 +476,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     game2048: '2048',
     minesweeper: 'minesweeper',
     typingRace: 'skrivetest',
+    wordScramble: 'danne-ord',
   },
   fi: {
     dailyWord: 'paivan-sana',
@@ -469,6 +494,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     game2048: '2048',
     minesweeper: 'miinaharava',
     typingRace: 'kirjoitustesti',
+    wordScramble: 'muodosta-sanoja',
   },
   no: {
     dailyWord: 'dagens-ord',
@@ -486,6 +512,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     game2048: '2048',
     minesweeper: 'minesweeper',
     typingRace: 'skrivetest',
+    wordScramble: 'danne-ord',
   },
 };
 
@@ -544,6 +571,33 @@ const messages: Record<Locale, any> = {
       hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
       trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
       typingRace: { name: 'Skrivekonkurranse', desc: 'Test skrivehastigheten og nøyaktigheten din' },
+      wordScramble: { name: 'Danne Ord', desc: 'Dann ord med 7 bokstaver' },
+      wordScramble: { name: 'Muodosta Sanoja', desc: 'Muodosta sanoja 7 kirjaimesta' },
+      wordScramble: { name: 'Dan Ord', desc: 'Dan ord med 7 bogstaver' },
+      wordScramble: { name: 'สร้างคำ', desc: 'สร้างคำจาก 7 ตัวอักษร' },
+      wordScramble: { name: 'Tạo Từ', desc: 'Tạo từ từ 7 chữ cái' },
+      wordScramble: { name: 'Membentuk Kata', desc: 'Bentuk kata dari 7 huruf' },
+      wordScramble: { name: 'Szóképzés', desc: 'Képezzen szavakat 7 betűből' },
+      wordScramble: { name: 'Bilda Ord', desc: 'Bilda ord med 7 bokstäver' },
+      wordScramble: { name: 'Tvoření Slov', desc: 'Vytvořte slova ze 7 písmen' },
+      wordScramble: { name: 'Δημιουργία Λέξεων', desc: 'Δημιουργήστε λέξεις με 7 γράμματα' },
+      wordScramble: { name: 'Formare Cuvinte', desc: 'Formați cuvinte din 7 litere' },
+      wordScramble: { name: 'Склади Слова', desc: 'Складіть слова з 7 літер' },
+      wordScramble: { name: 'Woorden Vormen', desc: 'Maak woorden met 7 letters' },
+      wordScramble: { name: 'Tworzenie Słów', desc: 'Twórz słowa z 7 liter' },
+      wordScramble: { name: 'Formare Parole', desc: 'Forma parole con 7 lettere' },
+      wordScramble: { name: 'Kelime Oluştur', desc: '7 harfle kelime oluşturun' },
+      wordScramble: { name: 'Former Mots', desc: 'Formez des mots avec 7 lettres' },
+      wordScramble: { name: '단어 만들기', desc: '7개 글자로 단어 만들기' },
+      wordScramble: { name: 'Wörter Bilden', desc: 'Bilde Wörter aus 7 Buchstaben' },
+      wordScramble: { name: '文字足しゲーム', desc: '7文字で単語を作る' },
+      wordScramble: { name: 'Составь Слова', desc: 'Составьте слова из 7 букв' },
+      wordScramble: { name: 'শব্দ তৈরি', desc: '৭টি অক্ষর দিয়ে শব্দ তৈরি করুন' },
+      wordScramble: { name: 'Formar Palavras', desc: 'Crie palavras com 7 letras' },
+      wordScramble: { name: 'शब्द बनाएं', desc: '7 अक्षरों से शब्द बनाएं' },
+      wordScramble: { name: '拼词游戏', desc: '用7个字母组词' },
+      wordScramble: { name: 'Formar Palabras', desc: 'Crea palabras con 7 letras' },
+      wordScramble: { name: 'Word Scramble', desc: 'Make words from 7 letters' },
       typingRace: { name: 'Kirjoituskilpailu', desc: 'Testaa kirjoitusnopeuttasi ja tarkkuuttasi' },
       typingRace: { name: 'Skrivekonkurrence', desc: 'Test din skrivehastighed og nøjagtighed' },
       typingRace: { name: 'การแข่งพิมพ์', desc: 'ทดสอบความเร็วและความแม่นยำในการพิมพ์ของคุณ' },
@@ -596,6 +650,7 @@ const messages: Record<Locale, any> = {
       hangman: { name: 'Ahorcado', desc: 'Adivina la palabra antes de que sea tarde' },
       trivia: { name: 'Trivia', desc: 'Pon a prueba tu conocimiento del lenguaje' },
       typingRace: { name: 'Carrera de Escritura', desc: 'Prueba tu velocidad y precisión de escritura' },
+      wordScramble: { name: 'Formar Palabras', desc: 'Crea palabras con 7 letras' },
     },
     footer: { games: 'Juegos', company: 'Empresa', legal: 'Legal', privacy: 'Privacidad', terms: 'Términos', cookies: 'Cookies' }
   },
@@ -622,6 +677,8 @@ const messages: Record<Locale, any> = {
       hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
       trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
       typingRace: { name: '打字测试', desc: '测试你的打字速度和准确度' },
+      wordScramble: { name: '拼词游戏', desc: '用7个字母组词' },
+      wordScramble: { name: 'Formar Palabras', desc: 'Crea palabras con 7 letras' },
       typingRace: { name: 'Carrera de Escritura', desc: 'Prueba tu velocidad y precisión de escritura' },
     },
     footer: { games: '游戏', company: '公司', legal: '法律', privacy: '隐私', terms: '条款', cookies: 'Cookie' }
@@ -649,6 +706,8 @@ const messages: Record<Locale, any> = {
       hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
       trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
       typingRace: { name: 'टाइपिंग रेस', desc: 'अपनी टाइपिंग गति और सटीकता का परीक्षण करें' },
+      wordScramble: { name: 'शब्द बनाएं', desc: '7 अक्षरों से शब्द बनाएं' },
+      wordScramble: { name: 'Formar Palabras', desc: 'Crea palabras con 7 letras' },
       typingRace: { name: 'Carrera de Escritura', desc: 'Prueba tu velocidad y precisión de escritura' },
     },
     footer: { games: 'खेल', company: 'कंपनी', legal: 'कानूनी', privacy: 'गोपनीयता', terms: 'शर्तें', cookies: 'Cookies' }
@@ -676,6 +735,8 @@ const messages: Record<Locale, any> = {
       hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
       trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
       typingRace: { name: 'Corrida de Digitação', desc: 'Teste sua velocidade e precisão de digitação' },
+      wordScramble: { name: 'Formar Palavras', desc: 'Crie palavras com 7 letras' },
+      wordScramble: { name: 'Formar Palabras', desc: 'Crea palabras con 7 letras' },
       typingRace: { name: 'Carrera de Escritura', desc: 'Prueba tu velocidad y precisión de escritura' },
     },
     footer: { games: 'Jogos', company: 'Empresa', legal: 'Legal', privacy: 'Privacidade', terms: 'Termos', cookies: 'Cookies' }
@@ -703,6 +764,8 @@ const messages: Record<Locale, any> = {
       hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
       trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
       typingRace: { name: 'টাইপিং রেস', desc: 'আপনার টাইপিং গতি এবং নির্ভুল্য পরীক্ষা করুন' },
+      wordScramble: { name: 'শব্দ তৈরি', desc: '৭টি অক্ষর দিয়ে শব্দ তৈরি করুন' },
+      wordScramble: { name: 'Formar Palabras', desc: 'Crea palabras con 7 letras' },
       typingRace: { name: 'Carrera de Escritura', desc: 'Prueba tu velocidad y precisión de escritura' },
     },
     footer: { games: 'খেলা', company: 'কোম্পানি', legal: 'আইনি', privacy: 'গোপনীয়তা', terms: 'শর্তাবলী', cookies: 'Cookies' }
@@ -730,6 +793,8 @@ const messages: Record<Locale, any> = {
       hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
       trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
       typingRace: { name: 'Скоропечатание', desc: 'Проверьте скорость и точность печати' },
+      wordScramble: { name: 'Составь Слова', desc: 'Составьте слова из 7 букв' },
+      wordScramble: { name: 'Formar Palabras', desc: 'Crea palabras con 7 letras' },
       typingRace: { name: 'Carrera de Escritura', desc: 'Prueba tu velocidad y precisión de escritura' },
     },
     footer: { games: 'Игры', company: 'Компания', legal: 'Правовая информация', privacy: 'Конфиденциальность', terms: 'Условия', cookies: 'Cookies' }
@@ -757,6 +822,8 @@ const messages: Record<Locale, any> = {
       hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
       trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
       typingRace: { name: 'タイピングレース', desc: 'タイピング速度と正確性をテスト' },
+      wordScramble: { name: '文字足しゲーム', desc: '7文字で単語を作る' },
+      wordScramble: { name: 'Formar Palabras', desc: 'Crea palabras con 7 letras' },
       typingRace: { name: 'Carrera de Escritura', desc: 'Prueba tu velocidad y precisión de escritura' },
     },
     footer: { games: 'ゲーム', company: '会社', legal: '法的情報', privacy: 'プライバシー', terms: '規約', cookies: 'Cookie' }
@@ -784,6 +851,8 @@ const messages: Record<Locale, any> = {
       hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
       trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
       typingRace: { name: 'Tipprace', desc: 'Teste deine Tippgeschwindigkeit und Genauigkeit' },
+      wordScramble: { name: 'Wörter Bilden', desc: 'Bilde Wörter aus 7 Buchstaben' },
+      wordScramble: { name: 'Formar Palabras', desc: 'Crea palabras con 7 letras' },
       typingRace: { name: 'Carrera de Escritura', desc: 'Prueba tu velocidad y precisión de escritura' },
     },
     footer: { games: 'Spiele', company: 'Unternehmen', legal: 'Rechtliches', privacy: 'Datenschutz', terms: 'Nutzungsbedingungen', cookies: 'Cookies' }
@@ -811,6 +880,8 @@ const messages: Record<Locale, any> = {
       hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
       trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
       typingRace: { name: '타이핑 레이스', desc: '타이핑 속도와 정확도를 테스트하세요' },
+      wordScramble: { name: '단어 만들기', desc: '7개 글자로 단어 만들기' },
+      wordScramble: { name: 'Formar Palabras', desc: 'Crea palabras con 7 letras' },
       typingRace: { name: 'Carrera de Escritura', desc: 'Prueba tu velocidad y precisión de escritura' },
     },
     footer: { games: '게임', company: '회사', legal: '법률', privacy: '개인정보', terms: '약관', cookies: 'Cookie' }
@@ -838,6 +909,8 @@ const messages: Record<Locale, any> = {
       hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
       trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
       typingRace: { name: 'Course de Dactylo', desc: 'Testez votre vitesse et précision de frappe' },
+      wordScramble: { name: 'Former Mots', desc: 'Formez des mots avec 7 lettres' },
+      wordScramble: { name: 'Formar Palabras', desc: 'Crea palabras con 7 letras' },
       typingRace: { name: 'Carrera de Escritura', desc: 'Prueba tu velocidad y precisión de escritura' },
     },
     footer: { games: 'Jeux', company: 'Entreprise', legal: 'Mentions légales', privacy: 'Confidentialité', terms: 'Conditions', cookies: 'Cookies' }
@@ -865,6 +938,8 @@ const messages: Record<Locale, any> = {
       hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
       trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
       typingRace: { name: 'Yazma Yarışı', desc: 'Yazma hızınızı ve doğruluğunuzu test edin' },
+      wordScramble: { name: 'Kelime Oluştur', desc: '7 harfle kelime oluşturun' },
+      wordScramble: { name: 'Formar Palabras', desc: 'Crea palabras con 7 letras' },
       typingRace: { name: 'Carrera de Escritura', desc: 'Prueba tu velocidad y precisión de escritura' },
     },
     footer: { games: 'Oyunlar', company: 'Şirket', legal: 'Yasal', privacy: 'Gizlilik', terms: 'Koşullar', cookies: 'Cookies' }
@@ -892,6 +967,8 @@ const messages: Record<Locale, any> = {
       hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
       trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
       typingRace: { name: 'Gara di Battitura', desc: 'Testa la tua velocità e precisione di battitura' },
+      wordScramble: { name: 'Formare Parole', desc: 'Forma parole con 7 lettere' },
+      wordScramble: { name: 'Formar Palabras', desc: 'Crea palabras con 7 letras' },
       typingRace: { name: 'Carrera de Escritura', desc: 'Prueba tu velocidad y precisión de escritura' },
     },
     footer: { games: 'Giochi', company: 'Azienda', legal: 'Legale', privacy: 'Privacy', terms: 'Termini', cookies: 'Cookies' }
@@ -919,6 +996,8 @@ const messages: Record<Locale, any> = {
       hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
       trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
       typingRace: { name: 'Wyścig Pisania', desc: 'Sprawdź swoją szybkość i dokładność pisania' },
+      wordScramble: { name: 'Tworzenie Słów', desc: 'Twórz słowa z 7 liter' },
+      wordScramble: { name: 'Formar Palabras', desc: 'Crea palabras con 7 letras' },
       typingRace: { name: 'Carrera de Escritura', desc: 'Prueba tu velocidad y precisión de escritura' },
     },
     footer: { games: 'Gry', company: 'Firma', legal: 'Prawne', privacy: 'Prywatność', terms: 'Warunki', cookies: 'Cookies' }
@@ -946,6 +1025,8 @@ const messages: Record<Locale, any> = {
       hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
       trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
       typingRace: { name: 'Typrace', desc: 'Test je typsnelheid en nauwkeurigheid' },
+      wordScramble: { name: 'Woorden Vormen', desc: 'Maak woorden met 7 letters' },
+      wordScramble: { name: 'Formar Palabras', desc: 'Crea palabras con 7 letras' },
       typingRace: { name: 'Carrera de Escritura', desc: 'Prueba tu velocidad y precisión de escritura' },
     },
     footer: { games: 'Spellen', company: 'Bedrijf', legal: 'Juridisch', privacy: 'Privacy', terms: 'Voorwaarden', cookies: 'Cookies' }
@@ -973,6 +1054,8 @@ const messages: Record<Locale, any> = {
       hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
       trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
       typingRace: { name: 'Перегони Друку', desc: 'Перевірте швидкість і точність друку' },
+      wordScramble: { name: 'Склади Слова', desc: 'Складіть слова з 7 літер' },
+      wordScramble: { name: 'Formar Palabras', desc: 'Crea palabras con 7 letras' },
       typingRace: { name: 'Carrera de Escritura', desc: 'Prueba tu velocidad y precisión de escritura' },
     },
     footer: { games: 'Ігри', company: 'Компанія', legal: 'Правова інформація', privacy: 'Конфіденційність', terms: 'Умови', cookies: 'Cookies' }
@@ -1000,6 +1083,8 @@ const messages: Record<Locale, any> = {
       hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
       trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
       typingRace: { name: 'Cursa de Scriere', desc: 'Testează-ți viteza și precizia de scriere' },
+      wordScramble: { name: 'Formare Cuvinte', desc: 'Formați cuvinte din 7 litere' },
+      wordScramble: { name: 'Formar Palabras', desc: 'Crea palabras con 7 letras' },
       typingRace: { name: 'Carrera de Escritura', desc: 'Prueba tu velocidad y precisión de escritura' },
     },
     footer: { games: 'Jocuri', company: 'Companie', legal: 'Legal', privacy: 'Confidențialitate', terms: 'Termeni', cookies: 'Cookies' }
@@ -1027,6 +1112,8 @@ const messages: Record<Locale, any> = {
       hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
       trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
       typingRace: { name: 'Αγώνας Πληκτρολόγησης', desc: 'Δοκιμάστε την ταχύτητα και ακρίβεια πληκτρολόγησης' },
+      wordScramble: { name: 'Δημιουργία Λέξεων', desc: 'Δημιουργήστε λέξεις με 7 γράμματα' },
+      wordScramble: { name: 'Formar Palabras', desc: 'Crea palabras con 7 letras' },
       typingRace: { name: 'Carrera de Escritura', desc: 'Prueba tu velocidad y precisión de escritura' },
     },
     footer: { games: 'Παιχνίδια', company: 'Εταιρεία', legal: 'Νομικά', privacy: 'Απόρρητο', terms: 'Όροι', cookies: 'Cookies' }
@@ -1054,6 +1141,8 @@ const messages: Record<Locale, any> = {
       hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
       trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
       typingRace: { name: 'Psací Závod', desc: 'Otestujte svou rychlost a přesnost psaní' },
+      wordScramble: { name: 'Tvoření Slov', desc: 'Vytvořte slova ze 7 písmen' },
+      wordScramble: { name: 'Formar Palabras', desc: 'Crea palabras con 7 letras' },
       typingRace: { name: 'Carrera de Escritura', desc: 'Prueba tu velocidad y precisión de escritura' },
     },
     footer: { games: 'Hry', company: 'Společnost', legal: 'Právní', privacy: 'Soukromí', terms: 'Podmínky', cookies: 'Cookies' }
@@ -1081,6 +1170,8 @@ const messages: Record<Locale, any> = {
       hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
       trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
       typingRace: { name: 'Skrivtävling', desc: 'Testa din skrivhastighet och noggrannhet' },
+      wordScramble: { name: 'Bilda Ord', desc: 'Bilda ord med 7 bokstäver' },
+      wordScramble: { name: 'Formar Palabras', desc: 'Crea palabras con 7 letras' },
       typingRace: { name: 'Carrera de Escritura', desc: 'Prueba tu velocidad y precisión de escritura' },
     },
     footer: { games: 'Spel', company: 'Företag', legal: 'Juridisk', privacy: 'Integritet', terms: 'Villkor', cookies: 'Cookies' }
@@ -1108,6 +1199,8 @@ const messages: Record<Locale, any> = {
       hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
       trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
       typingRace: { name: 'Gépelési Verseny', desc: 'Tesztelje gépelési sebességét és pontosságát' },
+      wordScramble: { name: 'Szóképzés', desc: 'Képezzen szavakat 7 betűből' },
+      wordScramble: { name: 'Formar Palabras', desc: 'Crea palabras con 7 letras' },
       typingRace: { name: 'Carrera de Escritura', desc: 'Prueba tu velocidad y precisión de escritura' },
     },
     footer: { games: 'Játékok', company: 'Vállalat', legal: 'Jogi', privacy: 'Adatvédelem', terms: 'Feltételek', cookies: 'Cookies' }
@@ -1135,6 +1228,8 @@ const messages: Record<Locale, any> = {
       hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
       trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
       typingRace: { name: 'Lomba Mengetik', desc: 'Uji kecepatan dan akurasi mengetik Anda' },
+      wordScramble: { name: 'Membentuk Kata', desc: 'Bentuk kata dari 7 huruf' },
+      wordScramble: { name: 'Formar Palabras', desc: 'Crea palabras con 7 letras' },
       typingRace: { name: 'Carrera de Escritura', desc: 'Prueba tu velocidad y precisión de escritura' },
     },
     footer: { games: 'Permainan', company: 'Perusahaan', legal: 'Hukum', privacy: 'Privasi', terms: 'Syarat', cookies: 'Cookies' }
@@ -1162,6 +1257,8 @@ const messages: Record<Locale, any> = {
       hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
       trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
       typingRace: { name: 'Đua Gõ Chữ', desc: 'Kiểm tra tốc độ và độ chính xác gõ chữ của bạn' },
+      wordScramble: { name: 'Tạo Từ', desc: 'Tạo từ từ 7 chữ cái' },
+      wordScramble: { name: 'Formar Palabras', desc: 'Crea palabras con 7 letras' },
       typingRace: { name: 'Carrera de Escritura', desc: 'Prueba tu velocidad y precisión de escritura' },
     },
     footer: { games: 'Trò chơi', company: 'Công ty', legal: 'Pháp lý', privacy: 'Bảo mật', terms: 'Điều khoản', cookies: 'Cookies' }
@@ -1189,6 +1286,8 @@ const messages: Record<Locale, any> = {
       hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
       trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
       typingRace: { name: 'การแข่งพิมพ์', desc: 'ทดสอบความเร็วและความแม่นยำในการพิมพ์ของคุณ' },
+      wordScramble: { name: 'สร้างคำ', desc: 'สร้างคำจาก 7 ตัวอักษร' },
+      wordScramble: { name: 'Formar Palabras', desc: 'Crea palabras con 7 letras' },
       typingRace: { name: 'Carrera de Escritura', desc: 'Prueba tu velocidad y precisión de escritura' },
     },
     footer: { games: 'เกม', company: 'บริษัท', legal: 'กฎหมาย', privacy: 'ความเป็นส่วนตัว', terms: 'เงื่อนไข', cookies: 'Cookies' }
@@ -1216,6 +1315,8 @@ const messages: Record<Locale, any> = {
       hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
       trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
       typingRace: { name: 'Skrivekonkurrence', desc: 'Test din skrivehastighed og nøjagtighed' },
+      wordScramble: { name: 'Dan Ord', desc: 'Dan ord med 7 bogstaver' },
+      wordScramble: { name: 'Formar Palabras', desc: 'Crea palabras con 7 letras' },
       typingRace: { name: 'Carrera de Escritura', desc: 'Prueba tu velocidad y precisión de escritura' },
     },
     footer: { games: 'Spil', company: 'Virksomhed', legal: 'Juridisk', privacy: 'Privatliv', terms: 'Vilkår', cookies: 'Cookies' }
@@ -1243,6 +1344,8 @@ const messages: Record<Locale, any> = {
       hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
       trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
       typingRace: { name: 'Kirjoituskilpailu', desc: 'Testaa kirjoitusnopeuttasi ja tarkkuuttasi' },
+      wordScramble: { name: 'Muodosta Sanoja', desc: 'Muodosta sanoja 7 kirjaimesta' },
+      wordScramble: { name: 'Formar Palabras', desc: 'Crea palabras con 7 letras' },
       typingRace: { name: 'Carrera de Escritura', desc: 'Prueba tu velocidad y precisión de escritura' },
     },
     footer: { games: 'Pelit', company: 'Yritys', legal: 'Laki', privacy: 'Tietosuoja', terms: 'Ehdot', cookies: 'Cookies' }
@@ -1270,6 +1373,8 @@ const messages: Record<Locale, any> = {
       hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
       trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
       typingRace: { name: 'Skrivekonkurranse', desc: 'Test skrivehastigheten og nøyaktigheten din' },
+      wordScramble: { name: 'Danne Ord', desc: 'Dann ord med 7 bokstaver' },
+      wordScramble: { name: 'Formar Palabras', desc: 'Crea palabras con 7 letras' },
       typingRace: { name: 'Carrera de Escritura', desc: 'Prueba tu velocidad y precisión de escritura' },
     },
     footer: { games: 'Spill', company: 'Selskap', legal: 'Juridisk', privacy: 'Personvern', terms: 'Vilkår', cookies: 'Cookies' }

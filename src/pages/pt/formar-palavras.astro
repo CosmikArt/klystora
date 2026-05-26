@@ -1,0 +1,34 @@
+---
+import PwaInstallPrompt from '@/components/PwaInstallPrompt';
+import Layout from '../../layouts/Layout.astro';
+import LazyGameWrapper from '../../components/games/LazyGameWrapper';
+
+const title = 'Formar Palavras — Klystora';
+const description = 'Crie palavras com 7 letras. Free daily puzzle in 27 languages.';
+const ogImage = '/og/default.jpg';
+---
+
+<Layout title={title} description={description} ogImage={ogImage}>
+  <div class="max-w-2xl mx-auto px-4 py-8">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-bold">Formar Palavras</h1>
+      <p class="text-sand-500 mt-1">Crie palavras com 7 letras</p>
+    </div>
+    
+    <LazyGameWrapper game="word-scramble" lang="pt" client:only="react" />
+    
+    <article class="mt-16 max-w-none">
+      <h2 class="text-2xl font-bold mb-4">Como Jogar Formar Palavras</h2>
+      <p class="text-sand-500 mb-4">Formar Palavras desafia você a criar o máximo de palavras possível com 7 letras. A letra central deve ser usada em cada palavra.</p>
+      <ul class="space-y-2 mb-6">
+        <li>Palavras devem ter pelo menos 3 letras</li>
+        <li>Cada palavra deve incluir a letra central</li>
+        <li>Letras podem ser usadas várias vezes</li>
+        <li>3 letras = 100pts, 4 = 200pts, 5 = 400pts, 6 = 800pts, 7+ = 1500pts</li>
+        <li>Encontre um pangrama (usa todas as 7 letras) para bônus 2x</li>
+      </ul>
+      <p class="text-sand-500">Novo puzzle gerado a cada jogo. Desafie-se a alcançar o rank Queen Bee!</p>
+    </article>
+  </div>
+  <PwaInstallPrompt client:only="react" />
+</Layout>

@@ -1,0 +1,34 @@
+---
+import PwaInstallPrompt from '@/components/PwaInstallPrompt';
+import Layout from '../../layouts/Layout.astro';
+import LazyGameWrapper from '../../components/games/LazyGameWrapper';
+
+const title = 'Составь Слова — Klystora';
+const description = 'Составьте слова из 7 букв. Free daily puzzle in 27 languages.';
+const ogImage = '/og/default.jpg';
+---
+
+<Layout title={title} description={description} ogImage={ogImage}>
+  <div class="max-w-2xl mx-auto px-4 py-8">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-bold">Составь Слова</h1>
+      <p class="text-sand-500 mt-1">Составьте слова из 7 букв</p>
+    </div>
+    
+    <LazyGameWrapper game="word-scramble" lang="ru" client:only="react" />
+    
+    <article class="mt-16 max-w-none">
+      <h2 class="text-2xl font-bold mb-4">Как Играть в Составь Слова</h2>
+      <p class="text-sand-500 mb-4">Составь Слова — составьте как можно больше слов из 7 букв. Центральная буква должна быть в каждом слове.</p>
+      <ul class="space-y-2 mb-6">
+        <li>Слова должны быть не короче 3 букв</li>
+        <li>Каждое слово должно содержать центральную букву</li>
+        <li>Буквы можно использовать несколько раз</li>
+        <li>3 буквы = 100pts, 4 = 200pts, 5 = 400pts, 6 = 800pts, 7+ = 1500pts</li>
+        <li>Найдите панграмму (все 7 букв) для бонуса 2x</li>
+      </ul>
+      <p class="text-sand-500">Новый пазл при каждой игре. Попробуйте достичь ранга Queen Bee!</p>
+    </article>
+  </div>
+  <PwaInstallPrompt client:only="react" />
+</Layout>

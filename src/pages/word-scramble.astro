@@ -1,0 +1,34 @@
+---
+import PwaInstallPrompt from '@/components/PwaInstallPrompt';
+import Layout from '../layouts/Layout.astro';
+import LazyGameWrapper from '../components/games/LazyGameWrapper';
+
+const title = 'Word Scramble — Make Words from Letters | Klystora';
+const description = 'Form words from 7 letters. Test your vocabulary and find the pangram. Free daily puzzle in 27 languages.';
+const ogImage = '/og/default.jpg';
+---
+
+<Layout title={{title}} description={{description}} ogImage={{ogImage}}>
+  <div class="max-w-2xl mx-auto px-4 py-8">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-bold">Word Scramble</h1>
+      <p class="text-sand-500 mt-1">Make words from 7 letters — find the pangram!</p>
+    </div>
+    
+    <LazyGameWrapper game="word-scramble" lang="en" client:only="react" />
+    
+    <article class="mt-16 max-w-none">
+      <h2 class="text-2xl font-bold mb-4">How to Play Word Scramble</h2>
+      <p class="text-sand-500 mb-4">Word Scramble challenges you to form as many words as possible from 7 given letters. The center letter must be used in every word.</p>
+      <ul class="space-y-2 mb-6">
+        <li>Words must be at least 3 letters long</li>
+        <li>Every word must include the center letter</li>
+        <li>Letters can be used multiple times</li>
+        <li>3 letters = 100pts, 4 = 200pts, 5 = 400pts, 6 = 800pts, 7+ = 1500pts</li>
+        <li>Find a pangram (uses all 7 letters) for 2x bonus!</li>
+      </ul>
+      <p class="text-sand-500">A new puzzle is generated each time you play. Challenge yourself to reach Queen Bee rank!</p>
+    </article>
+  </div>
+  <PwaInstallPrompt client:only="react" />
+</Layout>

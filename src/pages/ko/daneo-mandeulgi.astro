@@ -1,0 +1,34 @@
+---
+import PwaInstallPrompt from '@/components/PwaInstallPrompt';
+import Layout from '../../layouts/Layout.astro';
+import LazyGameWrapper from '../../components/games/LazyGameWrapper';
+
+const title = '단어 만들기 — Klystora';
+const description = '7개 글자로 단어 만들기. Free daily puzzle in 27 languages.';
+const ogImage = '/og/default.jpg';
+---
+
+<Layout title={title} description={description} ogImage={ogImage}>
+  <div class="max-w-2xl mx-auto px-4 py-8">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-bold">단어 만들기</h1>
+      <p class="text-sand-500 mt-1">7개 글자로 단어 만들기</p>
+    </div>
+    
+    <LazyGameWrapper game="word-scramble" lang="ko" client:only="react" />
+    
+    <article class="mt-16 max-w-none">
+      <h2 class="text-2xl font-bold mb-4">단어 만들기 플레이 방법</h2>
+      <p class="text-sand-500 mb-4">단어 만들기는 주어진 7개 글자로 가능한 많은 단어를 만드는 게임입니다. 가울데 글자는 모든 단어에 포함되어야 합니다.</p>
+      <ul class="space-y-2 mb-6">
+        <li>단어는 최소 3글자 이상</li>
+        <li>모든 단어에 가울데 글자 포함</li>
+        <li>글자는 여러 번 사용 가능</li>
+        <li>3글자=100점, 4=200점, 5=400점, 6=800점, 7+=1500점</li>
+        <li>팬그램(7글자 모두 사용)을 찾으면 2배 본</li>
+      </ul>
+      <p class="text-sand-500">플레이할 때마다 새 퍼즐 생성. Queen Bee 등급에 도전하세요!</p>
+    </article>
+  </div>
+  <PwaInstallPrompt client:only="react" />
+</Layout>
