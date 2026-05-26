@@ -31,6 +31,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
   en: {
     dailyWord: 'daily-word',
     crossword: 'mini-crossword',
+    acrostic: 'acrostic',
     wordSearch: 'word-search',
     anagrams: 'anagrams',
     connections: 'connections',
@@ -53,6 +54,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
   es: {
     dailyWord: 'palabra-diaria',
     crossword: 'crucigrama-mini',
+    acrostic: 'acrostico',
     wordSearch: 'sopa-de-letras',
     anagrams: 'anagramas',
     connections: 'conexiones',
@@ -75,6 +77,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
   zh: {
     dailyWord: 'mei-ri-yi-ci',
     crossword: 'mi-ni-tian-zi-you-xi',
+    acrostic: 'cang-tou-shi',
     wordSearch: 'zhao-dan-ci',
     anagrams: 'zi-mu-zhong-zu',
     connections: 'lian-xiang',
@@ -97,6 +100,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
   hi: {
     dailyWord: 'din-bhar-ka-shabd',
     crossword: 'chhota-shabd-jaal',
+    acrostic: 'acrostic',
     wordSearch: 'shabd-khoj',
     anagrams: 'akshar-jeern',
     connections: 'sambandh',
@@ -119,6 +123,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
   pt: {
     dailyWord: 'palavra-diaria',
     crossword: 'cruzadinha-mini',
+    acrostic: 'acrostico',
     wordSearch: 'caca-palavras',
     anagrams: 'anagramas',
     connections: 'conexoes',
@@ -141,6 +146,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
   bn: {
     dailyWord: 'doinik-shobdo',
     crossword: 'chhoto-shobdo-jaal',
+    acrostic: 'acrostic',
     wordSearch: 'shobdo-khoj',
     anagrams: 'bak-jorano',
     connections: 'somporko',
@@ -163,6 +169,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
   ru: {
     dailyWord: 'slovo-dnya',
     crossword: 'mini-krossvord',
+    acrostic: 'akrostikh',
     wordSearch: 'poisk-slov',
     anagrams: 'anagrammy',
     connections: 'svyazi',
@@ -185,6 +192,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
   ja: {
     dailyWord: 'mainichi-no-kotoba',
     crossword: 'mini-kurosuwaado',
+    acrostic: 'akurosutikku',
     wordSearch: 'tango-sagashi',
     anagrams: 'anaguramu',
     connections: 'renketsu',
@@ -207,6 +215,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
   de: {
     dailyWord: 'taegliches-wort',
     crossword: 'mini-kreuzwort',
+    acrostic: 'akrostichon',
     wordSearch: 'wort-suche',
     anagrams: 'anagramme',
     connections: 'verbindungen',
@@ -229,6 +238,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
   ko: {
     dailyWord: 'maeil-han-geul',
     crossword: 'mini-silheom-mal-ggeut',
+    acrostic: 'acrostic',
     wordSearch: 'dan-eo-chajgi',
     anagrams: 'munja-baek-gwi',
     connections: 'yeongyeol',
@@ -251,6 +261,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
   fr: {
     dailyWord: 'mot-du-jour',
     crossword: 'mini-mots-croises',
+    acrostic: 'acrostiche',
     wordSearch: 'mots-melanges',
     anagrams: 'anagrammes',
     connections: 'connexions',
@@ -273,6 +284,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
   tr: {
     dailyWord: 'gunun-kelimesi',
     crossword: 'mini-bulmaca',
+    acrostic: 'acrostic',
     wordSearch: 'kelime-avi',
     anagrams: 'anagramlar',
     connections: 'baglantilar',
@@ -295,6 +307,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
   it: {
     dailyWord: 'parola-del-giorno',
     crossword: 'mini-cruciverba',
+    acrostic: 'acrostico',
     wordSearch: 'ricerca-parole',
     anagrams: 'anagrammi',
     connections: 'connessioni',
@@ -317,6 +330,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
   pl: {
     dailyWord: 'slowo-dnia',
     crossword: 'mini-krzyzowka',
+    acrostic: 'akrostych',
     wordSearch: 'szukanie-slow',
     anagrams: 'anagramy',
     connections: 'polaczenia',
@@ -339,6 +353,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
   nl: {
     dailyWord: 'dagelijks-woord',
     crossword: 'mini-kruiswoord',
+    acrostic: 'acrostichon',
     wordSearch: 'woordzoeker',
     anagrams: 'anagrammen',
     connections: 'verbanden',
@@ -361,6 +376,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
   uk: {
     dailyWord: 'slovo-dnya',
     crossword: 'mini-krosvord',
+    acrostic: 'akrostikh',
     wordSearch: 'poshuk-sliv',
     anagrams: 'anagramy',
     connections: 'zvyazky',
@@ -383,6 +399,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
   ro: {
     dailyWord: 'cuvantul-zilei',
     crossword: 'mini-cuvinte-incrucisate',
+    acrostic: 'acrostic',
     wordSearch: 'cautare-cuvinte',
     anagrams: 'anagrame',
     connections: 'conexiuni',
@@ -405,6 +422,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
   el: {
     dailyWord: 'i-lexi-tis-imeras',
     crossword: 'mini-stavrolexo',
+    acrostic: 'akrosticho',
     wordSearch: 'anazitisi-lekseon',
     anagrams: 'anagrammata',
     connections: 'sindeseis',
@@ -427,6 +445,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
   cs: {
     dailyWord: 'slovo-dne',
     crossword: 'mini-krizovka',
+    acrostic: 'akrostichon',
     wordSearch: 'hledani-slov',
     anagrams: 'anagramy',
     connections: 'spojeni',
@@ -449,6 +468,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
   sv: {
     dailyWord: 'dagens-ord',
     crossword: 'mini-korsord',
+    acrostic: 'akrostikon',
     wordSearch: 'ordjakt',
     anagrams: 'anagram',
     connections: 'kopplingar',
@@ -471,6 +491,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
   hu: {
     dailyWord: 'a-napi-szo',
     crossword: 'mini-keresztrejtvény',
+    acrostic: 'akrosztikon',
     wordSearch: 'szokereso',
     anagrams: 'anagrammak',
     connections: 'kapcsolatok',
@@ -493,6 +514,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
   id: {
     dailyWord: 'kata-harian',
     crossword: 'mini-teka-teki-silang',
+    acrostic: 'acrostic',
     wordSearch: 'pencarian-kata',
     anagrams: 'anagram',
     connections: 'koneksi',
@@ -515,6 +537,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
   vi: {
     dailyWord: 'tu-ngay',
     crossword: 'o-chu-mini',
+    acrostic: 'acrostic',
     wordSearch: 'tim-tu',
     anagrams: 'sap-xep-chu-cai',
     connections: 'ket-noi',
@@ -537,6 +560,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
   th: {
     dailyWord: 'kham-pra-jam-wan',
     crossword: 'kham-khuei-mini',
+    acrostic: 'acrostic',
     wordSearch: 'kham-nai-talad',
     anagrams: 'kham-salap',
     connections: 'khwam-samphan',
@@ -559,6 +583,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
   da: {
     dailyWord: 'dagens-ord',
     crossword: 'mini-krydsord',
+    acrostic: 'akrostikon',
     wordSearch: 'ordjagt',
     anagrams: 'anagrammer',
     connections: 'forbindelser',
@@ -581,6 +606,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
   fi: {
     dailyWord: 'paivan-sana',
     crossword: 'mini-sanaristikko',
+    acrostic: 'akrostikko',
     wordSearch: 'sanahaku',
     anagrams: 'anagrammit',
     connections: 'yhteydet',
@@ -603,6 +629,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
   no: {
     dailyWord: 'dagens-ord',
     crossword: 'mini-kryssord',
+    acrostic: 'akrostikon',
     wordSearch: 'ordjakt',
     anagrams: 'anagrammer',
     connections: 'koblinger',
@@ -666,6 +693,33 @@ const messages: Record<Locale, any> = {
     games: {
       dailyWord: { name: 'Daily Word', desc: 'Guess the 5-letter word in 6 tries' },
       crossword: { name: 'Crossword Mini', desc: 'Solve the 5×5 grid' },
+      acrostic: { name: 'Akrostikon', desc: 'Første bokstaver avslører et skjult ord' },
+      acrostic: { name: 'Akrostikko', desc: 'Ensimmäiset kirjaimet paljastavat piilotetun sanan' },
+      acrostic: { name: 'Akrostikon', desc: 'Første bogstaver afslører et skjult ord' },
+      acrostic: { name: 'Acrostic', desc: 'ตัวอักษรแรกเผยคำที่ซ่อนอยู่' },
+      acrostic: { name: 'Acrostic', desc: 'Chữ cái đầu tiên tiết lộ từ ẩn' },
+      acrostic: { name: 'Acrostic', desc: 'Huruf pertama mengungkapkan kata tersembunyi' },
+      acrostic: { name: 'Akrosztikon', desc: 'Az első betűk felfedik a rejtett szót' },
+      acrostic: { name: 'Akrostikon', desc: 'Första bokstäverna avslöjar ett dolt ord' },
+      acrostic: { name: 'Akrostichon', desc: 'První písmena odhalují skryté slovo' },
+      acrostic: { name: 'Ακροστιχίδα', desc: 'Τα πρώτα γράμματα αποκαλύπτουν μια κρυφή λέξη' },
+      acrostic: { name: 'Acrostic', desc: 'Primele litere dezvăluie un cuvânt ascuns' },
+      acrostic: { name: 'Акростих', desc: 'Перші літери відкривають приховане слово' },
+      acrostic: { name: 'Acrostichon', desc: 'Eerste letters onthullen een verborgen woord' },
+      acrostic: { name: 'Akrostych', desc: 'Pierwsze litery odkrywają ukryte słowo' },
+      acrostic: { name: 'Acrostico', desc: 'Le prime lettere rivelano una parola nascosta' },
+      acrostic: { name: 'Akrostik', desc: 'İlk harfler gizli bir kelimeyi ortaya çıkarır' },
+      acrostic: { name: 'Acrostiche', desc: 'Les premières lettres révèlent un mot caché' },
+      acrostic: { name: '아크로스틱', desc: '첫 글자가 숨겨진 단어를 밝힙니다' },
+      acrostic: { name: 'Akrostichon', desc: 'Erste Buchstaben enthüllen ein verborgenes Wort' },
+      acrostic: { name: 'アクロスティック', desc: '最初の文字が隠された単語を明らかにする' },
+      acrostic: { name: 'Акростих', desc: 'Первые буквы открывают скрытое слово' },
+      acrostic: { name: 'অ্যাক্রোস্টিক', desc: 'প্রথম অক্ষরগুলি একটি লুকানো শব্দ প্রকাশ করে' },
+      acrostic: { name: 'Acróstico', desc: 'As primeiras letras revelam uma palavra oculta' },
+      acrostic: { name: 'एक्रोस्टिक', desc: 'पहले अक्षर छिपे शब्द को प्रकट करते हैं' },
+      acrostic: { name: '藏头诗', desc: '首字母揭示隐藏单词' },
+      acrostic: { name: 'Acróstico', desc: 'Las primeras letras revelan una palabra oculta' },
+      acrostic: { name: 'Acrostic', desc: 'First letters reveal a hidden word' },
       wordSearch: { name: 'Word Search', desc: 'Find hidden words' },
       anagrams: { name: 'Anagrams', desc: 'Unscramble letters' },
       connections: { name: 'Connections', desc: 'Group words by theme' },
@@ -853,6 +907,7 @@ const messages: Record<Locale, any> = {
     games: {
       dailyWord: { name: 'Palabra Diaria', desc: 'Adivina la palabra de 5 letras en 6 intentos' },
       crossword: { name: 'Crucigrama Mini', desc: 'Resuelve la cuadrícula 5×5' },
+      acrostic: { name: 'Acróstico', desc: 'Las primeras letras revelan una palabra oculta' },
       wordSearch: { name: 'Sopa de Letras', desc: 'Encuentra palabras ocultas' },
       anagrams: { name: 'Anagramas', desc: 'Ordena las letras' },
       connections: { name: 'Conexiones', desc: 'Agrupa palabras por tema' },
@@ -884,6 +939,8 @@ const messages: Record<Locale, any> = {
     games: {
       dailyWord: { name: '每日一词', desc: '6次机会猜出5字母单词' },
       crossword: { name: '迷你填字', desc: '解开5×5网格' },
+      acrostic: { name: '藏头诗', desc: '首字母揭示隐藏单词' },
+      acrostic: { name: 'Acróstico', desc: 'Las primeras letras revelan una palabra oculta' },
       wordSearch: { name: '找单词', desc: '寻找隐藏单词' },
       anagrams: { name: '字母重组', desc: '重新排列字母' },
       connections: { name: '联想', desc: '按主题分组单词' },
@@ -921,6 +978,8 @@ const messages: Record<Locale, any> = {
     games: {
       dailyWord: { name: 'दिन का शब्द', desc: '6 प्रयासों में 5 अक्षर का शब्द अनुमान लगाएं' },
       crossword: { name: 'छोटा क्रॉसवर्ड', desc: '5×5 ग्रिड हल करें' },
+      acrostic: { name: 'एक्रोस्टिक', desc: 'पहले अक्षर छिपे शब्द को प्रकट करते हैं' },
+      acrostic: { name: 'Acróstico', desc: 'Las primeras letras revelan una palabra oculta' },
       wordSearch: { name: 'शब्द खोज', desc: 'छिपे शब्द खोजें' },
       anagrams: { name: 'अक्षर जोड़', desc: 'अक्षरों को व्यवस्थित करें' },
       connections: { name: 'संबंध', desc: 'शब्दों को विषय के अनुसार समूहित करें' },
@@ -958,6 +1017,8 @@ const messages: Record<Locale, any> = {
     games: {
       dailyWord: { name: 'Palavra do Dia', desc: 'Adivinhe a palavra de 5 letras em 6 tentativas' },
       crossword: { name: 'Cruzadinha Mini', desc: 'Resolva a grade 5×5' },
+      acrostic: { name: 'Acróstico', desc: 'As primeiras letras revelam uma palavra oculta' },
+      acrostic: { name: 'Acróstico', desc: 'Las primeras letras revelan una palabra oculta' },
       wordSearch: { name: 'Caça-Palavras', desc: 'Encontre palavras escondidas' },
       anagrams: { name: 'Anagramas', desc: 'Ordene as letras' },
       connections: { name: 'Conexões', desc: 'Agrupe palavras por tema' },
@@ -995,6 +1056,8 @@ const messages: Record<Locale, any> = {
     games: {
       dailyWord: { name: 'দৈনিক শব্দ', desc: '৬ প্রচেষ্টায় ৫ অক্ষরের শব্দ অনুমান করুন' },
       crossword: { name: 'ছোট ক্রসওয়ার্ড', desc: '৫×৫ গ্রিড সমাধান করুন' },
+      acrostic: { name: 'অ্যাক্রোস্টিক', desc: 'প্রথম অক্ষরগুলি একটি লুকানো শব্দ প্রকাশ করে' },
+      acrostic: { name: 'Acróstico', desc: 'Las primeras letras revelan una palabra oculta' },
       wordSearch: { name: 'শব্দ খোজ', desc: 'লুকানো শব্দ খুঁজুন' },
       anagrams: { name: 'বাক্‌যোড়া', desc: 'অক্ষর সাজান' },
       connections: { name: 'সম্পর্ক', desc: 'শব্দগুলোকে থিম অনুযায়ী গ্রুপ করুন' },
@@ -1032,6 +1095,8 @@ const messages: Record<Locale, any> = {
     games: {
       dailyWord: { name: 'Слово дня', desc: 'Угадайте слово из 5 букв за 6 попыток' },
       crossword: { name: 'Мини-кроссворд', desc: 'Решите сетку 5×5' },
+      acrostic: { name: 'Акростих', desc: 'Первые буквы открывают скрытое слово' },
+      acrostic: { name: 'Acróstico', desc: 'Las primeras letras revelan una palabra oculta' },
       wordSearch: { name: 'Поиск слов', desc: 'Найдите скрытые слова' },
       anagrams: { name: 'Анаграммы', desc: 'Расставьте буквы' },
       connections: { name: 'Связи', desc: 'Сгруппируйте слова по теме' },
@@ -1069,6 +1134,8 @@ const messages: Record<Locale, any> = {
     games: {
       dailyWord: { name: '今日の言葉', desc: '6回以内に5文字の単語を当てよう' },
       crossword: { name: 'ミニクロスワード', desc: '5×5グリッドを解こう' },
+      acrostic: { name: 'アクロスティック', desc: '最初の文字が隠された単語を明らかにする' },
+      acrostic: { name: 'Acróstico', desc: 'Las primeras letras revelan una palabra oculta' },
       wordSearch: { name: '単語探し', desc: '隠れた単語を見つけよう' },
       anagrams: { name: 'アナグラム', desc: '文字を並べ替えよう' },
       connections: { name: '連想', desc: '単語をテーマごとにグループ化しよう' },
@@ -1106,6 +1173,8 @@ const messages: Record<Locale, any> = {
     games: {
       dailyWord: { name: 'Wort des Tages', desc: 'Errate das 5-Buchstaben-Wort in 6 Versuchen' },
       crossword: { name: 'Mini-Kreuzwort', desc: 'Löse das 5×5-Gitter' },
+      acrostic: { name: 'Akrostichon', desc: 'Erste Buchstaben enthüllen ein verborgenes Wort' },
+      acrostic: { name: 'Acróstico', desc: 'Las primeras letras revelan una palabra oculta' },
       wordSearch: { name: 'Wort-Suche', desc: 'Finde versteckte Wörter' },
       anagrams: { name: 'Anagramme', desc: 'Ordne die Buchstaben' },
       connections: { name: 'Verbindungen', desc: 'Gruppiere Wörter nach Thema' },
@@ -1143,6 +1212,8 @@ const messages: Record<Locale, any> = {
     games: {
       dailyWord: { name: '오늘의 단어', desc: '6번 안에 5글자 단어를 맞춰보세요' },
       crossword: { name: '미니 십자말풀이', desc: '5×5 그리드를 풀어보세요' },
+      acrostic: { name: '아크로스틱', desc: '첫 글자가 숨겨진 단어를 밝힙니다' },
+      acrostic: { name: 'Acróstico', desc: 'Las primeras letras revelan una palabra oculta' },
       wordSearch: { name: '단어 찾기', desc: '숨겨진 단어를 찾으세요' },
       anagrams: { name: '애너그램', desc: '글자를 재배열하세요' },
       connections: { name: '연결', desc: '단어를 주제별로 그룹화하세요' },
@@ -1180,6 +1251,8 @@ const messages: Record<Locale, any> = {
     games: {
       dailyWord: { name: 'Mot du Jour', desc: 'Devinez le mot de 5 lettres en 6 essais' },
       crossword: { name: 'Mini Mots Croisés', desc: 'Résolvez la grille 5×5' },
+      acrostic: { name: 'Acrostiche', desc: 'Les premières lettres révèlent un mot caché' },
+      acrostic: { name: 'Acróstico', desc: 'Las primeras letras revelan una palabra oculta' },
       wordSearch: { name: 'Mots Mêlés', desc: 'Trouvez les mots cachés' },
       anagrams: { name: 'Anagrammes', desc: 'Réorganisez les lettres' },
       connections: { name: 'Connexions', desc: 'Groupez les mots par thème' },
@@ -1217,6 +1290,8 @@ const messages: Record<Locale, any> = {
     games: {
       dailyWord: { name: 'Günün Kelimesi', desc: '6 denemede 5 harfli kelimeyi tahmin et' },
       crossword: { name: 'Mini Bulmaca', desc: '5×5 ızgarayı çöz' },
+      acrostic: { name: 'Akrostik', desc: 'İlk harfler gizli bir kelimeyi ortaya çıkarır' },
+      acrostic: { name: 'Acróstico', desc: 'Las primeras letras revelan una palabra oculta' },
       wordSearch: { name: 'Kelime Avı', desc: 'Gizli kelimeleri bul' },
       anagrams: { name: 'Anagramlar', desc: 'Harfleri sırala' },
       connections: { name: 'Bağlantılar', desc: 'Kelimeleri temaya göre grupla' },
@@ -1254,6 +1329,8 @@ const messages: Record<Locale, any> = {
     games: {
       dailyWord: { name: 'Parola del Giorno', desc: 'Indovina la parola di 5 lettere in 6 tentativi' },
       crossword: { name: 'Mini Cruciverba', desc: 'Risolvi la griglia 5×5' },
+      acrostic: { name: 'Acrostico', desc: 'Le prime lettere rivelano una parola nascosta' },
+      acrostic: { name: 'Acróstico', desc: 'Las primeras letras revelan una palabra oculta' },
       wordSearch: { name: 'Ricerca Parole', desc: 'Trova parole nascoste' },
       anagrams: { name: 'Anagrammi', desc: 'Riordina le lettere' },
       connections: { name: 'Connessioni', desc: 'Raggruppa parole per tema' },
@@ -1291,6 +1368,8 @@ const messages: Record<Locale, any> = {
     games: {
       dailyWord: { name: 'Słowo Dnia', desc: 'Odgadnij 5-literowe słowo na 6 prób' },
       crossword: { name: 'Mini Krzyżówka', desc: 'Rozwiąż siatkę 5×5' },
+      acrostic: { name: 'Akrostych', desc: 'Pierwsze litery odkrywają ukryte słowo' },
+      acrostic: { name: 'Acróstico', desc: 'Las primeras letras revelan una palabra oculta' },
       wordSearch: { name: 'Szukanie Słów', desc: 'Znajdź ukryte słowa' },
       anagrams: { name: 'Anagramy', desc: 'Ułóż litery' },
       connections: { name: 'Połączenia', desc: 'Grupuj słowa według tematu' },
@@ -1328,6 +1407,8 @@ const messages: Record<Locale, any> = {
     games: {
       dailyWord: { name: 'Woord van de Dag', desc: 'Raad het 5-letterwoord in 6 pogingen' },
       crossword: { name: 'Mini Kruiswoord', desc: 'Los het 5×5-raster op' },
+      acrostic: { name: 'Acrostichon', desc: 'Eerste letters onthullen een verborgen woord' },
+      acrostic: { name: 'Acróstico', desc: 'Las primeras letras revelan una palabra oculta' },
       wordSearch: { name: 'Woordzoeker', desc: 'Vind verborgen woorden' },
       anagrams: { name: 'Anagrammen', desc: 'Rangschik de letters' },
       connections: { name: 'Verbanden', desc: 'Groepeer woorden op thema' },
@@ -1383,6 +1464,8 @@ const messages: Record<Locale, any> = {
       letterBoxed: { name: 'Літерне Поле', desc: 'Зєднуйте сторони, складайте слова' },
       multiWordle: { name: 'Мульти-Вордл', desc: 'Варіанти Дордл та Квордл' },
       crossword: { name: 'Кросворд', desc: 'Класична головоломка зі словами' },
+      acrostic: { name: 'Акростих', desc: 'Перші літери відкривають приховане слово' },
+      acrostic: { name: 'Acróstico', desc: 'Las primeras letras revelan una palabra oculta' },
       crossword: { name: 'Crucigrama', desc: 'Clásico puzzle de palabras en cuadrícula' },
       multiWordle: { name: 'Multi-Wordle', desc: 'Variantes Dordle y Quordle' },
       letterBoxed: { name: 'Caja de Letras', desc: 'Conecta lados, forma palabras' },
@@ -1402,6 +1485,8 @@ const messages: Record<Locale, any> = {
     games: {
       dailyWord: { name: 'Cuvântul Zilei', desc: 'Ghicește cuvântul de 5 litere în 6 încercări' },
       crossword: { name: 'Mini Cuvinte Încrucișate', desc: 'Rezolvă grila 5×5' },
+      acrostic: { name: 'Acrostic', desc: 'Primele litere dezvăluie un cuvânt ascuns' },
+      acrostic: { name: 'Acróstico', desc: 'Las primeras letras revelan una palabra oculta' },
       wordSearch: { name: 'Căutare Cuvinte', desc: 'Găsește cuvinte ascunse' },
       anagrams: { name: 'Anagrame', desc: 'Ordonează literele' },
       connections: { name: 'Conexiuni', desc: 'Grupează cuvintele după temă' },
@@ -1439,6 +1524,8 @@ const messages: Record<Locale, any> = {
     games: {
       dailyWord: { name: 'Η Λέξη της Ημέρας', desc: 'Μάντεψε τη λέξη 5 γραμμάτων σε 6 προσπάθειες' },
       crossword: { name: 'Μίνι Σταυρόλεξο', desc: 'Λύσε το πλέγμα 5×5' },
+      acrostic: { name: 'Ακροστιχίδα', desc: 'Τα πρώτα γράμματα αποκαλύπτουν μια κρυφή λέξη' },
+      acrostic: { name: 'Acróstico', desc: 'Las primeras letras revelan una palabra oculta' },
       wordSearch: { name: 'Αναζήτηση Λέξεων', desc: 'Βρες κρυμμένες λέξεις' },
       anagrams: { name: 'Αναγράμματα', desc: 'Τακτοποίησε τα γράμματα' },
       connections: { name: 'Συνδέσεις', desc: 'Ομαδοποίησε λέξεις ανά θέμα' },
@@ -1476,6 +1563,8 @@ const messages: Record<Locale, any> = {
     games: {
       dailyWord: { name: 'Slovo Dne', desc: 'Uhádni 5-písmenné slovo na 6 pokusů' },
       crossword: { name: 'Mini Křížovka', desc: 'Vyřeš síť 5×5' },
+      acrostic: { name: 'Akrostichon', desc: 'První písmena odhalují skryté slovo' },
+      acrostic: { name: 'Acróstico', desc: 'Las primeras letras revelan una palabra oculta' },
       wordSearch: { name: 'Hledání Slov', desc: 'Najdi skrytá slova' },
       anagrams: { name: 'Anagramy', desc: 'Uspořádej písmena' },
       connections: { name: 'Spojení', desc: 'Seskup slova podle tématu' },
@@ -1513,6 +1602,8 @@ const messages: Record<Locale, any> = {
     games: {
       dailyWord: { name: 'Dagens Ord', desc: 'Gissa det 5-bokstavsordet på 6 försök' },
       crossword: { name: 'Mini Korsord', desc: 'Lös rutnätet 5×5' },
+      acrostic: { name: 'Akrostikon', desc: 'Första bokstäverna avslöjar ett dolt ord' },
+      acrostic: { name: 'Acróstico', desc: 'Las primeras letras revelan una palabra oculta' },
       wordSearch: { name: 'Ordjakt', desc: 'Hitta gömda ord' },
       anagrams: { name: 'Anagram', desc: 'Ordna bokstäverna' },
       connections: { name: 'Kopplingar', desc: 'Gruppera ord efter tema' },
@@ -1550,6 +1641,8 @@ const messages: Record<Locale, any> = {
     games: {
       dailyWord: { name: 'A Nap Szava', desc: 'Találd ki az 5 betűs szót 6 próbálkozásból' },
       crossword: { name: 'Mini Keresztrejtvény', desc: 'Oldd meg az 5×5-ös rácsot' },
+      acrostic: { name: 'Akrosztikon', desc: 'Az első betűk felfedik a rejtett szót' },
+      acrostic: { name: 'Acróstico', desc: 'Las primeras letras revelan una palabra oculta' },
       wordSearch: { name: 'Szókereső', desc: 'Találd meg a rejtett szavakat' },
       anagrams: { name: 'Anagrammák', desc: 'Rendezd a betűket' },
       connections: { name: 'Kapcsolatok', desc: 'Csoportosítsd a szavakat téma szerint' },
@@ -1587,6 +1680,8 @@ const messages: Record<Locale, any> = {
     games: {
       dailyWord: { name: 'Kata Harian', desc: 'Tebak kata 5 huruf dalam 6 percobaan' },
       crossword: { name: 'Teka-Teki Silang Mini', desc: 'Selesaikan kotak 5×5' },
+      acrostic: { name: 'Acrostic', desc: 'Huruf pertama mengungkapkan kata tersembunyi' },
+      acrostic: { name: 'Acróstico', desc: 'Las primeras letras revelan una palabra oculta' },
       wordSearch: { name: 'Pencarian Kata', desc: 'Temukan kata tersembunyi' },
       anagrams: { name: 'Anagram', desc: 'Susun huruf' },
       connections: { name: 'Koneksi', desc: 'Kelompokkan kata berdasarkan tema' },
@@ -1624,6 +1719,8 @@ const messages: Record<Locale, any> = {
     games: {
       dailyWord: { name: 'Từ Ngày', desc: 'Đoán từ 5 chữ cái trong 6 lần thử' },
       crossword: { name: 'Ô Chữ Mini', desc: 'Giải lưới 5×5' },
+      acrostic: { name: 'Acrostic', desc: 'Chữ cái đầu tiên tiết lộ từ ẩn' },
+      acrostic: { name: 'Acróstico', desc: 'Las primeras letras revelan una palabra oculta' },
       wordSearch: { name: 'Tìm Từ', desc: 'Tìm từ ẩn' },
       anagrams: { name: 'Sắp Xếp Chữ', desc: 'Sắp xếp lại chữ cái' },
       connections: { name: 'Kết Nối', desc: 'Nhóm từ theo chủ đề' },
@@ -1661,6 +1758,8 @@ const messages: Record<Locale, any> = {
     games: {
       dailyWord: { name: 'คำประจำวัน', desc: 'ทายคำ 5 ตัวอักษรใน 6 ครั้ง' },
       crossword: { name: 'ปริศนาคำไขว้มินิ', desc: 'แก้ตาราง 5×5' },
+      acrostic: { name: 'Acrostic', desc: 'ตัวอักษรแรกเผยคำที่ซ่อนอยู่' },
+      acrostic: { name: 'Acróstico', desc: 'Las primeras letras revelan una palabra oculta' },
       wordSearch: { name: 'ค้นหาคำ', desc: 'หาคำที่ซ่อนอยู่' },
       anagrams: { name: 'สลับตัวอักษร', desc: 'จัดเรียงตัวอักษร' },
       connections: { name: 'ความสัมพันธ์', desc: 'จัดกลุ่มคำตามหัวข้อ' },
@@ -1698,6 +1797,8 @@ const messages: Record<Locale, any> = {
     games: {
       dailyWord: { name: 'Dagens Ord', desc: 'Gæt det 5-bogstavsord på 6 forsøg' },
       crossword: { name: 'Mini Krydsord', desc: 'Løs gitteret 5×5' },
+      acrostic: { name: 'Akrostikon', desc: 'Første bogstaver afslører et skjult ord' },
+      acrostic: { name: 'Acróstico', desc: 'Las primeras letras revelan una palabra oculta' },
       wordSearch: { name: 'Ordjagt', desc: 'Find skjulte ord' },
       anagrams: { name: 'Anagrammer', desc: 'Arrangér bogstaverne' },
       connections: { name: 'Forbindelser', desc: 'Gruppér ord efter tema' },
@@ -1735,6 +1836,8 @@ const messages: Record<Locale, any> = {
     games: {
       dailyWord: { name: 'Päivän Sana', desc: 'Arvaa 5-kirjaiminen sana 6 yrityksessä' },
       crossword: { name: 'Mini Sanaristikko', desc: 'Ratkaise 5×5-ruudukko' },
+      acrostic: { name: 'Akrostikko', desc: 'Ensimmäiset kirjaimet paljastavat piilotetun sanan' },
+      acrostic: { name: 'Acróstico', desc: 'Las primeras letras revelan una palabra oculta' },
       wordSearch: { name: 'Sanahaku', desc: 'Etsi piilotettuja sanoja' },
       anagrams: { name: 'Anagrammit', desc: 'Järjestä kirjaimet' },
       connections: { name: 'Yhteydet', desc: 'Ryhmittele sanat teeman mukaan' },
@@ -1772,6 +1875,8 @@ const messages: Record<Locale, any> = {
     games: {
       dailyWord: { name: 'Dagens Ord', desc: 'Gjett det 5-bokstaversordet på 6 forsøk' },
       crossword: { name: 'Mini Kryssord', desc: 'Løs rutenettet 5×5' },
+      acrostic: { name: 'Akrostikon', desc: 'Første bokstaver avslører et skjult ord' },
+      acrostic: { name: 'Acróstico', desc: 'Las primeras letras revelan una palabra oculta' },
       wordSearch: { name: 'Ordjakt', desc: 'Finn skjulte ord' },
       anagrams: { name: 'Anagrammer', desc: 'Ordne bokstavene' },
       connections: { name: 'Koblinger', desc: 'Grupper ord etter tema' },

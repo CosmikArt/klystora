@@ -1,0 +1,21 @@
+---
+import PwaInstallPrompt from '@/components/PwaInstallPrompt';
+import Layout from '../../layouts/Layout.astro';
+import LazyGameWrapper from '../../components/games/LazyGameWrapper';
+
+const title = 'Akrostichon — Klystora';
+const description = 'Lösen Sie die Hinweise. Die ersten Buchstaben enthüllen ein verborgenes Wort!. Free in 27 languages.';
+const ogImage = '/og/default.jpg';
+---
+
+<Layout title={title} description={description} ogImage={ogImage}>
+  <div class="max-w-3xl mx-auto px-4 py-8">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-bold">Akrostichon</h1>
+      <p class="text-sand-500 mt-1">Lösen Sie die Hinweise. Die ersten Buchstaben enthüllen ein verborgenes Wort!</p>
+    </div>
+    
+    <LazyGameWrapper game="acrostic" lang="de" client:only="react" />
+  </div>
+  <PwaInstallPrompt client:only="react" />
+</Layout>

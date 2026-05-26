@@ -1,0 +1,21 @@
+---
+import PwaInstallPrompt from '@/components/PwaInstallPrompt';
+import Layout from '../../layouts/Layout.astro';
+import LazyGameWrapper from '../../components/games/LazyGameWrapper';
+
+const title = 'Acrostic — Klystora';
+const description = 'Solve clues to reveal a hidden word. Free in 27 languages.';
+const ogImage = '/og/default.jpg';
+---
+
+<Layout title={title} description={description} ogImage={ogImage}>
+  <div class="max-w-3xl mx-auto px-4 py-8">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-bold">Acrostic</h1>
+      <p class="text-sand-500 mt-1">Solve the clues. The first letters of each answer reveal a hidden word!</p>
+    </div>
+    
+    <LazyGameWrapper game="acrostic" lang="nl" client:only="react" />
+  </div>
+  <PwaInstallPrompt client:only="react" />
+</Layout>
