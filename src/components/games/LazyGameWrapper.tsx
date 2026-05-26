@@ -14,7 +14,8 @@ interface Props {
         'crossword' |
         'acrostic' |
         'word-search' |
-        'spelling-bee';
+        'spelling-bee' |
+        'anagrams';
   lang?: Lang;
 }
 
@@ -43,6 +44,7 @@ const gameComponents: Record<string, () => Promise<any>> = {
   'acrostic': () => import('./acrostic/AcrosticWrapper'),
   'word-search': () => import('./word-search/WordSearchWrapper'),
   'spelling-bee': () => import('./spelling-bee/SpellingBeeWrapper'),
+  'anagrams': () => import('./anagrams/AnagramsWrapper'),
 };
 
 function GameSkeleton() {

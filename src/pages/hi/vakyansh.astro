@@ -3,19 +3,19 @@ import PwaInstallPrompt from '@/components/PwaInstallPrompt';
 import Layout from '../../layouts/Layout.astro';
 import LazyGameWrapper from '../../components/games/LazyGameWrapper';
 
-const title = 'Анаграммы — Klystora';
-const description = 'Составьте слова из 7 букв за 2 минуты. Free in 27 languages.';
+const title = 'वाक्यांश — Klystora';
+const description = '2 मिनट में 7 अक्षरों से शब्द बनाएं. Free in 27 languages.';
 const ogImage = '/og/default.jpg';
 ---
 
 <Layout title={title} description={description} ogImage={ogImage}>
   <div class="max-w-3xl mx-auto px-4 py-8">
     <div class="text-center mb-6">
-      <h1 class="text-3xl font-bold">Анаграммы</h1>
-      <p class="text-sand-500 mt-1">Составьте слова из 7 букв за 2 минуты</p>
+      <h1 class="text-3xl font-bold">वाक्यांश</h1>
+      <p class="text-sand-500 mt-1">2 मिनट में 7 अक्षरों से शब्द बनाएं</p>
     </div>
     
-    <LazyGameWrapper game="anagrams" lang="ru" client:only="react" />
+    <LazyGameWrapper game="anagrams" lang="hi" client:only="react" />
   </div>
   <PwaInstallPrompt client:only="react" />
 </Layout>

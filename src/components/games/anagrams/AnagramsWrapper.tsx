@@ -10,11 +10,11 @@ interface Props {
 
 function AnalyticsWrapper({ children, game }: { children: React.ReactNode; game: string }) {
   const { trackGameStart } = useAnalytics();
-  
+
   useEffect(() => {
     trackGameStart(game);
   }, [trackGameStart, game]);
-  
+
   return <>{children}</>;
 }
 
