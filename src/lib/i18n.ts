@@ -43,6 +43,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     trivia: 'trivia',
     game2048: '2048',
     minesweeper: 'minesweeper',
+    typingRace: 'typing-race',
   },
   es: {
     dailyWord: 'palabra-diaria',
@@ -59,6 +60,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     trivia: 'trivia',
     game2048: '2048',
     minesweeper: 'buscaminas',
+    typingRace: 'prueba-de-escritura',
   },
   zh: {
     dailyWord: 'mei-ri-yi-ci',
@@ -75,6 +77,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     trivia: 'wen-da',
     game2048: '2048',
     minesweeper: 'saolei',
+    typingRace: 'da-zi-ce-shi',
   },
   hi: {
     dailyWord: 'din-bhar-ka-shabd',
@@ -91,6 +94,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     trivia: 'prashnottari',
     game2048: '2048',
     minesweeper: 'minesweeper',
+    typingRace: 'taipin-test',
   },
   pt: {
     dailyWord: 'palavra-diaria',
@@ -107,6 +111,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     trivia: 'trivia',
     game2048: '2048',
     minesweeper: 'campo-minado',
+    typingRace: 'teste-de-digitacao',
   },
   bn: {
     dailyWord: 'doinik-shobdo',
@@ -123,6 +128,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     trivia: 'proshno',
     game2048: '2048',
     minesweeper: 'minesweeper',
+    typingRace: 'taipin-test',
   },
   ru: {
     dailyWord: 'slovo-dnya',
@@ -139,6 +145,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     trivia: 'viktorna',
     game2048: '2048',
     minesweeper: 'saper',
+    typingRace: 'test-skorosti-pechati',
   },
   ja: {
     dailyWord: 'mainichi-no-kotoba',
@@ -155,6 +162,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     trivia: 'torivia',
     game2048: '2048',
     minesweeper: 'mainusuiipa',
+    typingRace: 'taipingu-tesuto',
   },
   de: {
     dailyWord: 'taegliches-wort',
@@ -171,6 +179,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     trivia: 'quiz',
     game2048: '2048',
     minesweeper: 'minesweeper',
+    typingRace: 'tipptest',
   },
   ko: {
     dailyWord: 'maeil-han-geul',
@@ -187,6 +196,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     trivia: 'sijag',
     game2048: '2048',
     minesweeper: 'maineu-swip-eo',
+    typingRace: 'taipin-sokdo-teseuteu',
   },
   fr: {
     dailyWord: 'mot-du-jour',
@@ -203,6 +213,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     trivia: 'trivia',
     game2048: '2048',
     minesweeper: 'demineur',
+    typingRace: 'test-de-dactylo',
   },
   tr: {
     dailyWord: 'gunun-kelimesi',
@@ -219,6 +230,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     trivia: 'bilgi',
     game2048: '2048',
     minesweeper: 'mayin-tarlasi',
+    typingRace: 'yazma-hizi-testi',
   },
   it: {
     dailyWord: 'parola-del-giorno',
@@ -235,6 +247,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     trivia: 'trivia',
     game2048: '2048',
     minesweeper: 'campo-minato',
+    typingRace: 'test-di-digitazione',
   },
   pl: {
     dailyWord: 'slowo-dnia',
@@ -251,6 +264,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     trivia: 'ciekawostki',
     game2048: '2048',
     minesweeper: 'sapper',
+    typingRace: 'test-pisania',
   },
   nl: {
     dailyWord: 'dagelijks-woord',
@@ -267,6 +281,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     trivia: 'weetjes',
     game2048: '2048',
     minesweeper: 'mijnenveger',
+    typingRace: 'typetest',
   },
   uk: {
     dailyWord: 'slovo-dnya',
@@ -283,6 +298,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     trivia: 'viktorina',
     game2048: '2048',
     minesweeper: 'sap-er',
+    typingRace: 'test-shvidkosti-druku',
   },
   ro: {
     dailyWord: 'cuvantul-zilei',
@@ -299,6 +315,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     trivia: 'trivia',
     game2048: '2048',
     minesweeper: 'minesweeper',
+    typingRace: 'test-de-scriere',
   },
   el: {
     dailyWord: 'i-lexi-tis-imeras',
@@ -315,6 +332,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     trivia: 'gnoseis',
     game2048: '2048',
     minesweeper: 'minesweeper',
+    typingRace: 'test-pliroforisis',
   },
   cs: {
     dailyWord: 'slovo-dne',
@@ -331,6 +349,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     trivia: 'kviz',
     game2048: '2048',
     minesweeper: 'minesweeper',
+    typingRace: 'test-psani',
   },
   sv: {
     dailyWord: 'dagens-ord',
@@ -347,6 +366,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     trivia: 'trivia',
     game2048: '2048',
     minesweeper: 'minesweeper',
+    typingRace: 'skrivtest',
   },
   hu: {
     dailyWord: 'a-napi-szo',
@@ -363,6 +383,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     trivia: 'kviz',
     game2048: '2048',
     minesweeper: 'aknakereso',
+    typingRace: 'gepelesi-teszt',
   },
   id: {
     dailyWord: 'kata-harian',
@@ -379,6 +400,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     trivia: 'trivia',
     game2048: '2048',
     minesweeper: 'minesweeper',
+    typingRace: 'tes-mengetik',
   },
   vi: {
     dailyWord: 'tu-ngay',
@@ -395,6 +417,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     trivia: 'do-vui',
     game2048: '2048',
     minesweeper: 'do-mine',
+    typingRace: 'kiem-tra-go-chu',
   },
   th: {
     dailyWord: 'kham-pra-jam-wan',
@@ -411,6 +434,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     trivia: 'kham-tam',
     game2048: '2048',
     minesweeper: 'minesweeper',
+    typingRace: 'kaan-thaai-khat-phim',
   },
   da: {
     dailyWord: 'dagens-ord',
@@ -427,6 +451,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     trivia: 'trivia',
     game2048: '2048',
     minesweeper: 'minesweeper',
+    typingRace: 'skrivetest',
   },
   fi: {
     dailyWord: 'paivan-sana',
@@ -443,6 +468,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     trivia: 'trivia',
     game2048: '2048',
     minesweeper: 'miinaharava',
+    typingRace: 'kirjoitustesti',
   },
   no: {
     dailyWord: 'dagens-ord',
@@ -459,6 +485,7 @@ export const gameSlugs: Record<Locale, Record<string, string>> = {
     trivia: 'quiz',
     game2048: '2048',
     minesweeper: 'minesweeper',
+    typingRace: 'skrivetest',
   },
 };
 
@@ -516,6 +543,33 @@ const messages: Record<Locale, any> = {
       memory: { name: 'Memory Match', desc: 'Find all matching pairs' },
       hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
       trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
+      typingRace: { name: 'Skrivekonkurranse', desc: 'Test skrivehastigheten og nøyaktigheten din' },
+      typingRace: { name: 'Kirjoituskilpailu', desc: 'Testaa kirjoitusnopeuttasi ja tarkkuuttasi' },
+      typingRace: { name: 'Skrivekonkurrence', desc: 'Test din skrivehastighed og nøjagtighed' },
+      typingRace: { name: 'การแข่งพิมพ์', desc: 'ทดสอบความเร็วและความแม่นยำในการพิมพ์ของคุณ' },
+      typingRace: { name: 'Đua Gõ Chữ', desc: 'Kiểm tra tốc độ và độ chính xác gõ chữ của bạn' },
+      typingRace: { name: 'Lomba Mengetik', desc: 'Uji kecepatan dan akurasi mengetik Anda' },
+      typingRace: { name: 'Gépelési Verseny', desc: 'Tesztelje gépelési sebességét és pontosságát' },
+      typingRace: { name: 'Skrivtävling', desc: 'Testa din skrivhastighet och noggrannhet' },
+      typingRace: { name: 'Psací Závod', desc: 'Otestujte svou rychlost a přesnost psaní' },
+      typingRace: { name: 'Αγώνας Πληκτρολόγησης', desc: 'Δοκιμάστε την ταχύτητα και ακρίβεια πληκτρολόγησης' },
+      typingRace: { name: 'Cursa de Scriere', desc: 'Testează-ți viteza și precizia de scriere' },
+      typingRace: { name: 'Перегони Друку', desc: 'Перевірте швидкість і точність друку' },
+      typingRace: { name: 'Typrace', desc: 'Test je typsnelheid en nauwkeurigheid' },
+      typingRace: { name: 'Wyścig Pisania', desc: 'Sprawdź swoją szybkość i dokładność pisania' },
+      typingRace: { name: 'Gara di Battitura', desc: 'Testa la tua velocità e precisione di battitura' },
+      typingRace: { name: 'Yazma Yarışı', desc: 'Yazma hızınızı ve doğruluğunuzu test edin' },
+      typingRace: { name: 'Course de Dactylo', desc: 'Testez votre vitesse et précision de frappe' },
+      typingRace: { name: '타이핑 레이스', desc: '타이핑 속도와 정확도를 테스트하세요' },
+      typingRace: { name: 'Tipprace', desc: 'Teste deine Tippgeschwindigkeit und Genauigkeit' },
+      typingRace: { name: 'タイピングレース', desc: 'タイピング速度と正確性をテスト' },
+      typingRace: { name: 'Скоропечатание', desc: 'Проверьте скорость и точность печати' },
+      typingRace: { name: 'টাইপিং রেস', desc: 'আপনার টাইপিং গতি এবং নির্ভুল্য পরীক্ষা করুন' },
+      typingRace: { name: 'Corrida de Digitação', desc: 'Teste sua velocidade e precisão de digitação' },
+      typingRace: { name: 'टाइपिंग रेस', desc: 'अपनी टाइपिंग गति और सटीकता का परीक्षण करें' },
+      typingRace: { name: '打字测试', desc: '测试你的打字速度和准确度' },
+      typingRace: { name: 'Carrera de Escritura', desc: 'Prueba tu velocidad y precisión de escritura' },
+      typingRace: { name: 'Typing Race', desc: 'Test your typing speed and accuracy' },
     },
     footer: { games: 'Games', company: 'Company', legal: 'Legal', privacy: 'Privacy', terms: 'Terms', cookies: 'Cookies' }
   },
@@ -541,6 +595,7 @@ const messages: Record<Locale, any> = {
       memory: { name: 'Memoria', desc: 'Encuentra todos los pares coincidentes' },
       hangman: { name: 'Ahorcado', desc: 'Adivina la palabra antes de que sea tarde' },
       trivia: { name: 'Trivia', desc: 'Pon a prueba tu conocimiento del lenguaje' },
+      typingRace: { name: 'Carrera de Escritura', desc: 'Prueba tu velocidad y precisión de escritura' },
     },
     footer: { games: 'Juegos', company: 'Empresa', legal: 'Legal', privacy: 'Privacidad', terms: 'Términos', cookies: 'Cookies' }
   },
@@ -566,6 +621,8 @@ const messages: Record<Locale, any> = {
       memory: { name: 'Memory Match', desc: 'Find all matching pairs' },
       hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
       trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
+      typingRace: { name: '打字测试', desc: '测试你的打字速度和准确度' },
+      typingRace: { name: 'Carrera de Escritura', desc: 'Prueba tu velocidad y precisión de escritura' },
     },
     footer: { games: '游戏', company: '公司', legal: '法律', privacy: '隐私', terms: '条款', cookies: 'Cookie' }
   },
@@ -591,6 +648,8 @@ const messages: Record<Locale, any> = {
       memory: { name: 'Memory Match', desc: 'Find all matching pairs' },
       hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
       trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
+      typingRace: { name: 'टाइपिंग रेस', desc: 'अपनी टाइपिंग गति और सटीकता का परीक्षण करें' },
+      typingRace: { name: 'Carrera de Escritura', desc: 'Prueba tu velocidad y precisión de escritura' },
     },
     footer: { games: 'खेल', company: 'कंपनी', legal: 'कानूनी', privacy: 'गोपनीयता', terms: 'शर्तें', cookies: 'Cookies' }
   },
@@ -616,6 +675,8 @@ const messages: Record<Locale, any> = {
       memory: { name: 'Memory Match', desc: 'Find all matching pairs' },
       hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
       trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
+      typingRace: { name: 'Corrida de Digitação', desc: 'Teste sua velocidade e precisão de digitação' },
+      typingRace: { name: 'Carrera de Escritura', desc: 'Prueba tu velocidad y precisión de escritura' },
     },
     footer: { games: 'Jogos', company: 'Empresa', legal: 'Legal', privacy: 'Privacidade', terms: 'Termos', cookies: 'Cookies' }
   },
@@ -641,6 +702,8 @@ const messages: Record<Locale, any> = {
       memory: { name: 'Memory Match', desc: 'Find all matching pairs' },
       hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
       trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
+      typingRace: { name: 'টাইপিং রেস', desc: 'আপনার টাইপিং গতি এবং নির্ভুল্য পরীক্ষা করুন' },
+      typingRace: { name: 'Carrera de Escritura', desc: 'Prueba tu velocidad y precisión de escritura' },
     },
     footer: { games: 'খেলা', company: 'কোম্পানি', legal: 'আইনি', privacy: 'গোপনীয়তা', terms: 'শর্তাবলী', cookies: 'Cookies' }
   },
@@ -666,6 +729,8 @@ const messages: Record<Locale, any> = {
       memory: { name: 'Memory Match', desc: 'Find all matching pairs' },
       hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
       trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
+      typingRace: { name: 'Скоропечатание', desc: 'Проверьте скорость и точность печати' },
+      typingRace: { name: 'Carrera de Escritura', desc: 'Prueba tu velocidad y precisión de escritura' },
     },
     footer: { games: 'Игры', company: 'Компания', legal: 'Правовая информация', privacy: 'Конфиденциальность', terms: 'Условия', cookies: 'Cookies' }
   },
@@ -691,6 +756,8 @@ const messages: Record<Locale, any> = {
       memory: { name: 'Memory Match', desc: 'Find all matching pairs' },
       hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
       trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
+      typingRace: { name: 'タイピングレース', desc: 'タイピング速度と正確性をテスト' },
+      typingRace: { name: 'Carrera de Escritura', desc: 'Prueba tu velocidad y precisión de escritura' },
     },
     footer: { games: 'ゲーム', company: '会社', legal: '法的情報', privacy: 'プライバシー', terms: '規約', cookies: 'Cookie' }
   },
@@ -716,6 +783,8 @@ const messages: Record<Locale, any> = {
       memory: { name: 'Memory Match', desc: 'Find all matching pairs' },
       hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
       trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
+      typingRace: { name: 'Tipprace', desc: 'Teste deine Tippgeschwindigkeit und Genauigkeit' },
+      typingRace: { name: 'Carrera de Escritura', desc: 'Prueba tu velocidad y precisión de escritura' },
     },
     footer: { games: 'Spiele', company: 'Unternehmen', legal: 'Rechtliches', privacy: 'Datenschutz', terms: 'Nutzungsbedingungen', cookies: 'Cookies' }
   },
@@ -741,6 +810,8 @@ const messages: Record<Locale, any> = {
       memory: { name: 'Memory Match', desc: 'Find all matching pairs' },
       hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
       trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
+      typingRace: { name: '타이핑 레이스', desc: '타이핑 속도와 정확도를 테스트하세요' },
+      typingRace: { name: 'Carrera de Escritura', desc: 'Prueba tu velocidad y precisión de escritura' },
     },
     footer: { games: '게임', company: '회사', legal: '법률', privacy: '개인정보', terms: '약관', cookies: 'Cookie' }
   },
@@ -766,6 +837,8 @@ const messages: Record<Locale, any> = {
       memory: { name: 'Memory Match', desc: 'Find all matching pairs' },
       hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
       trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
+      typingRace: { name: 'Course de Dactylo', desc: 'Testez votre vitesse et précision de frappe' },
+      typingRace: { name: 'Carrera de Escritura', desc: 'Prueba tu velocidad y precisión de escritura' },
     },
     footer: { games: 'Jeux', company: 'Entreprise', legal: 'Mentions légales', privacy: 'Confidentialité', terms: 'Conditions', cookies: 'Cookies' }
   },
@@ -791,6 +864,8 @@ const messages: Record<Locale, any> = {
       memory: { name: 'Memory Match', desc: 'Find all matching pairs' },
       hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
       trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
+      typingRace: { name: 'Yazma Yarışı', desc: 'Yazma hızınızı ve doğruluğunuzu test edin' },
+      typingRace: { name: 'Carrera de Escritura', desc: 'Prueba tu velocidad y precisión de escritura' },
     },
     footer: { games: 'Oyunlar', company: 'Şirket', legal: 'Yasal', privacy: 'Gizlilik', terms: 'Koşullar', cookies: 'Cookies' }
   },
@@ -816,6 +891,8 @@ const messages: Record<Locale, any> = {
       memory: { name: 'Memory Match', desc: 'Find all matching pairs' },
       hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
       trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
+      typingRace: { name: 'Gara di Battitura', desc: 'Testa la tua velocità e precisione di battitura' },
+      typingRace: { name: 'Carrera de Escritura', desc: 'Prueba tu velocidad y precisión de escritura' },
     },
     footer: { games: 'Giochi', company: 'Azienda', legal: 'Legale', privacy: 'Privacy', terms: 'Termini', cookies: 'Cookies' }
   },
@@ -841,6 +918,8 @@ const messages: Record<Locale, any> = {
       memory: { name: 'Memory Match', desc: 'Find all matching pairs' },
       hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
       trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
+      typingRace: { name: 'Wyścig Pisania', desc: 'Sprawdź swoją szybkość i dokładność pisania' },
+      typingRace: { name: 'Carrera de Escritura', desc: 'Prueba tu velocidad y precisión de escritura' },
     },
     footer: { games: 'Gry', company: 'Firma', legal: 'Prawne', privacy: 'Prywatność', terms: 'Warunki', cookies: 'Cookies' }
   },
@@ -866,6 +945,8 @@ const messages: Record<Locale, any> = {
       memory: { name: 'Memory Match', desc: 'Find all matching pairs' },
       hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
       trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
+      typingRace: { name: 'Typrace', desc: 'Test je typsnelheid en nauwkeurigheid' },
+      typingRace: { name: 'Carrera de Escritura', desc: 'Prueba tu velocidad y precisión de escritura' },
     },
     footer: { games: 'Spellen', company: 'Bedrijf', legal: 'Juridisch', privacy: 'Privacy', terms: 'Voorwaarden', cookies: 'Cookies' }
   },
@@ -891,6 +972,8 @@ const messages: Record<Locale, any> = {
       memory: { name: 'Memory Match', desc: 'Find all matching pairs' },
       hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
       trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
+      typingRace: { name: 'Перегони Друку', desc: 'Перевірте швидкість і точність друку' },
+      typingRace: { name: 'Carrera de Escritura', desc: 'Prueba tu velocidad y precisión de escritura' },
     },
     footer: { games: 'Ігри', company: 'Компанія', legal: 'Правова інформація', privacy: 'Конфіденційність', terms: 'Умови', cookies: 'Cookies' }
   },
@@ -916,6 +999,8 @@ const messages: Record<Locale, any> = {
       memory: { name: 'Memory Match', desc: 'Find all matching pairs' },
       hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
       trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
+      typingRace: { name: 'Cursa de Scriere', desc: 'Testează-ți viteza și precizia de scriere' },
+      typingRace: { name: 'Carrera de Escritura', desc: 'Prueba tu velocidad y precisión de escritura' },
     },
     footer: { games: 'Jocuri', company: 'Companie', legal: 'Legal', privacy: 'Confidențialitate', terms: 'Termeni', cookies: 'Cookies' }
   },
@@ -941,6 +1026,8 @@ const messages: Record<Locale, any> = {
       memory: { name: 'Memory Match', desc: 'Find all matching pairs' },
       hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
       trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
+      typingRace: { name: 'Αγώνας Πληκτρολόγησης', desc: 'Δοκιμάστε την ταχύτητα και ακρίβεια πληκτρολόγησης' },
+      typingRace: { name: 'Carrera de Escritura', desc: 'Prueba tu velocidad y precisión de escritura' },
     },
     footer: { games: 'Παιχνίδια', company: 'Εταιρεία', legal: 'Νομικά', privacy: 'Απόρρητο', terms: 'Όροι', cookies: 'Cookies' }
   },
@@ -966,6 +1053,8 @@ const messages: Record<Locale, any> = {
       memory: { name: 'Memory Match', desc: 'Find all matching pairs' },
       hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
       trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
+      typingRace: { name: 'Psací Závod', desc: 'Otestujte svou rychlost a přesnost psaní' },
+      typingRace: { name: 'Carrera de Escritura', desc: 'Prueba tu velocidad y precisión de escritura' },
     },
     footer: { games: 'Hry', company: 'Společnost', legal: 'Právní', privacy: 'Soukromí', terms: 'Podmínky', cookies: 'Cookies' }
   },
@@ -991,6 +1080,8 @@ const messages: Record<Locale, any> = {
       memory: { name: 'Memory Match', desc: 'Find all matching pairs' },
       hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
       trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
+      typingRace: { name: 'Skrivtävling', desc: 'Testa din skrivhastighet och noggrannhet' },
+      typingRace: { name: 'Carrera de Escritura', desc: 'Prueba tu velocidad y precisión de escritura' },
     },
     footer: { games: 'Spel', company: 'Företag', legal: 'Juridisk', privacy: 'Integritet', terms: 'Villkor', cookies: 'Cookies' }
   },
@@ -1016,6 +1107,8 @@ const messages: Record<Locale, any> = {
       memory: { name: 'Memory Match', desc: 'Find all matching pairs' },
       hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
       trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
+      typingRace: { name: 'Gépelési Verseny', desc: 'Tesztelje gépelési sebességét és pontosságát' },
+      typingRace: { name: 'Carrera de Escritura', desc: 'Prueba tu velocidad y precisión de escritura' },
     },
     footer: { games: 'Játékok', company: 'Vállalat', legal: 'Jogi', privacy: 'Adatvédelem', terms: 'Feltételek', cookies: 'Cookies' }
   },
@@ -1041,6 +1134,8 @@ const messages: Record<Locale, any> = {
       memory: { name: 'Memory Match', desc: 'Find all matching pairs' },
       hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
       trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
+      typingRace: { name: 'Lomba Mengetik', desc: 'Uji kecepatan dan akurasi mengetik Anda' },
+      typingRace: { name: 'Carrera de Escritura', desc: 'Prueba tu velocidad y precisión de escritura' },
     },
     footer: { games: 'Permainan', company: 'Perusahaan', legal: 'Hukum', privacy: 'Privasi', terms: 'Syarat', cookies: 'Cookies' }
   },
@@ -1066,6 +1161,8 @@ const messages: Record<Locale, any> = {
       memory: { name: 'Memory Match', desc: 'Find all matching pairs' },
       hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
       trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
+      typingRace: { name: 'Đua Gõ Chữ', desc: 'Kiểm tra tốc độ và độ chính xác gõ chữ của bạn' },
+      typingRace: { name: 'Carrera de Escritura', desc: 'Prueba tu velocidad y precisión de escritura' },
     },
     footer: { games: 'Trò chơi', company: 'Công ty', legal: 'Pháp lý', privacy: 'Bảo mật', terms: 'Điều khoản', cookies: 'Cookies' }
   },
@@ -1091,6 +1188,8 @@ const messages: Record<Locale, any> = {
       memory: { name: 'Memory Match', desc: 'Find all matching pairs' },
       hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
       trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
+      typingRace: { name: 'การแข่งพิมพ์', desc: 'ทดสอบความเร็วและความแม่นยำในการพิมพ์ของคุณ' },
+      typingRace: { name: 'Carrera de Escritura', desc: 'Prueba tu velocidad y precisión de escritura' },
     },
     footer: { games: 'เกม', company: 'บริษัท', legal: 'กฎหมาย', privacy: 'ความเป็นส่วนตัว', terms: 'เงื่อนไข', cookies: 'Cookies' }
   },
@@ -1116,6 +1215,8 @@ const messages: Record<Locale, any> = {
       memory: { name: 'Memory Match', desc: 'Find all matching pairs' },
       hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
       trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
+      typingRace: { name: 'Skrivekonkurrence', desc: 'Test din skrivehastighed og nøjagtighed' },
+      typingRace: { name: 'Carrera de Escritura', desc: 'Prueba tu velocidad y precisión de escritura' },
     },
     footer: { games: 'Spil', company: 'Virksomhed', legal: 'Juridisk', privacy: 'Privatliv', terms: 'Vilkår', cookies: 'Cookies' }
   },
@@ -1141,6 +1242,8 @@ const messages: Record<Locale, any> = {
       memory: { name: 'Memory Match', desc: 'Find all matching pairs' },
       hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
       trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
+      typingRace: { name: 'Kirjoituskilpailu', desc: 'Testaa kirjoitusnopeuttasi ja tarkkuuttasi' },
+      typingRace: { name: 'Carrera de Escritura', desc: 'Prueba tu velocidad y precisión de escritura' },
     },
     footer: { games: 'Pelit', company: 'Yritys', legal: 'Laki', privacy: 'Tietosuoja', terms: 'Ehdot', cookies: 'Cookies' }
   },
@@ -1166,6 +1269,8 @@ const messages: Record<Locale, any> = {
       memory: { name: 'Memory Match', desc: 'Find all matching pairs' },
       hangman: { name: 'Hangman', desc: "Guess the word before it's too late" },
       trivia: { name: 'Word Trivia', desc: 'Test your language knowledge' },
+      typingRace: { name: 'Skrivekonkurranse', desc: 'Test skrivehastigheten og nøyaktigheten din' },
+      typingRace: { name: 'Carrera de Escritura', desc: 'Prueba tu velocidad y precisión de escritura' },
     },
     footer: { games: 'Spill', company: 'Selskap', legal: 'Juridisk', privacy: 'Personvern', terms: 'Vilkår', cookies: 'Cookies' }
   },

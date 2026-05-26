@@ -5,7 +5,8 @@ import type { Lang } from '@/lib/i18n';
 interface Props {
   game: 'daily-word' | 'mini-crossword' | 'word-search' | 'anagrams' | 
         'connections' | 'spelling-bee' | 'word-ladder' | 'word-wheel' |
-        'sudoku' | 'memory' | 'hangman' | 'trivia' | '2048' | 'minesweeper';
+        'sudoku' | 'memory' | 'hangman' | 'trivia' | '2048' | 'minesweeper' |
+        'typing-race';
   lang?: Lang;
 }
 
@@ -25,6 +26,7 @@ const gameComponents: Record<string, () => Promise<any>> = {
   'trivia': () => import('./trivia/TriviaWrapper'),
   '2048': () => import('./game2048/Game2048Wrapper'),
   'minesweeper': () => import('./minesweeper/MinesweeperWrapper'),
+  'typing-race': () => import('./typing-race/TypingRaceWrapper'),
 };
 
 function GameSkeleton() {

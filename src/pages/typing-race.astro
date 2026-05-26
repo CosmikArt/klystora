@@ -1,0 +1,34 @@
+---
+import PwaInstallPrompt from '@/components/PwaInstallPrompt';
+import Layout from '../layouts/Layout.astro';
+import LazyGameWrapper from '../components/games/LazyGameWrapper';
+
+const title = 'Typing Race — Test Your WPM | Klystora';
+const description = 'Free typing speed test. Measure your WPM (words per minute) and accuracy in 27 languages. No signup required.';
+const ogImage = '/og/default.jpg';
+---
+
+<Layout title={title} description={description} ogImage={ogImage}>
+  <div class="max-w-3xl mx-auto px-4 py-8">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-bold">Typing Race</h1>
+      <p class="text-sand-500 mt-1">Test your typing speed and accuracy</p>
+    </div>
+    
+    <LazyGameWrapper game="typing-race" lang="en" client:only="react" />
+    
+    <article class="mt-16 max-w-none">
+      <h2 class="text-2xl font-bold mb-4">How to Play Typing Race</h2>
+      <p class="text-sand-500 mb-4">Typing Race measures your typing speed in words per minute (WPM) and accuracy. Type the displayed text as fast and accurately as you can.</p>
+      <ul class="space-y-2 mb-6">
+        <li>Choose your time limit: 30, 60, or 120 seconds</li>
+        <li>Type the text exactly as shown</li>
+        <li>Correct characters turn green, errors turn red</li>
+        <li>Your WPM and accuracy are calculated in real-time</li>
+        <li>Beat your personal best and climb the leaderboard</li>
+      </ul>
+      <p class="text-sand-500">Practice daily to improve your typing speed. The average typing speed is 40 WPM, while professional typists reach 80+ WPM.</p>
+    </article>
+  </div>
+  <PwaInstallPrompt client:only="react" />
+</Layout>

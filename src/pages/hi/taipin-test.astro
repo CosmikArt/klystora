@@ -1,0 +1,34 @@
+---
+import PwaInstallPrompt from '@/components/PwaInstallPrompt';
+import Layout from '../../layouts/Layout.astro';
+import LazyGameWrapper from '../../components/games/LazyGameWrapper';
+
+const title = "टाइपिंग रेस — अपनी गति जांचें | Klystora";
+const description = "मुफ्त टाइपिंग गति परीक्षण। 27 भाषाओं में अपनी WPM और सटीकता मापें। कोई साइनअप नहीं।";
+const ogImage = '/og/default.jpg';
+---
+
+<Layout title={title} description={description} ogImage={ogImage}>
+  <div class="max-w-3xl mx-auto px-4 py-8">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-bold">टाइपिंग रेस</h1>
+      <p class="text-sand-500 mt-1">अपनी टाइपिंग गति और सटीकता का परीक्षण करें</p>
+    </div>
+    
+    <LazyGameWrapper game="typing-race" lang="hi" client:only="react" />
+    
+    <article class="mt-16 max-w-none">
+      <h2 class="text-2xl font-bold mb-4">टाइपिंग रेस कैसे खेलें</h2>
+      <p class="text-sand-500 mb-4">टाइपिंग रेस आपकी टाइपिंग गति (प्रति मिनट शब्द) और सटीकता मापती है। प्रदर्शित टेक्स्ट को जितनी तेज़ी और सटीकता से टाइप कर सकें।</p>
+      <ul class="space-y-2 mb-6">
+        <li>अपनी समय सीमा चुनें: 30, 60, या 120 सेकंड</li>
+        <li>टेक्स्ट को ठीक वैसे ही टाइप करें जैसा दिखाया गया है</li>
+        <li>सही अक्षर हरे हो जाते हैं, गलतियाँ लाल</li>
+        <li>आपकी WPM और सटीकता रीयल-टाइम में गणना की जाती है</li>
+        <li>अपना व्यक्तिगत सर्वश्रेष्ठ बीट करें और लीडरबोर्ड पर चढ़ें</li>
+      </ul>
+      <p class="text-sand-500">अपनी टाइपिंग गति में सुधार के लिए दैनिक अभ्यास करें। औसत टाइपिंग गति 40 WPM है, जबकि पेशेवर 80+ WPM तक पहुँचते हैं।</p>
+    </article>
+  </div>
+  <PwaInstallPrompt client:only="react" />
+</Layout>

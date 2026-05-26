@@ -1,0 +1,34 @@
+---
+import PwaInstallPrompt from '@/components/PwaInstallPrompt';
+import Layout from '../../layouts/Layout.astro';
+import LazyGameWrapper from '../../components/games/LazyGameWrapper';
+
+const title = "Course de Dactylo — Testez votre Vitesse | Klystora";
+const description = "Test de vitesse de frappe gratuit. Mesurez votre VPM et précision en 27 langues. Sans inscription.";
+const ogImage = '/og/default.jpg';
+---
+
+<Layout title={title} description={description} ogImage={ogImage}>
+  <div class="max-w-3xl mx-auto px-4 py-8">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-bold">Course de Dactylo</h1>
+      <p class="text-sand-500 mt-1">Testez votre vitesse et précision de frappe</p>
+    </div>
+    
+    <LazyGameWrapper game="typing-race" lang="fr" client:only="react" />
+    
+    <article class="mt-16 max-w-none">
+      <h2 class="text-2xl font-bold mb-4">Comment Jouer à la Course de Dactylo</h2>
+      <p class="text-sand-500 mb-4">La Course de Dactylo mesure votre vitesse de frappe en mots par minute (VPM) et votre précision. Tapez le texte affiché aussi vite et précisément que possible.</p>
+      <ul class="space-y-2 mb-6">
+        <li>Choisissez votre limite de temps : 30, 60 ou 120 secondes</li>
+        <li>Tapez le texte exactement comme affiché</li>
+        <li>Les caractères corrects deviennent verts, les erreurs rouges</li>
+        <li>Votre VPM et précision sont calculées en temps réel</li>
+        <li>Battez votre record personnel et grimpez au classement</li>
+      </ul>
+      <p class="text-sand-500">Pratiquez quotidiennement pour améliorer votre vitesse. La moyenne est de 40 VPM, les professionnels atteignent 80+ VPM.</p>
+    </article>
+  </div>
+  <PwaInstallPrompt client:only="react" />
+</Layout>

@@ -1,0 +1,21 @@
+---
+import PwaInstallPrompt from '@/components/PwaInstallPrompt';
+import Layout from '../../layouts/Layout.astro';
+import LazyGameWrapper from '../../components/games/LazyGameWrapper';
+
+const title = 'Typing Race — Klystora';
+const description = 'Free typing speed test in 27 languages. No signup required.';
+const ogImage = '/og/default.jpg';
+---
+
+<Layout title={title} description={description} ogImage={ogImage}>
+  <div class="max-w-3xl mx-auto px-4 py-8">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-bold">Typing Race</h1>
+      <p class="text-sand-500 mt-1">Test your typing speed and accuracy</p>
+    </div>
+    
+    <LazyGameWrapper game="typing-race" lang="id" client:only="react" />
+  </div>
+  <PwaInstallPrompt client:only="react" />
+</Layout>

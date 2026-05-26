@@ -1,0 +1,34 @@
+---
+import PwaInstallPrompt from '@/components/PwaInstallPrompt';
+import Layout from '../../layouts/Layout.astro';
+import LazyGameWrapper from '../../components/games/LazyGameWrapper';
+
+const title = "타이핑 레이스 — 속도 측정 | Klystora";
+const description = "묣타이핑 속도 테스트. 27개 언어로 WPM과 정확도를 측정하세요. 회원가입 불필요.";
+const ogImage = '/og/default.jpg';
+---
+
+<Layout title={title} description={description} ogImage={ogImage}>
+  <div class="max-w-3xl mx-auto px-4 py-8">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-bold">타이핑 레이스</h1>
+      <p class="text-sand-500 mt-1">타이핑 속도와 정확도를 테스트하세요</p>
+    </div>
+    
+    <LazyGameWrapper game="typing-race" lang="ko" client:only="react" />
+    
+    <article class="mt-16 max-w-none">
+      <h2 class="text-2xl font-bold mb-4">타이핑 레이스 플레이 방법</h2>
+      <p class="text-sand-500 mb-4">타이핑 레이스는 분당 단어 수(WPM)와 정확도를 측정합니다. 표시된 텍스트를 가능한 한 빠르고 정확하게 입력하세요.</p>
+      <ul class="space-y-2 mb-6">
+        <li>시간 제한 선택: 30초, 60초, 120초</li>
+        <li>표시된 텍스트를 정확히 입력</li>
+        <li>올바른 문자는 초록색, 오류는 빨간색</li>
+        <li>WPM과 정확도가 실시간으로 계산됩니다</li>
+        <li>개인 최고 기록을 경신하고 순위를 올리세요</li>
+      </ul>
+      <p class="text-sand-500">타이핑 속도를 향상시키려면 매일 연습하세요. 평균은 40 WPM, 전문가는 80+ WPM을 달성합니다.</p>
+    </article>
+  </div>
+  <PwaInstallPrompt client:only="react" />
+</Layout>

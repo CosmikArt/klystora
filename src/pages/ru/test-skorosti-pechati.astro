@@ -1,0 +1,34 @@
+---
+import PwaInstallPrompt from '@/components/PwaInstallPrompt';
+import Layout from '../../layouts/Layout.astro';
+import LazyGameWrapper from '../../components/games/LazyGameWrapper';
+
+const title = "Скоропечатание — Проверь Скорость | Klystora";
+const description = "Бесплатный тест скорости печати. Измерь WPM и точность на 27 языках. Без регистрации.";
+const ogImage = '/og/default.jpg';
+---
+
+<Layout title={title} description={description} ogImage={ogImage}>
+  <div class="max-w-3xl mx-auto px-4 py-8">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-bold">Скоропечатание</h1>
+      <p class="text-sand-500 mt-1">Проверь скорость и точность печати</p>
+    </div>
+    
+    <LazyGameWrapper game="typing-race" lang="ru" client:only="react" />
+    
+    <article class="mt-16 max-w-none">
+      <h2 class="text-2xl font-bold mb-4">Как Играть в Скоропечатание</h2>
+      <p class="text-sand-500 mb-4">Скоропечатание измеряет скорость печати в словах в минуту (WPM) и точность. Печатай отображаемый текст как можно быстрее и точнее.</p>
+      <ul class="space-y-2 mb-6">
+        <li>Выбери лимит времени: 30, 60 или 120 секунд</li>
+        <li>Печатай текст точно как показано</li>
+        <li>Правильные символы зелёные, ошибки красные</li>
+        <li>WPM и точность считаются в реальном времени</li>
+        <li>Побей личный рекорд и поднимись в таблице лидеров</li>
+      </ul>
+      <p class="text-sand-500">Тренируйся ежедневно, чтобы улучшить скорость. Средняя — 40 WPM, профи достигают 80+ WPM.</p>
+    </article>
+  </div>
+  <PwaInstallPrompt client:only="react" />
+</Layout>

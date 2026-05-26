@@ -1,0 +1,34 @@
+---
+import PwaInstallPrompt from '@/components/PwaInstallPrompt';
+import Layout from '../../layouts/Layout.astro';
+import LazyGameWrapper from '../../components/games/LazyGameWrapper';
+
+const title = "打字测试 — 测试你的打字速度 | Klystora";
+const description = "免费打字速度测试。在27种语言中测量你的WPM（每分钟字数）和准确度。无需注册。";
+const ogImage = '/og/default.jpg';
+---
+
+<Layout title={title} description={description} ogImage={ogImage}>
+  <div class="max-w-3xl mx-auto px-4 py-8">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-bold">打字测试</h1>
+      <p class="text-sand-500 mt-1">测试你的打字速度和准确度</p>
+    </div>
+    
+    <LazyGameWrapper game="typing-race" lang="zh" client:only="react" />
+    
+    <article class="mt-16 max-w-none">
+      <h2 class="text-2xl font-bold mb-4">如何进行打字测试</h2>
+      <p class="text-sand-500 mb-4">打字测试测量你的打字速度（每分钟字数WPM）和准确度。尽可能快速准确地输入显示的文本。</p>
+      <ul class="space-y-2 mb-6">
+        <li>选择时间限制：30、60或120秒</li>
+        <li>完全按照显示输入文本</li>
+        <li>正确的字符变绿，错误变红</li>
+        <li>你的WPM和准确度实时计算</li>
+        <li>打破个人最佳记录，攀登排行榜</li>
+      </ul>
+      <p class="text-sand-500">每天练习以提高打字速度。平均打字速度为40 WPM，专业打字员可达80+ WPM。</p>
+    </article>
+  </div>
+  <PwaInstallPrompt client:only="react" />
+</Layout>

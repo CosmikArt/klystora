@@ -1,0 +1,34 @@
+---
+import PwaInstallPrompt from '@/components/PwaInstallPrompt';
+import Layout from '../../layouts/Layout.astro';
+import LazyGameWrapper from '../../components/games/LazyGameWrapper';
+
+const title = "タイピングレース — 速度を測定 | Klystora";
+const description = "無料タイピング速度テスト。27言語でWPMと正確性を測定。登録不要。";
+const ogImage = '/og/default.jpg';
+---
+
+<Layout title={title} description={description} ogImage={ogImage}>
+  <div class="max-w-3xl mx-auto px-4 py-8">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-bold">タイピングレース</h1>
+      <p class="text-sand-500 mt-1">タイピング速度と正確性をテスト</p>
+    </div>
+    
+    <LazyGameWrapper game="typing-race" lang="ja" client:only="react" />
+    
+    <article class="mt-16 max-w-none">
+      <h2 class="text-2xl font-bold mb-4">タイピングレースの遊び方</h2>
+      <p class="text-sand-500 mb-4">タイピングレースは1分間の単語数（WPM）と正確性を測定します。表示されたテキストをできるだけ速く正確に入力してください。</p>
+      <ul class="space-y-2 mb-6">
+        <li>時間制限を選択：30秒、60秒、120秒</li>
+        <li>表示されたテキストを正確に入力</li>
+        <li>正しい文字は緑、間違いは赤になります</li>
+        <li>WPMと正確性がリアルタイムで計算されます</li>
+        <li>自己ベストを更新してランキングを上げましょう</li>
+      </ul>
+      <p class="text-sand-500">毎日練習してタイピング速度を向上させましょう。平均は40 WPM、プロは80+ WPMを達成します。</p>
+    </article>
+  </div>
+  <PwaInstallPrompt client:only="react" />
+</Layout>

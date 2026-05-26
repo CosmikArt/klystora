@@ -1,0 +1,34 @@
+---
+import PwaInstallPrompt from '@/components/PwaInstallPrompt';
+import Layout from '../../layouts/Layout.astro';
+import LazyGameWrapper from '../../components/games/LazyGameWrapper';
+
+const title = "Carrera de Escritura — Prueba tu PPM | Klystora";
+const description = "Prueba de velocidad de escritura gratuita. Mide tus PPM (palabras por minuto) y precisión en 27 idiomas. Sin registro.";
+const ogImage = '/og/default.jpg';
+---
+
+<Layout title={title} description={description} ogImage={ogImage}>
+  <div class="max-w-3xl mx-auto px-4 py-8">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-bold">Carrera de Escritura</h1>
+      <p class="text-sand-500 mt-1">Prueba tu velocidad y precisión de escritura</p>
+    </div>
+    
+    <LazyGameWrapper game="typing-race" lang="es" client:only="react" />
+    
+    <article class="mt-16 max-w-none">
+      <h2 class="text-2xl font-bold mb-4">Cómo Jugar Carrera de Escritura</h2>
+      <p class="text-sand-500 mb-4">Carrera de Escritura mide tu velocidad de escritura en palabras por minuto (PPM) y precisión. Escribe el texto mostrado tan rápido y precisamente como puedas.</p>
+      <ul class="space-y-2 mb-6">
+        <li>Elige tu límite de tiempo: 30, 60 o 120 segundos</li>
+        <li>Escribe el texto exactamente como se muestra</li>
+        <li>Los caracteres correctos se ponen verdes, los errores en rojo</li>
+        <li>Tu PPM y precisión se calculan en tiempo real</li>
+        <li>Supera tu mejor marca y escala el leaderboard</li>
+      </ul>
+      <p class="text-sand-500">Practica diariamente para mejorar tu velocidad de escritura. La velocidad promedio es de 40 PPM, mientras que los profesionales alcanzan 80+ PPM.</p>
+    </article>
+  </div>
+  <PwaInstallPrompt client:only="react" />
+</Layout>
