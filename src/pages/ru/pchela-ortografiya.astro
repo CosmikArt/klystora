@@ -1,0 +1,21 @@
+---
+import PwaInstallPrompt from '@/components/PwaInstallPrompt';
+import Layout from '../../layouts/Layout.astro';
+import LazyGameWrapper from '../../components/games/LazyGameWrapper';
+
+const title = 'Пчела Орфографии — Klystora';
+const description = 'Составляйте слова из 7 букв. Центральная буква обязательна. Free in 27 languages.';
+const ogImage = '/og/default.jpg';
+---
+
+<Layout title={title} description={description} ogImage={ogImage}>
+  <div class="max-w-3xl mx-auto px-4 py-8">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-bold">Пчела Орфографии</h1>
+      <p class="text-sand-500 mt-1">Составляйте слова из 7 букв. Центральная буква обязательна</p>
+    </div>
+    
+    <LazyGameWrapper game="spelling-bee" lang="ru" client:only="react" />
+  </div>
+  <PwaInstallPrompt client:only="react" />
+</Layout>

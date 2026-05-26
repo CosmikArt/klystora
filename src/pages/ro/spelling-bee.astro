@@ -3,19 +3,19 @@ import PwaInstallPrompt from '@/components/PwaInstallPrompt';
 import Layout from '../../layouts/Layout.astro';
 import LazyGameWrapper from '../../components/games/LazyGameWrapper';
 
-const title = 'Rechtschreib-Biene — Klystora';
-const description = 'Bilden Sie Wörter mit 7 Buchstaben. Mittlerer Buchstabe erforderlich. Free in 27 languages.';
+const title = 'Spelling Bee — Klystora';
+const description = 'Form words with 7 letters. Must use the center letter. Free in 27 languages.';
 const ogImage = '/og/default.jpg';
 ---
 
 <Layout title={title} description={description} ogImage={ogImage}>
   <div class="max-w-3xl mx-auto px-4 py-8">
     <div class="text-center mb-6">
-      <h1 class="text-3xl font-bold">Rechtschreib-Biene</h1>
-      <p class="text-sand-500 mt-1">Bilden Sie Wörter mit 7 Buchstaben. Mittlerer Buchstabe erforderlich</p>
+      <h1 class="text-3xl font-bold">Spelling Bee</h1>
+      <p class="text-sand-500 mt-1">Form words with 7 letters. Must use the center letter. Find pangrams for bonus points!</p>
     </div>
     
-    <LazyGameWrapper game="spelling-bee" lang="de" client:only="react" />
+    <LazyGameWrapper game="spelling-bee" lang="ro" client:only="react" />
   </div>
   <PwaInstallPrompt client:only="react" />
 </Layout>

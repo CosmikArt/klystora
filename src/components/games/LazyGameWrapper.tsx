@@ -13,7 +13,8 @@ interface Props {
         'multi-wordle' |
         'crossword' |
         'acrostic' |
-        'word-search';
+        'word-search' |
+        'spelling-bee';
   lang?: Lang;
 }
 
@@ -41,6 +42,7 @@ const gameComponents: Record<string, () => Promise<any>> = {
   'crossword': () => import('./crossword/CrosswordWrapper'),
   'acrostic': () => import('./acrostic/AcrosticWrapper'),
   'word-search': () => import('./word-search/WordSearchWrapper'),
+  'spelling-bee': () => import('./spelling-bee/SpellingBeeWrapper'),
 };
 
 function GameSkeleton() {

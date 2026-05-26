@@ -3,35 +3,32 @@ import PwaInstallPrompt from '@/components/PwaInstallPrompt';
 import Layout from '../layouts/Layout.astro';
 import LazyGameWrapper from '../components/games/LazyGameWrapper';
 
-const title = 'Spelling Bee — Klystora';
-const description = 'Form words using 7 letters. A new puzzle every day.';
+const title = 'Spelling Bee — NYT-Style Word Game | Klystora';
+const description = 'Form words using 7 letters. Must use the center letter. Find pangrams for bonus points. Free in 27 languages.';
+const ogImage = '/og/default.jpg';
 ---
 
-<Layout title={title} description={description}>
-  <div class="min-h-[calc(100vh-200px)] flex flex-col items-center justify-start pt-8 px-4">
+<Layout title={{title}} description={{description}} ogImage={{ogImage}}>
+  <div class="max-w-3xl mx-auto px-4 py-8">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-bold">Spelling Bee</h1>
+      <p class="text-sand-500 mt-1">Form words with 7 letters. Must use the center letter. Find pangrams for bonus points!</p>
+    </div>
+    
     <LazyGameWrapper game="spelling-bee" lang="en" client:only="react" />
-
+    
     <article class="mt-16 max-w-none">
       <h2 class="text-2xl font-bold mb-4">How to Play Spelling Bee</h2>
-      <p class="text-sand-500 mb-4">Form words using the 7 letters shown. The center letter must appear in every word.</p>
+      <p class="text-sand-500 mb-4">Spelling Bee is a word puzzle where you form as many words as possible using 7 letters, with one letter required in every word.</p>
       <ul class="space-y-2 mb-6">
-        <li><strong style="color:#4A8B5B">4+ letters</strong> — minimum word length</li>
-        <li><strong style="color:#D9A93E">Center letter</strong> — must be used in every word</li>
-        <li><strong style="color:#6845BC">Pangram</strong> — use all 7 letters for bonus points</li>
+        <li>Words must be at least 4 letters long</li>
+        <li>Every word must include the center letter</li>
+        <li>Letters can be used multiple times</li>
+        <li>4-letter words = 1 point, longer words = more points</li>
+        <li>Pangrams (use all 7 letters) = word length + 7 bonus points</li>
       </ul>
-      <p class="text-sand-500">Find the pangram and reach Genius rank!</p>
+      <p class="text-sand-500">Inspired by the NYT puzzle, Spelling Bee tests your vocabulary and creativity. Can you reach Queen Bee rank?</p>
     </article>
-    <section class="mt-12">
-      <h2 class="text-2xl font-bold mb-4">FAQ</h2>
-        <details class="mb-3">
-          <summary class="font-medium cursor-pointer">What is a pangram?</summary>
-          <p class="text-sand-500 mt-2">A word that uses all 7 available letters at least once.</p>
-        </details>
-        <details class="mb-3">
-          <summary class="font-medium cursor-pointer">How many words are there?</summary>
-          <p class="text-sand-500 mt-2">Each puzzle has 20-50 valid words.</p>
-        </details>
-    </section>
   </div>
   <PwaInstallPrompt client:only="react" />
 </Layout>
