@@ -16,7 +16,8 @@ interface Props {
         'word-search' |
         'spelling-bee' |
         'anagrams' |
-        'word-ladder';
+        'word-ladder' |
+        'hangman';
   lang?: Lang;
 }
 
@@ -27,6 +28,7 @@ const gameComponents: Record<string, () => Promise<any>> = {
   'word-search': () => import('./wordsearch/WordSearchWrapper'),
   'anagrams': () => import('./anagrams/AnagramsWrapper'),
   'word-ladder': () => import('./word-ladder/WordLadderWrapper'),
+  'hangman': () => import('./hangman/HangmanWrapper'),
   'connections': () => import('./connections/ConnectionsWrapper'),
   'spelling-bee': () => import('./spellingbee/SpellingBeeWrapper'),
   'word-ladder': () => import('./wordladder/WordLadderWrapper'),
@@ -48,6 +50,7 @@ const gameComponents: Record<string, () => Promise<any>> = {
   'spelling-bee': () => import('./spelling-bee/SpellingBeeWrapper'),
   'anagrams': () => import('./anagrams/AnagramsWrapper'),
   'word-ladder': () => import('./word-ladder/WordLadderWrapper'),
+  'hangman': () => import('./hangman/HangmanWrapper'),
 };
 
 function GameSkeleton() {

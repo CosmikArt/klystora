@@ -3,19 +3,19 @@ import PwaInstallPrompt from '@/components/PwaInstallPrompt';
 import Layout from '../../layouts/Layout.astro';
 import LazyGameWrapper from '../../components/games/LazyGameWrapper';
 
-const title = 'Pendu — Klystora';
-const description = 'Devinez le mot caché lettre par lettre. Vous avez 6 vies. Free in 27 languages.';
+const title = 'Hangman — Klystora';
+const description = 'Guess the hidden word letter by letter. You have 6 lives. Free in 27 languages.';
 const ogImage = '/og/default.jpg';
 ---
 
 <Layout title={title} description={description} ogImage={ogImage}>
   <div class="max-w-3xl mx-auto px-4 py-8">
     <div class="text-center mb-6">
-      <h1 class="text-3xl font-bold">Pendu</h1>
-      <p class="text-sand-500 mt-1">Devinez le mot caché lettre par lettre. Vous avez 6 vies</p>
+      <h1 class="text-3xl font-bold">Hangman</h1>
+      <p class="text-sand-500 mt-1">Guess the hidden word letter by letter. You have 6 lives.</p>
     </div>
     
-    <LazyGameWrapper game="hangman" lang="fr" client:only="react" />
+    <LazyGameWrapper game="hangman" lang="vi" client:only="react" />
   </div>
   <PwaInstallPrompt client:only="react" />
 </Layout>

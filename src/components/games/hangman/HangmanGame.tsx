@@ -1,177 +1,266 @@
-import { useState, useCallback, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useAnalytics } from '@/hooks/useAnalytics';
 import { motion, AnimatePresence } from 'framer-motion';
-import { RotateCcw, Trophy, Clock, Heart } from 'lucide-react';
+import { RotateCcw, Trophy, Heart } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 
-const WORDS_EN = ['JAVASCRIPT', 'TYPESCRIPT', 'REACT', 'ASTRO', 'TAILWIND', 'COMPONENT', 'FUNCTION', 'VARIABLE', 'ARRAY', 'OBJECT'];
-const WORDS_ES = ['JAVASCRIPT', 'TYPESCRIPT', 'REACT', 'ASTRO', 'TAILWIND', 'COMPONENTE', 'FUNCION', 'VARIABLE', 'MATRIZ', 'OBJETO'];
+const WORDS: Record<string, string[]> = {
+  en: ['PUZZLE', 'WORD', 'GAME', 'LETTER', 'ALPHABET', 'PHRASE', 'SENTENCE', 'STORY', 'BOOK', 'READ', 'WRITE', 'SPELL', 'GUESS', 'THINK', 'BRAIN', 'MIND', 'SMART', 'CLEVER', 'QUICK', 'FAST'],
+  es: ['PALABRA', 'JUEGO', 'LETRA', 'ALFABETO', 'FRASE', 'ORACION', 'HISTORIA', 'LIBRO', 'LEER', 'ESCRIBIR', 'DELETREAR', 'ADIVINAR', 'PENSAR', 'CEREBRO', 'MENTE', 'LISTO', 'RAPIDO'],
+  default: ['PUZZLE', 'WORD', 'GAME', 'LETTER', 'ALPHABET', 'PHRASE', 'SENTENCE', 'STORY'],
+};
 
-const HANGMAN_PARTS = [
-  'head', 'body', 'left-arm', 'right-arm', 'left-leg', 'right-leg'
-];
+const MAX_GUESSES = 6;
+
+function getWord(lang: string): string {
+  const words = WORDS[lang] || WORDS['default'];
+  return words[Math.floor(Math.random() * words.length)];
+}
+
+// SVG Hangman figure
+function HangmanFigure({ wrongGuesses }: { wrongGuesses: number }) {
+  return (
+    <svg viewBox="0 0 200 250" className="w-48 h-60 mx-auto">
+      {/* Gallows */}
+      <line x1="20" y1="230" x2="120" y2="230" stroke="#4a4a4a" strokeWidth="3" />
+      <line x1="70" y1="230" x2="70" y2="20" stroke="#4a4a4a" strokeWidth="3" />
+      <line x1="70" y1="20" x2="140" y2="20" stroke="#4a4a4a" strokeWidth="3" />
+      <line x1="140" y1="20" x2="140" y2="50" stroke="#4a4a4a" strokeWidth="3" />
+      
+      {/* Head */}
+      {wrongGuesses >= 1 && (
+        <motion.circle 
+          cx="140" cy="70" r="20" 
+          stroke="#4a4a4a" strokeWidth="3" fill="none"
+          initial={{ scale: 0 }} animate={{ scale: 1 }}
+        />
+      )}
+      {/* Body */}
+      {wrongGuesses >= 2 && (
+        <motion.line 
+          x1="140" y1="90" x2="140" y2="160" 
+          stroke="#4a4a4a" strokeWidth="3"
+          initial={{ pathLength: 0 }} animate={{ pathLength: 1 }}
+        />
+      )}
+      {/* Left arm */}
+      {wrongGuesses >= 3 && (
+        <motion.line 
+          x1="140" y1="110" x2="110" y2="130" 
+          stroke="#4a4a4a" strokeWidth="3"
+          initial={{ pathLength: 0 }} animate={{ pathLength: 1 }}
+        />
+      )}
+      {/* Right arm */}
+      {wrongGuesses >= 4 && (
+        <motion.line 
+          x1="140" y1="110" x2="170" y2="130" 
+          stroke="#4a4a4a" strokeWidth="3"
+          initial={{ pathLength: 0 }} animate={{ pathLength: 1 }}
+        />
+      )}
+      {/* Left leg */}
+      {wrongGuesses >= 5 && (
+        <motion.line 
+          x1="140" y1="160" x2="110" y2="190" 
+          stroke="#4a4a4a" strokeWidth="3"
+          initial={{ pathLength: 0 }} animate={{ pathLength: 1 }}
+        />
+      )}
+      {/* Right leg */}
+      {wrongGuesses >= 6 && (
+        <motion.line 
+          x1="140" y1="160" x2="170" y2="190" 
+          stroke="#4a4a4a" strokeWidth="3"
+          initial={{ pathLength: 0 }} animate={{ pathLength: 1 }}
+        />
+      )}
+    </svg>
+  );
+}
 
 export default function HangmanGame() {
   const { trackGameComplete } = useAnalytics();
   const { lang } = useLanguage();
-  const words = lang === 'es' ? WORDS_ES : WORDS_EN;
-  const [word] = useState(() => words[Math.floor(Math.random() * words.length)]);
-  const [guessed, setGuessed] = useState<Set<string>>(new Set());
-  const [wrongGuesses, setWrongGuesses] = useState(0);
-  const [startTime] = useState(() => Date.now());
-  const [elapsed, setElapsed] = useState(0);
-  const [shake, setShake] = useState(false);
 
-  useEffect(() => {
-    const timer = setInterval(() => setElapsed(Math.floor((Date.now() - startTime) / 1000)), 1000);
-    return () => clearInterval(timer);
-  }, [startTime]);
+  const [word] = useState(() => getWord(lang));
+  const [guessedLetters, setGuessedLetters] = useState<Set<string>>(new Set());
+  const [wrongGuesses, setWrongGuesses] = useState(0);
+  const [isComplete, setIsComplete] = useState(false);
+  const [isWon, setIsWon] = useState(false);
+  const [message, setMessage] = useState('');
 
   const handleGuess = useCallback((letter: string) => {
-    if (guessed.has(letter) || wrongGuesses >= 6 || word.split('').every(c => guessed.has(c))) return;
-    
-    const newGuessed = new Set(guessed);
+    if (isComplete || guessedLetters.has(letter)) return;
+
+    const newGuessed = new Set(guessedLetters);
     newGuessed.add(letter);
-    setGuessed(newGuessed);
+    setGuessedLetters(newGuessed);
 
     if (!word.includes(letter)) {
-      setWrongGuesses(w => w + 1);
-      setShake(true);
-      setTimeout(() => setShake(false), 300);
+      const newWrong = wrongGuesses + 1;
+      setWrongGuesses(newWrong);
+      
+      if (newWrong >= MAX_GUESSES) {
+        setIsComplete(true);
+        setIsWon(false);
+        trackGameComplete('hangman', { won: false, wrongGuesses: newWrong });
+      }
+    } else {
+      // Check if all letters guessed
+      const allGuessed = word.split('').every(l => newGuessed.has(l));
+      if (allGuessed) {
+        setIsComplete(true);
+        setIsWon(true);
+        trackGameComplete('hangman', { won: true, wrongGuesses });
+      }
     }
-  }, [guessed, wrongGuesses, word]);
+  }, [word, guessedLetters, wrongGuesses, isComplete, trackGameComplete]);
 
-  // Keyboard support
+  // Keyboard input
   useEffect(() => {
-    const handler = (e: KeyboardEvent) => {
-      const key = e.key.toUpperCase();
-      if (/^[A-Z]$/.test(key)) handleGuess(key);
+    const handleKeyDown = (e: KeyboardEvent) => {
+      const letter = e.key.toUpperCase();
+      if (/^[A-Z]$/.test(letter)) {
+        handleGuess(letter);
+      }
     };
-    window.addEventListener('keydown', handler);
-    return () => window.removeEventListener('keydown', handler);
+    
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
   }, [handleGuess]);
 
-  const isWon = word.split('').every(c => guessed.has(c));
-  const isLost = wrongGuesses >= 6;
-  const isComplete = isWon || isLost;
-
-  // Track game completion
-  useEffect(() => {
-    if (isComplete) {
-      trackGameComplete('hangman', 6 - wrongGuesses, isWon);
-    }
-  }, [isComplete, isWon, wrongGuesses, trackGameComplete]);
-
-  const formatTime = (s: number) => {
-    const m = Math.floor(s / 60);
-    const sec = s % 60;
-    return `${m}:${sec.toString().padStart(2, '0')}`;
+  const reset = () => {
+    window.location.reload();
   };
+
+  const displayWord = word.split('').map(letter => 
+    guessedLetters.has(letter) ? letter : '_'
+  );
 
   const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 
   return (
-    <div className="w-full max-w-[480px] mx-auto">
-      {/* Header */}
-      <div className="flex items-center justify-between mb-4">
-        <div>
-          <h2 className="text-2xl font-bold text-coal dark:text-white">{lang === 'es' ? 'Ahorcado' : 'Hangman'}</h2>
-          <p className="text-sm text-sand-500">{lang === 'es' ? 'Adivina la palabra' : 'Guess the word'}</p>
-        </div>
-        <div className="flex items-center gap-3">
-          <div className="flex items-center gap-1 text-sm text-sand-500"><Clock size={14} /> {formatTime(elapsed)}</div>
-          <div className="flex gap-1">
-            {Array.from({ length: 6 }, (_, i) => (
-              <Heart key={i} size={16} className={i < 6 - wrongGuesses ? 'text-rose-500 fill-rose-500' : 'text-sand-300'} />
-            ))}
-          </div>
-        </div>
+    <div className="max-w-2xl mx-auto">
+      {/* Lives */}
+      <div className="flex justify-center gap-1 mb-4">
+        {Array.from({ length: MAX_GUESSES }).map((_, i) => (
+          <Heart 
+            key={i} 
+            className={`w-6 h-6 ${i < MAX_GUESSES - wrongGuesses ? 'text-red-500 fill-red-500' : 'text-sand-200'}`}
+          />
+        ))}
       </div>
+
+      {/* Hangman figure */}
+      <HangmanFigure wrongGuesses={wrongGuesses} />
 
       {/* Word display */}
-      <motion.div 
-        animate={shake ? { x: [-5, 5, -5, 5, 0] } : {}}
-        className="flex justify-center gap-2 mb-6"
-      >
-        {word.split('').map((letter, i) => (
-          <div key={i} className="w-10 h-12 border-b-4 border-violet-500 flex items-end justify-center">
-            <AnimatePresence>
-              {guessed.has(letter) && (
-                <motion.span 
-                  initial={{ y: -20, opacity: 0 }} 
-                  animate={{ y: 0, opacity: 1 }}
-                  className="text-2xl font-bold text-coal dark:text-white"
-                >
-                  {letter}
-                </motion.span>
-              )}
-            </AnimatePresence>
+      <div className="flex justify-center gap-2 mb-6 mt-4">
+        {displayWord.map((letter, i) => (
+          <div 
+            key={i}
+            className="w-10 h-12 border-b-2 border-coal flex items-end justify-center text-2xl font-bold"
+          >
+            {letter !== '_' && (
+              <motion.span
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+              >
+                {letter}
+              </motion.span>
+            )}
           </div>
         ))}
-      </motion.div>
-
-      {/* Hangman SVG */}
-      <div className="flex justify-center mb-6">
-        <svg width="120" height="140" viewBox="0 0 120 140" className="text-coal dark:text-white">
-          {/* Gallows */}
-          <line x1="20" y1="130" x2="100" y2="130" stroke="currentColor" strokeWidth="3" />
-          <line x1="40" y1="130" x2="40" y2="20" stroke="currentColor" strokeWidth="3" />
-          <line x1="40" y1="20" x2="80" y2="20" stroke="currentColor" strokeWidth="3" />
-          <line x1="80" y1="20" x2="80" y2="35" stroke="currentColor" strokeWidth="3" />
-          
-          {/* Body parts */}
-          {wrongGuesses > 0 && <motion.circle initial={{ r: 0 }} animate={{ r: 10 }} cx="80" cy="45" fill="none" stroke="currentColor" strokeWidth="3" />}
-          {wrongGuesses > 1 && <motion.line initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} x1="80" y1="55" x2="80" y2="90" stroke="currentColor" strokeWidth="3" />}
-          {wrongGuesses > 2 && <motion.line initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} x1="80" y1="65" x2="60" y2="80" stroke="currentColor" strokeWidth="3" />}
-          {wrongGuesses > 3 && <motion.line initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} x1="80" y1="65" x2="100" y2="80" stroke="currentColor" strokeWidth="3" />}
-          {wrongGuesses > 4 && <motion.line initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} x1="80" y1="90" x2="65" y2="110" stroke="currentColor" strokeWidth="3" />}
-          {wrongGuesses > 5 && <motion.line initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} x1="80" y1="90" x2="95" y2="110" stroke="currentColor" strokeWidth="3" />}
-        </svg>
       </div>
 
-      {/* Keyboard */}
-      <div className="grid grid-cols-7 gap-1 mb-4">
-        {alphabet.map(letter => {
-          const isGuessed = guessed.has(letter);
-          const isCorrect = word.includes(letter);
-          return (
-            <motion.button
-              key={letter}
-              whileTap={{ scale: 0.9 }}
-              onClick={() => handleGuess(letter)}
-              disabled={isGuessed || isComplete}
-              className={`aspect-square rounded-lg font-bold text-sm transition-all ${
-                isGuessed 
-                  ? isCorrect 
-                    ? 'bg-emerald-100 dark:bg-emerald-900 text-emerald-600' 
-                    : 'bg-rose-100 dark:bg-rose-900 text-rose-600 opacity-50'
-                  : 'bg-sand-100 dark:bg-sand-800 text-coal dark:text-white hover:bg-violet-100 dark:hover:bg-violet-900'
-              }`}
-            >
-              {letter}
-            </motion.button>
-          );
-        })}
-      </div>
-
-      {/* Result */}
+      {/* Message */}
       <AnimatePresence>
-        {isComplete && (
-          <motion.div initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} className="mt-4 text-center p-6 bg-emerald-50 dark:bg-emerald-900/30 rounded-2xl border-2 border-emerald-400">
-            <Trophy size={40} className="mx-auto text-amber-500 mb-2" />
-            <p className="text-xl font-bold text-emerald-700 dark:text-emerald-300">
-              {isWon ? (lang === 'es' ? '¡Ganaste!' : 'You Won!') : `${lang === 'es' ? 'La palabra era' : 'The word was'}: ${word}`}
-            </p>
-            <p className="text-sm text-emerald-600 dark:text-emerald-400 mt-1">{formatTime(elapsed)}</p>
+        {message && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="text-center py-2 mb-4"
+          >
+            {message}
           </motion.div>
         )}
       </AnimatePresence>
 
-      <div className="flex justify-center mt-4">
-        <button onClick={() => window.location.reload()} className="flex items-center gap-2 px-5 py-3 rounded-xl bg-violet-500 text-white hover:bg-violet-600 transition-colors font-medium">
-          <RotateCcw size={18} /> {lang === 'es' ? 'Nuevo' : 'New'}
-        </button>
-      </div>
+      {/* Keyboard */}
+      {!isComplete && (
+        <div className="flex flex-wrap justify-center gap-2 mb-6">
+          {alphabet.map(letter => {
+            const isGuessed = guessedLetters.has(letter);
+            const isCorrect = word.includes(letter);
+            
+            return (
+              <button
+                key={letter}
+                onClick={() => handleGuess(letter)}
+                disabled={isGuessed}
+                className={`w-9 h-10 rounded-lg font-bold text-sm transition ${
+                  isGuessed 
+                    ? isCorrect 
+                      ? 'bg-green-100 text-green-700 cursor-default'
+                      : 'bg-red-100 text-red-700 cursor-default'
+                    : 'bg-white border border-sand-200 text-coal hover:bg-violet-50 hover:border-violet-300'
+                }`}
+              >
+                {letter}
+              </button>
+            );
+          })}
+        </div>
+      )}
+
+      {/* Results */}
+      <AnimatePresence>
+        {isComplete && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className={`border rounded-xl p-6 ${
+              isWon ? 'bg-green-50 border-green-200' : 'bg-red-50 border-red-200'
+            }`}
+          >
+            <div className="flex items-center gap-2 mb-4">
+              <Trophy className={`w-5 h-5 ${isWon ? 'text-green-500' : 'text-red-500'}`} />
+              <h3 className="font-bold text-lg">
+                {isWon ? 'You Won!' : 'Game Over'}
+              </h3>
+            </div>
+
+            {!isWon && (
+              <p className="text-center mb-4">
+                The word was: <span className="font-bold">{word}</span>
+              </p>
+            )}
+
+            <div className="grid grid-cols-2 gap-4 mb-6">
+              <div className="text-center">
+                <p className="text-3xl font-bold text-violet-600">
+                  {guessedLetters.size - wrongGuesses}
+                </p>
+                <p className="text-sm text-sand-500">Correct</p>
+              </div>
+              <div className="text-center">
+                <p className="text-3xl font-bold text-violet-600">{wrongGuesses}</p>
+                <p className="text-sm text-sand-500">Wrong</p>
+              </div>
+            </div>
+
+            <button
+              onClick={reset}
+              className="w-full flex items-center justify-center gap-2 bg-violet-500 text-white font-medium px-6 py-3 rounded-xl hover:bg-violet-600 transition"
+            >
+              <RotateCcw className="w-4 h-4" />
+              Play Again
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

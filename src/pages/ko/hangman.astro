@@ -3,19 +3,19 @@ import PwaInstallPrompt from '@/components/PwaInstallPrompt';
 import Layout from '../../layouts/Layout.astro';
 import LazyGameWrapper from '../../components/games/LazyGameWrapper';
 
-const title = 'Pendu — Klystora';
-const description = 'Devinez le mot caché lettre par lettre. Vous avez 6 vies. Free in 27 languages.';
+const title = '행맨 — Klystora';
+const description = '한 글자씩 숨겨진 단어를 맞춰보세요. 6번의 기회. Free in 27 languages.';
 const ogImage = '/og/default.jpg';
 ---
 
 <Layout title={title} description={description} ogImage={ogImage}>
   <div class="max-w-3xl mx-auto px-4 py-8">
     <div class="text-center mb-6">
-      <h1 class="text-3xl font-bold">Pendu</h1>
-      <p class="text-sand-500 mt-1">Devinez le mot caché lettre par lettre. Vous avez 6 vies</p>
+      <h1 class="text-3xl font-bold">행맨</h1>
+      <p class="text-sand-500 mt-1">한 글자씩 숨겨진 단어를 맞춰보세요. 6번의 기회</p>
     </div>
     
-    <LazyGameWrapper game="hangman" lang="fr" client:only="react" />
+    <LazyGameWrapper game="hangman" lang="ko" client:only="react" />
   </div>
   <PwaInstallPrompt client:only="react" />
 </Layout>
